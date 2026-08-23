@@ -1,0 +1,103 @@
+.fx-faq-section {
+  padding: clamp(56px, 8vh, 110px) var(--pad);
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  scroll-snap-align: start;
+  border-bottom: 1px solid var(--rule);
+}
+.fx-faq-wrap {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.fx-faq-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.fx-faq-eyebrow::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+.fx-faq-title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(28px, 4.4vw, 54px);
+  line-height: 1.02;
+  letter-spacing: -.03em;
+  max-width: 20ch;
+  color: var(--fg);
+}
+.fx-faq-container {
+  margin-top: clamp(30px, 5vh, 50px);
+  border-top: 1px solid var(--rule);
+  max-width: 1000px;
+}
+.fx-faq-q {
+  border-bottom: 1px solid var(--rule);
+}
+.fx-faq-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 46px 22px 0;
+  position: relative;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(18px, 2.1vw, 24px);
+  letter-spacing: -.02em;
+  outline: none;
+}
+.fx-faq-summary::-webkit-details-marker {
+  display: none;
+}
+.fx-faq-summary::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-50%);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M7 0v14M0 7h14' stroke='%23F26829' stroke-width='2'/%3E%3C/svg%3E") center/contain no-repeat;
+  transition: transform .3s var(--ease);
+}
+.fx-faq-q[open] .fx-faq-summary::after {
+  transform: translateY(-50%) rotate(135deg);
+}
+.fx-faq-a {
+  padding: 0 60px 24px 0;
+  color: var(--mid);
+  max-width: 72ch;
+  animation: fx-faq-fade .3s var(--ease);
+}
+.fx-faq-a p {
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.fx-faq-a a {
+  color: var(--ember);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.fx-faq-lead {
+  margin-top: 40px;
+  max-width: 52ch;
+  color: var(--slate);
+  font-family: var(--body);
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.5;
+}
+
+@keyframes fx-faq-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}

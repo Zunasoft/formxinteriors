@@ -1,0 +1,225 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap');
+
+.fx-why{
+  --fx-ground:#101E24;--fx-panel:#16262D;--fx-panel-2:#1A2C34;
+  --fx-line:rgba(255,255,255,.13);--fx-line-soft:rgba(255,255,255,.07);
+  --fx-orange:#F26829;--fx-orange-hi:#FF7D42;--fx-on-orange:#101E24;
+  --fx-paper:#F3F6F7;--fx-muted:#9DB0B8;--fx-dim:#7A939D;--fx-draw:#6E858F;
+  --fx-display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --fx-body:'Inter','Helvetica Neue',Arial,sans-serif;
+  --fx-mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+  background:var(--fx-ground);color:var(--fx-paper);font-family:var(--fx-body);
+  padding:clamp(26px,3.4vh,52px) clamp(18px,4vw,64px);-webkit-font-smoothing:antialiased;
+  height:100dvh;display:flex;align-items:center;overflow:hidden}
+.fx-why *{box-sizing:border-box;margin:0;padding:0}
+
+/* Scope .fx-wrap ONLY inside .fx-why - override HowWeWork's global .fx-wrap if needed */
+.fx-why .fx-wrap{width:100%;max-width:1480px;margin-inline:auto;height:100%;
+  display:flex;flex-direction:column}
+.fx-why .fx-head{flex:none}
+
+.fx-why .fx-top{display:flex;align-items:center;gap:22px}
+.fx-why .fx-eyebrow{font-family:var(--fx-mono);font-size:11px;letter-spacing:.22em;color:var(--fx-dim);white-space:nowrap}
+.fx-why .fx-rule{flex:1;height:1px;background:var(--fx-line)}
+.fx-why .fx-h2{font-family:var(--display);font-weight:400;letter-spacing:-.03em;
+  font-size:clamp(28px, 4.4vw, 54px);line-height:1.02;margin-top:clamp(14px,2vh,28px);max-width:20ch}
+.fx-why .fx-h2 span{display:block}
+.fx-why .fx-h2 em{font-style:normal;color:var(--fx-orange)}
+
+/* SCOPED: .fx-cards, .fx-card, .fx-title, .fx-line, .fx-bar, .fx-gate all under .fx-why */
+.fx-why .fx-cards{flex:1;min-height:0;display:flex;gap:12px;justify-content:center;align-items:center;
+  margin-top:clamp(14px,2.2vh,30px)}
+.fx-why .fx-card{display:flex;flex-direction:column;position:relative;overflow:hidden;
+  background:var(--fx-panel);border:1px solid var(--fx-line-soft);
+  flex:none;width:var(--card,100%);height:var(--card,auto);
+  padding:clamp(14px,1vw + .4vh,20px);
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .4s,background .4s}
+.fx-why .fx-card:hover{transform:translateY(-5px);border-color:var(--fx-orange);background:var(--fx-panel-2)}
+.fx-why .fx-card:focus-within{border-color:var(--fx-orange)}
+.fx-why .fx-vis{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:flex-end;
+  padding-top:clamp(4px,0.8vh,10px)}
+/* ---------- 01 : the plan tips up into 3D ---------- */
+.fx-why .iso{flex:1;min-height:0;display:grid;place-items:center;
+  perspective:1100px;perspective-origin:50% 44%}
+.fx-why .sway{transform-style:preserve-3d;animation:fxSway 18s ease-in-out infinite alternate}
+@keyframes fxSway{from{transform:rotateZ(-1.4deg)}to{transform:rotateZ(1.4deg)}}
+.fx-why .world{position:relative;width:320px;height:232px;transform-style:preserve-3d;
+  transform:scale(var(--s,1)) rotateX(0deg) rotateZ(0deg);
+  transition:transform 1.6s cubic-bezier(.4,0,.2,1) .95s}
+.fx-why .is-on .world{transform:scale(var(--s,1))
+  rotateX(calc(56deg + var(--dx,0deg))) rotateZ(calc(-32deg + var(--dz,0deg)))}
+.fx-why .floor{position:absolute;inset:0;transform-style:preserve-3d}
+.fx-why .fx-plan{display:block;width:100%;height:100%}
+.fx-why .model{position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none}
+
+.fx-why .wall,.fx-why .face{position:absolute;transform-origin:top left;box-sizing:border-box}
+.fx-why .wall{background:rgba(110,133,143,.13);border:1px solid var(--fx-draw);border-bottom:0;
+  transition:transform .7s cubic-bezier(.3,0,.2,1)}
+.fx-why .face{transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .4s}
+.fx-why .face.top{border:1px solid var(--fx-orange);background:rgba(242,104,41,.22)}
+.fx-why .face.side{border:1px solid rgba(242,104,41,.5);background:rgba(242,104,41,.09)}
+.fx-why .face.round{border-radius:50%}
+.fx-why .model .face{opacity:0}
+.fx-why .is-on .model .face{opacity:1}
+.fx-why .fx-film{flex:1;min-height:0;display:flex;flex-direction:column}
+.fx-why .fx-window{flex:1;min-height:0}
+.fx-why .fx-track{height:100%}
+.fx-why .fx-cell{aspect-ratio:auto;height:100%}
+
+.fx-why .fx-tagrow{display:flex;align-items:center;gap:12px}
+.fx-why .fx-num{font-family:var(--fx-mono);font-size:11px;letter-spacing:.2em;color:var(--fx-orange)}
+.fx-why .fx-kick{font-family:var(--fx-mono);font-size:10px;letter-spacing:.18em;color:var(--fx-dim)}
+/* SCOPED .fx-title to .fx-why only */
+.fx-why .fx-title{font-family:var(--fx-display);font-weight:700;letter-spacing:-.025em;
+  font-size:clamp(17px,1.1vw + .7vh,26px);line-height:1.08;margin-top:clamp(10px,1.4vh,16px)}
+/* SCOPED .fx-line to .fx-why only */
+.fx-why .fx-line{margin-top:9px;font-size:clamp(12px,.45vw + .4vh,14px);line-height:1.5;color:var(--fx-muted)}
+.fx-why .fx-chip{display:inline-flex;align-items:center;gap:7px;margin-top:clamp(8px,1.4vh,16px);padding:7px 10px;
+  font-family:var(--fx-mono);font-size:9px;letter-spacing:.13em;color:var(--fx-dim);
+  border:1px solid var(--fx-line-soft)}
+.fx-why .fx-chip::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--fx-orange)}
+
+/* ================= 01 : drafting ================= */
+.fx-why .fx-plan{display:block;width:100%;height:auto}
+.fx-why .fx-plan *{transform-box:view-box;transform-origin:0 0}
+
+.fx-why .fx-plan .grid{stroke:var(--fx-line-soft);stroke-width:.6;opacity:0;transition:opacity .6s}
+.fx-why .is-on .fx-plan .grid{opacity:1}
+
+.fx-why .fx-plan .wall{stroke:var(--fx-draw);stroke-width:1.5;fill:none;
+  stroke-dasharray:var(--len,600);stroke-dashoffset:var(--len,600);
+  transition:stroke-dashoffset 1.05s cubic-bezier(.35,0,.2,1)}
+.fx-why .is-on .fx-plan .wall{stroke-dashoffset:0}
+.fx-why .w1{transition-delay:.12s}.fx-why .w2{transition-delay:1.05s}.fx-why .w3{transition-delay:1.2s}.fx-why .w4{transition-delay:1.45s}
+
+/* the pen tracing the shell */
+.fx-why .fx-pen{opacity:0;offset-path:path("M12 12 H308 V208 H12 Z");offset-rotate:0deg}
+.fx-why .is-on .fx-pen{animation:fxTrace 1.05s cubic-bezier(.35,0,.2,1) .12s 1}
+@keyframes fxTrace{
+  0%{offset-distance:0%;opacity:1}
+  92%{opacity:1}
+  100%{offset-distance:100%;opacity:0}}
+
+/* furniture drops in */
+.fx-why .fx-plan .fur{stroke:var(--fx-orange);stroke-width:1.4;fill:none;
+  opacity:0;transform:translate(0,7px);
+  transition:opacity .4s ease,transform .5s cubic-bezier(.2,.8,.2,1)}
+.fx-why .is-on .fx-plan .fur{opacity:1;transform:translate(0,0)}
+.fx-why .fx-plan .fill{fill:rgba(242,104,41,.14);stroke:none}
+.fx-why .f1{transition-delay:1.75s}.fx-why .f2{transition-delay:1.9s}.fx-why .f3{transition-delay:2.05s}
+.fx-why .f4{transition-delay:2.2s}.fx-why .f5{transition-delay:2.35s}.fx-why .f6{transition-delay:2.5s}
+
+/* crosshair blip that lands on each piece */
+.fx-why .fx-cross{stroke:var(--fx-orange);stroke-width:1;opacity:0}
+.fx-why .is-on .fx-cross{animation:fxBlip .38s ease-out 1 both}
+.fx-why .c1{animation-delay:1.72s}.fx-why .c2{animation-delay:1.87s}.fx-why .c3{animation-delay:2.02s}
+.fx-why .c4{animation-delay:2.17s}.fx-why .c5{animation-delay:2.32s}.fx-why .c6{animation-delay:2.47s}
+@keyframes fxBlip{0%{opacity:0;transform:scale(2.4)}45%{opacity:1}100%{opacity:0;transform:scale(.7)}}
+
+/* dimensions + labels */
+.fx-why .fx-plan .dim{stroke:var(--fx-dim);stroke-width:.9;fill:none;
+  stroke-dasharray:var(--len,300);stroke-dashoffset:var(--len,300);
+  transition:stroke-dashoffset .7s ease 2.7s}
+.fx-why .is-on .fx-plan .dim{stroke-dashoffset:0}
+.fx-why .fx-plan .lab{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:.14em;
+  fill:var(--fx-dim);opacity:0;transition:opacity .4s 2.9s}
+.fx-why .is-on .fx-plan .lab{opacity:1}
+
+/* ambient plotter sweep */
+.fx-why .fx-sweep{opacity:0}
+.fx-why .is-on .fx-sweep{animation:fxSweep 6.5s linear 3.4s infinite}
+@keyframes fxSweep{
+  0%{transform:translateX(-14px);opacity:0}
+  8%{opacity:.55}
+  70%{opacity:.55}
+  85%{opacity:0}
+  100%{transform:translateX(316px);opacity:0}}
+
+/* ================= 02 : counters ================= */
+.fx-why .fx-48{display:flex;flex-direction:column;gap:2px}
+.fx-why .fx-48-n{font-family:var(--fx-display);font-weight:800;letter-spacing:-.05em;
+  font-size:clamp(32px,2vw + 1.8vh,56px);line-height:.8;font-variant-numeric:tabular-nums;transition:color .4s}
+.fx-why .fx-card:hover .fx-48-n{color:var(--fx-orange-hi)}
+.fx-why .fx-48-lab{margin-top:4px;font-family:var(--fx-mono);font-size:10.5px;letter-spacing:.16em;color:var(--fx-orange)}
+.fx-why .fx-48-sub{margin-top:2px;font-size:clamp(11px,.35vw + .35vh,12px);line-height:1.4;color:var(--fx-muted)}
+.fx-why .fx-amp{font-family:var(--fx-display);font-size:16px;color:var(--fx-dim);margin:2px 0}
+/* SCOPED .fx-bar to .fx-why only */
+.fx-why .fx-bar{height:2px;background:var(--fx-line-soft);margin-top:clamp(6px,1vh,12px);overflow:hidden}
+.fx-why .fx-bar i{display:block;height:2px;background:var(--fx-orange);transform:scaleX(0);transform-origin:left;
+  transition:transform 1.3s cubic-bezier(.3,0,.2,1)}
+.fx-why .is-on .fx-bar i{transform:scaleX(1)}
+
+/* ================= 03 : film reel ================= */
+.fx-why .fx-film{position:relative;border:1px solid var(--fx-line);background:#0A1418;padding:9px 0}
+.fx-why .fx-perf{height:9px;background-image:radial-gradient(circle at 6px 50%,#0A1418 0 2.4px,transparent 2.6px);
+  background-color:rgba(255,255,255,.13);background-size:18px 9px;background-repeat:repeat-x;
+  margin:0 8px;border-radius:1px}
+.fx-why .fx-window{position:relative;overflow:hidden;margin:8px 8px}
+.fx-why .fx-track{display:flex;width:400%;
+  transform:translateX(calc(var(--i,0) * -25%));
+  transition:transform .34s cubic-bezier(.75,0,.25,1)}
+.fx-why .fx-cell{position:relative;width:25%;flex:none;aspect-ratio:5/4;background:#0C171C;
+  border-right:1px solid rgba(255,255,255,.08)}
+.fx-why .fx-cell::after{content:'';position:absolute;inset:0;background-image:var(--shot,none);
+  background-size:cover;background-position:center}
+.fx-why .fx-cell svg{display:block;width:100%;height:100%}
+.fx-why .fx-grain{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(rgba(255,255,255,.045) .5px,transparent .5px);background-size:3px 3px}
+.fx-why .fx-flash{position:absolute;inset:0;background:#F3F6F7;opacity:0;pointer-events:none}
+.fx-why .fx-flash.go{animation:fxFlash .3s ease-out 1}
+@keyframes fxFlash{0%{opacity:.22}100%{opacity:0}}
+/* SCOPED .fx-gate to .fx-why only */
+.fx-why .fx-gate{position:absolute;top:14px;left:14px;font-family:var(--fx-mono);font-size:8.5px;
+  letter-spacing:.16em;color:var(--fx-dim);z-index:2}
+.fx-why .fx-count{position:absolute;top:14px;right:14px;font-family:var(--fx-mono);font-size:8.5px;
+  letter-spacing:.16em;color:var(--fx-orange);z-index:2}
+
+.fx-why .fx-days{display:flex;gap:5px;margin-top:9px;flex:none}
+.fx-why .fx-day{flex:1;padding:7px 4px;min-height:38px;cursor:pointer;background:none;
+  border:1px solid var(--fx-line-soft);color:var(--fx-dim);
+  font-family:var(--fx-mono);font-size:9px;letter-spacing:.1em;
+  transition:border-color .3s,color .3s,background .3s}
+.fx-why .fx-day:hover{border-color:var(--fx-orange);color:var(--fx-paper)}
+.fx-why .fx-day[aria-current="true"]{background:var(--fx-orange);border-color:var(--fx-orange);color:var(--fx-on-orange)}
+.fx-why .fx-day:focus-visible{outline:2px solid var(--fx-orange);outline-offset:2px}
+
+.fx-why .fx-stage .s{stroke:var(--fx-draw);stroke-width:1.4;fill:none}
+.fx-why .fx-stage .o{stroke:var(--fx-orange);stroke-width:1.4;fill:none}
+.fx-why .fx-stage .of{fill:rgba(242,104,41,.16);stroke:none}
+.fx-why .fx-stage .dash{stroke-dasharray:3 5}
+
+/* ================= cta ================= */
+.fx-why .fx-cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;
+  flex:none;margin-top:clamp(14px,2vh,26px);padding-top:clamp(12px,1.8vh,24px);
+  border-top:1px solid var(--fx-line)}
+.fx-why .fx-cta{padding:clamp(13px,1.7vh,18px) clamp(22px,2.2vw,30px);text-decoration:none;
+  background:var(--fx-orange);color:var(--fx-on-orange);
+  font-weight:600;font-size:clamp(14px,.5vw + .4vh,16px);transition:background .25s,transform .25s}
+.fx-why .fx-cta:hover{background:var(--fx-orange-hi);transform:translateY(-2px)}
+.fx-why .fx-cta2{padding:clamp(13px,1.7vh,18px) clamp(22px,2.2vw,30px);text-decoration:none;
+  border:1px solid var(--fx-line);color:var(--fx-paper);
+  font-family:var(--fx-mono);font-size:10.5px;letter-spacing:.16em;transition:border-color .25s,color .25s}
+.fx-why .fx-cta2:hover{border-color:var(--fx-orange);color:var(--fx-orange)}
+.fx-why .fx-cta:focus-visible,.fx-why .fx-cta2:focus-visible{outline:2px solid var(--fx-orange);outline-offset:3px}
+
+@media (max-width:900px){
+  .fx-why{height:auto;min-height:0;display:block;overflow:visible;
+    padding:clamp(48px,7vw,80px) clamp(18px,5vw,48px)}
+  .fx-why .fx-wrap{height:auto;display:block}
+  .fx-why .fx-cards{display:grid;grid-template-columns:1fr;gap:14px}
+  .fx-why .fx-card{width:auto!important;height:auto!important;padding:clamp(22px,5vw,30px)}
+  .fx-why .fx-vis{flex:none;margin-top:24px}
+  .fx-why .iso,.fx-why .fx-film{flex:none}
+  .fx-why .iso{height:min(64vw,340px);perspective:800px}
+  .fx-why .fx-cell{aspect-ratio:5/4;height:auto}
+  .fx-why .fx-window{flex:none}
+  .fx-why .fx-48-n{font-size:clamp(58px,16vw,92px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .fx-why *{transition:none!important;animation:none!important}
+  .fx-why .fx-plan .wall,.fx-why .fx-plan .dim{stroke-dashoffset:0}
+  .fx-why .fx-plan .fur,.fx-why .fx-plan .lab,.fx-why .fx-plan .grid{opacity:1;transform:none}
+  .fx-why .fx-bar i{transform:scaleX(1)}
+  .fx-why .fx-pen,.fx-why .fx-cross,.fx-why .fx-sweep{display:none}
+}
