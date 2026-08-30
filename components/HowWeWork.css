@@ -100,20 +100,25 @@
   transition:transform .55s cubic-bezier(.4,0,.2,1);
 }
 
-.fx-process .fx-marks{display:grid;grid-template-columns:repeat(3,1fr)}
-.fx-process .fx-mark-set{display:grid;grid-template-columns:repeat(3,1fr);list-style:none;padding-right:8px}
-.fx-process .fx-mark-set li{
+.fx-process .fx-marks{display:grid;grid-template-columns:1fr}
+.fx-process .fx-mark-set.fx-mark-all{
+  display:grid;
+  grid-template-columns:repeat(9,1fr);
+  list-style:none;
+  padding-right:8px;
+}
+.fx-process .fx-mark-set.fx-mark-all li{
   position:relative;padding-top:18px;
   font-family:var(--fx-mono);font-size:10px;letter-spacing:.12em;
   color:var(--fx-line-color);transition:color .35s;
 }
-.fx-process .fx-mark-set li::before{
+.fx-process .fx-mark-set.fx-mark-all li::before{
   content:'';position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;
   background:var(--fx-ground);border:1px solid var(--fx-line-color);
   transition:background .4s,border-color .4s,box-shadow .4s;
 }
-.fx-process .fx-mark-set[data-on="1"] li{color:var(--fx-dim)}
-.fx-process .fx-mark-set[data-on="1"] li::before{
+.fx-process .fx-mark-set.fx-mark-all li[data-on="1"]{color:var(--fx-dim)}
+.fx-process .fx-mark-set.fx-mark-all li[data-on="1"]::before{
   background:var(--fx-orange);border-color:var(--fx-orange);box-shadow:0 0 0 4px rgba(242,104,41,.14);
 }
 .fx-process .fx-end{

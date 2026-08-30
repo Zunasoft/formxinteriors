@@ -27,7 +27,7 @@
   -webkit-font-smoothing: antialiased;
   position: relative;
   height: 100vh;
-  scroll-snap-align: start;
+  
   overflow: hidden;
 }
 

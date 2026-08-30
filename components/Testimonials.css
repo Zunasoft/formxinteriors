@@ -11,7 +11,7 @@
   background:var(--petrol);color:var(--shell);font-family:var(--body);font-size:17px;
   line-height:1.5;-webkit-font-smoothing:antialiased; overflow-x: hidden; position: relative;
   min-height:100vh;
-  scroll-snap-align:start;
+  
   display:flex; flex-direction:column; justify-content:center;
 }
 

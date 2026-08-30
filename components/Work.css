@@ -4,7 +4,7 @@
 
 .fx-work-section {
   padding-block: clamp(64px, 10vh, 128px);
-  scroll-snap-align: start;
+  
 }
 
 .fx-work-head {
@@ -184,7 +184,7 @@
 
 .fx-ba-section {
   padding-block: clamp(64px, 10vh, 128px);
-  scroll-snap-align: start;
+  
 }
 
 .fx-ba-head {

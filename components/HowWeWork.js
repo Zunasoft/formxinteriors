@@ -31,7 +31,12 @@ export default function HowWeWork() {
       if (i === active) return;
       active = i;
       phases.forEach((p, n) => p.setAttribute('data-on', n === i ? '1' : '0'));
-      marks.forEach((m, n)  => m.setAttribute('data-on', n === i ? '1' : '0'));
+      // cumulative mark highlight: light all marks whose phase <= active
+      const allMarks = [...rail.querySelectorAll('.fx-mark-all li')];
+      allMarks.forEach(li => {
+        const phase = parseInt(li.getAttribute('data-phase'), 10);
+        li.setAttribute('data-on', phase <= i ? '1' : '0');
+      });
       cards.forEach((c, n)  => c.setAttribute('data-on', n === i ? '1' : '0'));
       hits.forEach((h, n)   => h.setAttribute('aria-expanded', n === i ? 'true' : 'false'));
       if (endDot) endDot.setAttribute('data-on', i === 2 ? '1' : '0');
@@ -129,9 +134,17 @@ export default function HowWeWork() {
               <span className="fx-end" id="fx-end"></span>
             </div>
             <div className="fx-marks">
-              <ul className="fx-mark-set" data-i="0"><li>MEASURE</li><li>3D VIEWS</li><li>DRAWINGS</li></ul>
-              <ul className="fx-mark-set" data-i="1"><li>PROCUREMENT</li><li>FABRICATION</li><li>SITE</li></ul>
-              <ul className="fx-mark-set" data-i="2"><li>INSTALL</li><li>SNAG</li><li>HANDOVER</li></ul>
+              <ul className="fx-mark-set fx-mark-all">
+                <li data-phase="0">MEASURE</li>
+                <li data-phase="0">3D VIEWS</li>
+                <li data-phase="0">DRAWINGS</li>
+                <li data-phase="1">PROCUREMENT</li>
+                <li data-phase="1">FABRICATION</li>
+                <li data-phase="1">SITE</li>
+                <li data-phase="2">INSTALL</li>
+                <li data-phase="2">SNAG</li>
+                <li data-phase="2">HANDOVER</li>
+              </ul>
             </div>
           </div>
 
@@ -149,8 +162,6 @@ export default function HowWeWork() {
                   <li>Site measurement and structure check</li>
                   <li>Layouts, elevations and 3D views of every room</li>
                   <li>Material and finish selection</li>
-                  <li>Working drawings for site and factory</li>
-                  <li>Line-by-line scope, item by item</li>
                 </ul>
                 <span className="fx-split">YOU CHOOSE. WE DRAW AND REVISE.</span>
                 <div className="fx-gate">
@@ -172,8 +183,6 @@ export default function HowWeWork() {
                   <li>Procurement against the approved scope</li>
                   <li>In-house carpentry and modular fabrication</li>
                   <li>Civil, electrical, plumbing and false ceiling on site</li>
-                  <li>Quality check before anything leaves the factory</li>
-                  <li>Weekly photo updates from site</li>
                 </ul>
                 <span className="fx-split">YOU APPROVE. WE PROCURE AND EXECUTE.</span>
                 <div className="fx-gate">
@@ -195,8 +204,6 @@ export default function HowWeWork() {
                   <li>Installation and finishing</li>
                   <li>Snag list &mdash; ours first, then yours</li>
                   <li>Deep clean and styling before you walk in</li>
-                  <li>Handover file: warranties, manuals, as-built drawings</li>
-                  <li>10-year warranty, with a named person to call</li>
                 </ul>
                 <span className="fx-split">WE FINISH. YOU INSPECT. THEN KEYS.</span>
                 <div className="fx-gate">

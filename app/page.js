@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import initFormX from "@/lib/formx";
 import Logo from "@/components/Logo";
 import HowWeWork from "@/components/HowWeWork";
+import Projects from "@/components/Projects";
 import Estimator from "@/components/Estimator";
 import Testimonials from "@/components/Testimonials";
 import MoneyBreakdown from "@/components/MoneyBreakdown";
@@ -40,7 +41,7 @@ export default function Page() {
           <span className="word">form</span>
           <span className="sq introsq">
             <svg viewBox="0 0 100 100">
-              <path d="M13 13L39 39M39 13L13 39" stroke="#fff" strokeWidth="9" />
+              <path d="M12 12L42 42M42 12L12 42" stroke="#fff" strokeWidth="10" />
             </svg>
           </span>
         </div>
@@ -124,11 +125,14 @@ export default function Page() {
             <Logo />
           </div>
           <div className="hero-in">
+            <p className="mono" style={{ color: "#9FB0B6", marginBottom: "16px" }}>
+              Hyderabad · Design &amp; turnkey execution
+            </p>
             <div className="caps">
               <h1 className="cap on">
-                We design the room,
+                Interiors priced
                 <br />
-                then we <em>build it</em>.
+                in the <em>open</em>.
               </h1>
               <h1 className="cap">
                 Drawings, materials,
@@ -142,7 +146,11 @@ export default function Page() {
               </h1>
             </div>
             <div className="hero-row">
-              <p>No handoffs, no second vendor to chase. Hyderabad, since 2019.</p>
+              <p>
+                A measured drawing after the first visit — yours to keep, even if you walk.
+                Every board, laminate and hinge named in the quote.
+                A dated photo of your site every Saturday until we hand over the keys.
+              </p>
               <a className="btn mag" href="#estimate" data-cursor="price">
                 Get a price for your space →
               </a>
@@ -152,26 +160,20 @@ export default function Page() {
             <i id="sfill"></i>
           </div>
           <div className="tag mono">Scroll to play</div>
-          
+
           {/* ---- marquee ---- */}
           <div className="mq">
             <div id="mqi">
-              <span>DESIGN</span>
-              <span>✕</span>
-              <span>BUILD</span>
-              <span>✕</span>
-              <span>DELIVER</span>
-              <span>✕</span>
-              <span>DESIGN</span>
-              <span>✕</span>
-              <span>BUILD</span>
-              <span>✕</span>
-              <span>DELIVER</span>
-              <span>✕</span>
+              {Array.from({ length: 60 }).map((_, idx) => (
+                <span key={idx}>{["DESIGN", "BUILD", "DELIVER"][idx % 3]}</span>
+              ))}
             </div>
           </div>
         </div>
       </header>
+
+      {/* ---- projects wall ---- */}
+      <Projects />
 
       <HowWeWork />
 

@@ -5,7 +5,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  scroll-snap-align: start;
+  
   border-bottom: 1px solid var(--rule);
 }
 .fx-faq-wrap {

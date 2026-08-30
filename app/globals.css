@@ -102,7 +102,7 @@ h2 {
 .logo {
   display: inline-flex;
   align-items: flex-start;
-  gap: .1em;
+  gap: .15em;
   line-height: 1;
   font-size: inherit;
   color: currentColor
@@ -115,35 +115,31 @@ h2 {
 }
 
 .logo-form {
-  font-family: var(--display);
+  font-family: var(--body);
   font-weight: 800;
-  letter-spacing: -.04em;
+  letter-spacing: -.055em;
   font-size: 1em;
-  line-height: .78
+  line-height: .86
 }
 
 .logo-int {
   font-family: var(--body);
   font-weight: 400;
-  letter-spacing: .03em;
-  font-size: .38em;
-  line-height: .9;
-  margin-top: .08em
+  letter-spacing: .015em;
+  font-size: .45em;
+  line-height: .95;
+  margin-top: .04em
 }
 
 .logo-sq {
   background: var(--orange);
-  width: 1.24em;
-  height: 1.24em;
+  width: 1.33em;
+  height: 1.33em;
   flex: none;
   display: block
 }
 
-.logo-sq svg {
-  width: 100%;
-  height: 100%;
-  display: block
-}
+
 
 /* ---- custom cursor ---- */
 #cur {
@@ -250,7 +246,7 @@ h2 {
 
 .sub {
   position: absolute;
-  font-family: var(--display);
+  font-family: var(--body);
   font-weight: 400;
   color: var(--slate);
   font-size: clamp(15px, 2.6vw, 30px);
@@ -428,7 +424,7 @@ a:hover .sw i,
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 0 var(--pad) calc(clamp(28px, 5vh, 58px) + 64px)
+  padding: 0 var(--pad) calc(clamp(80px, 14vh, 140px) + 64px)
 }
 
 .caps {
@@ -482,7 +478,7 @@ a:hover .sw i,
   display: flex;
   align-items: center;
   gap: 5px;
-  font-family: var(--display);
+  font-family: var(--body);
   font-weight: 800;
   font-size: clamp(28px, 3vw, 38px);
   letter-spacing: -.04em;
@@ -521,9 +517,11 @@ a:hover .sw i,
 }
 
 .vhero p {
-  color: var(--slate);
-  max-width: 34ch;
-  font-size: 16px
+  color: rgba(246, 242, 238, 0.85);
+  font-weight: 500;
+  max-width: 54ch;
+  font-size: 16px;
+  line-height: 1.6
 }
 
 .btn {
@@ -553,24 +551,40 @@ a:hover .sw i,
   width: 100%;
   z-index: 10;
   background: var(--orange);
-  color: #fff;
-  padding: 13px 0;
+  color: var(--ink);
+  padding: 0;
   overflow: hidden;
   white-space: nowrap;
+  border-block: 1px solid var(--ink);
 }
 
 .mq div {
-  display: inline-block;
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: clamp(19px, 3vw, 34px);
-  letter-spacing: -.02em;
-  will-change: transform
+  display: inline-flex;
+  align-items: center;
+  will-change: transform;
 }
 
 .mq span {
-  padding: 0 26px;
-  opacity: .94
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  padding: 15px 26px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 1;
+}
+
+.mq span::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: var(--ink);
+  transform: rotate(45deg);
+  flex-shrink: 0;
 }
 
 /* ---- offers ---- */

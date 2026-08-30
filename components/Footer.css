@@ -16,7 +16,7 @@
   padding: clamp(48px, 7vh, 84px) var(--fx-foot-pad) clamp(24px, 3vh, 40px);
   font-family: var(--fx-foot-body);
   font-size: 17px;
-  scroll-snap-align: end; /* Snaps when user reaches the end of the page */
+   /* Snaps when user reaches the end of the page */
   position: relative;
   -webkit-font-smoothing: antialiased;
 }
