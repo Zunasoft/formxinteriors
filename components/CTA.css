@@ -30,12 +30,12 @@
 
 .fx-cta-section h2 {
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: -.03em;
   line-height: 1.02;
   max-width: 20ch;
   margin-inline: auto;
-  font-size: clamp(28px, 4.4vw, 54px);
+  font-size: clamp(32px, 5vw, 62px);
   margin-bottom: 0;
   margin-top: 0;
 }

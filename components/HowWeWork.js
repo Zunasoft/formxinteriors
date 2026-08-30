@@ -226,7 +226,6 @@ export default function HowWeWork() {
             </div>
             <div className="fx-actions">
               <a className="fx-btn fx-btn--solid" href="#estimate">GET MY 3D IN 48 HOURS</a>
-              <a className="fx-btn fx-btn--ghost" href="#contact">TALK TO THE ARCHITECT</a>
             </div>
           </div>
         </div>

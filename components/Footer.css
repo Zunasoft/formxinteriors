@@ -16,7 +16,7 @@
   padding: clamp(48px, 7vh, 84px) var(--fx-foot-pad) clamp(24px, 3vh, 40px);
   font-family: var(--fx-foot-body);
   font-size: 17px;
-   /* Snaps when user reaches the end of the page */
+  scroll-snap-align: start;
   position: relative;
   -webkit-font-smoothing: antialiased;
 }
@@ -92,41 +92,8 @@
   align-items: center;
 }
 
-.fx-footer-section .logo .x {
-  background: var(--fx-foot-orange);
-  color: #fff;
-  width: 26px;
-  height: 26px;
-  display: inline-grid;
-  place-items: center;
-  margin-left: 3px;
-  font-size: 19px;
-  transform: translateY(-2px);
-}
-
-.fx-footer-section .logo-words {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 6px;
-}
-
-.fx-footer-section .logo-form {
-  font-family: var(--fx-foot-display);
-  font-weight: 800;
-  letter-spacing: -.045em;
-  font-size: 22px;
-  line-height: .8;
-}
-
-.fx-footer-section .logo-int {
-  font-family: var(--fx-foot-body);
-  font-weight: 400;
-  letter-spacing: .03em;
-  font-size: 10px;
-  line-height: .9;
-  margin-top: 2px;
-  color: var(--fx-foot-slate);
+.fx-footer-section .logo .logo-img {
+  height: 34px;
 }
 
 .fx-footer-section .social {

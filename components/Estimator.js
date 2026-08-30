@@ -182,7 +182,7 @@ export default function Estimator() {
 
             <div className="fx-cats" id="fx-cats" role="radiogroup" aria-label="Project type"></div>
 
-            <div className="fx-head" style={{ marginTop: "clamp(30px,3.5vw,52px)" }}>
+            <div className="fx-head" style={{ marginTop: "clamp(20px,2.4vw,32px)" }}>
               <span className="fx-lab" id="fx-lab">CONFIGURATION</span>
               <span className="fx-val" id="fx-val">&mdash;</span>
             </div>

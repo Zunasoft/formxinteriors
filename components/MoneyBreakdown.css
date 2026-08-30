@@ -12,6 +12,7 @@
   line-height:1.5;-webkit-font-smoothing:antialiased;
   padding:clamp(56px,9vh,116px) var(--pad);
   min-height:100vh;
+  scroll-snap-align:start;
 }
 .fx-money *{box-sizing:border-box;margin:0;padding:0}
 .fx-money button{font-family:inherit;color:inherit;background:none;border:none;cursor:pointer}

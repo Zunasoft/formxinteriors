@@ -4,24 +4,18 @@ import { useEffect } from "react";
 import initFormX from "@/lib/formx";
 import Logo from "@/components/Logo";
 import HowWeWork from "@/components/HowWeWork";
-import Projects from "@/components/Projects";
 import Estimator from "@/components/Estimator";
 import Testimonials from "@/components/Testimonials";
 import MoneyBreakdown from "@/components/MoneyBreakdown";
 import Advantage from "@/components/Advantage";
+import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import Instagram from "@/components/Instagram";
 import FAQ from "@/components/FAQ";
 import Guarantee from "@/components/Guarantee";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import CTAModal from "@/components/CTAModal";
-import Work from "@/components/Work";
-
-const X = (
-  <svg viewBox="0 0 100 100">
-    <path d="M23 23L77 77M77 23L23 77" stroke="#fff" strokeWidth="16" />
-  </svg>
-);
 
 export default function Page() {
   useEffect(() => {
@@ -37,21 +31,10 @@ export default function Page() {
 
       {/* ---- intro logo animation ---- */}
       <div id="intro">
-        <div className="lockup">
-          <span className="word">form</span>
-          <span className="sq introsq">
-            <svg viewBox="0 0 100 100">
-              <path d="M12 12L42 42M42 12L12 42" stroke="#fff" strokeWidth="10" />
-            </svg>
-          </span>
-        </div>
-        <span className="sub">Interiors</span>
+        <img src="/logo.png" alt="form X Interiors" className="intro-logo" />
       </div>
 
-      {/* ---- scroll ring + menu ---- */}
-      <svg id="ring" viewBox="0 0 68 68">
-        <circle id="rc" cx="34" cy="34" r="31" />
-      </svg>
+      {/* ---- menu ---- */}
       <button suppressHydrationWarning
         id="xbtn"
         className="sq"
@@ -59,7 +42,7 @@ export default function Page() {
         aria-expanded="false"
         data-cursor="menu"
       >
-        {X}
+        <img src="/logo-x-square.png" alt="" />
       </button>
       <nav id="menu" aria-hidden="true">
         <a href="#work">
@@ -172,9 +155,6 @@ export default function Page() {
         </div>
       </header>
 
-      {/* ---- projects wall ---- */}
-      <Projects />
-
       <HowWeWork />
 
       {/* ---- estimator ---- */}
@@ -183,15 +163,11 @@ export default function Page() {
       {/* ---- three promises ---- */}
       <Advantage />
 
+      {/* ---- projects wall ---- */}
+      <Projects />
+
       {/* ---- cost anatomy ---- */}
       <MoneyBreakdown />
-
-      {/* ---- work ---- */}
-      <Work />
-
-
-
-
 
       {/* ---- Why Us (Four things) ---- */}
       <section className="stages wrap" id="process">
@@ -252,6 +228,9 @@ export default function Page() {
 
       {/* ---- book a consultation ---- */}
       <Contact />
+
+      {/* ---- instagram ---- */}
+      <Instagram />
 
       {/* ---- faq ---- */}
       <FAQ />

@@ -1,4 +1,5 @@
 "use client";
+import Logo from "@/components/Logo";
 import "./Footer.css";
 
 export default function Footer() {
@@ -9,11 +10,7 @@ export default function Footer() {
       <div className="fgrid">
         <div>
           <a className="logo" href="/" aria-label="form X Interiors — home">
-            <span>form<span className="x" aria-hidden="true">X</span></span>
-            <div className="logo-words">
-              <span className="logo-form sr-only">form X</span>
-              <span className="logo-int" style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em" }}>Interiors</span>
-            </div>
+            <Logo />
           </a>
           <p style={{ fontSize: "15px", lineHeight: "1.6", marginTop: "14px", maxWidth: "34ch" }}>
             Interior design and turnkey execution in Hyderabad. Measured drawings, named materials, a photo every Saturday.

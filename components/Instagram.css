@@ -1,0 +1,116 @@
+.fx-instagram{
+  --ig-ink:#0C0D0F;--ig-petrol:#16242B;--ig-deep:#0E181D;--ig-shell:#F6F2EE;
+  --ig-orange:#F26829;--ig-ember:#C24A16;--ig-slate:#6E7B80;--ig-stone:#D8D2CB;
+  --ig-rule:rgba(216,210,203,.18);
+  --ig-te:"Noto Sans Telugu","Instrument Sans",sans-serif;
+  --ig-pad:clamp(18px,4vw,54px);
+
+  background:var(--ig-petrol);color:var(--ig-shell);font-family:var(--body);font-size:17px;
+  line-height:1.5;-webkit-font-smoothing:antialiased;
+  padding:clamp(48px,7vh,96px) var(--ig-pad);
+  scroll-snap-align:start;
+}
+.fx-instagram *{box-sizing:border-box;margin:0;padding:0}
+.fx-instagram a{color:inherit;text-decoration:none}
+.fx-instagram :focus-visible{outline:2px solid var(--ig-orange);outline-offset:3px}
+.fx-instagram .ig-mono{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ig-slate)}
+
+/* header */
+.fx-instagram .ig-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.fx-instagram .ig-eyebrow::after{content:"";flex:1;height:1px;background:var(--ig-rule)}
+.fx-instagram .ig-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.fx-instagram h2{font-family:var(--display);font-weight:400;font-size:clamp(21px,2.7vw,38px);
+  line-height:1.04;letter-spacing:-.03em;max-width:22ch}
+.fx-instagram h2 em{font-style:normal;font-weight:800;color:var(--ig-orange)}
+.fx-instagram .ig-stats{display:flex;align-items:flex-end;gap:clamp(14px,2.2vw,28px);flex-wrap:wrap}
+.fx-instagram .ig-stat b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(17px,1.8vw,24px);
+  letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1}
+.fx-instagram .ig-stat span{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ig-slate);margin-top:5px}
+
+/* ---------- contact sheet ---------- */
+.fx-instagram .ig-sheet{display:grid;grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:clamp(66px,7.4vw,104px);gap:clamp(8px,1vw,14px);
+  margin-top:clamp(20px,3vh,34px)}
+.fx-instagram .ig-tile{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--ig-rule);
+  background:var(--ig-deep);display:block;transition:border-color .3s,transform .3s cubic-bezier(.2,.7,.3,1)}
+.fx-instagram .ig-tile:hover{border-color:rgba(242,104,41,.6);transform:translateY(-3px)}
+.fx-instagram .ig-tile .ig-shot{position:absolute;inset:0}
+.fx-instagram .ig-tile .ig-grain{position:absolute;inset:0;mix-blend-mode:overlay;opacity:.14;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.fx-instagram .ig-tile .ig-vg{position:absolute;inset:0;background:linear-gradient(180deg,
+  rgba(11,18,22,.52) 0,rgba(11,18,22,.02) 32%,rgba(11,18,22,.93) 100%)}
+.fx-instagram .ig-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+.fx-instagram .ig-no{position:absolute;top:10px;left:11px;z-index:3;font-family:var(--mono);font-size:8.5px;
+  letter-spacing:.16em;color:var(--ig-stone);opacity:.8}
+.fx-instagram .ig-kind{position:absolute;top:9px;right:10px;z-index:3;font-family:var(--mono);font-size:7.5px;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--ig-stone);
+  background:rgba(14,24,29,.72);border-radius:5px;padding:4px 6px}
+.fx-instagram .ig-kind.ig-te{font-family:var(--ig-te);letter-spacing:0;text-transform:none;font-size:9px;
+  border-left:2px solid var(--ig-orange)}
+.fx-instagram .ig-cap{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:12px 11px 13px}
+.fx-instagram .ig-cap p{font-family:var(--display);font-weight:600;letter-spacing:-.015em;line-height:1.15;
+  font-size:clamp(11px,.95vw,14px)}
+.fx-instagram .ig-cap .ig-views{font-family:var(--mono);font-size:8px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ig-slate);margin-top:6px}
+.fx-instagram .ig-tile.ig-big .ig-cap p{font-size:clamp(14px,1.35vw,20px)}
+.fx-instagram .ig-play{position:absolute;left:11px;bottom:11px;z-index:4;width:26px;height:26px;border-radius:50%;
+  background:rgba(14,24,29,.7);display:grid;place-items:center}
+.fx-instagram .ig-play svg{width:9px;height:9px;fill:var(--ig-shell);margin-left:2px}
+.fx-instagram .ig-tile.ig-big .ig-play{width:34px;height:34px}
+.fx-instagram .ig-tile.ig-big .ig-play svg{width:12px;height:12px}
+.fx-instagram .ig-tile.ig-big .ig-cap{padding-left:52px}
+.fx-instagram .ig-tile:not(.ig-big) .ig-cap{padding-left:44px}
+.fx-instagram .ig-tile.ig-sq .ig-cap p{font-size:clamp(10px,.85vw,12.5px)}
+
+/* the "today" tile reads differently */
+.fx-instagram .ig-today .ig-flag{position:absolute;top:10px;left:11px;z-index:4;display:flex;align-items:center;gap:7px;
+  background:rgba(14,24,29,.82);border-radius:6px;padding:5px 9px}
+.fx-instagram .ig-today .ig-flag i{width:6px;height:6px;border-radius:50%;background:var(--ig-orange)}
+.fx-instagram .ig-today .ig-flag span{font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase}
+.fx-instagram .ig-today .ig-no{display:none}
+.fx-instagram .ig-today .ig-meta{font-family:var(--mono);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ig-stone);margin-top:7px}
+
+/* non-image tiles */
+.fx-instagram .ig-card{border:1px solid var(--ig-rule);border-radius:12px;padding:14px 14px 15px;
+  display:flex;flex-direction:column;justify-content:space-between}
+.fx-instagram .ig-card .ig-num{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.3vw,32px);
+  letter-spacing:-.03em;line-height:1;color:var(--ig-orange);font-variant-numeric:tabular-nums}
+.fx-instagram .ig-card .ig-lab{font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--ig-slate)}
+.fx-instagram .ig-cta{background:var(--ig-orange);border-color:var(--ig-orange);color:#fff;transition:background .25s,transform .3s}
+.fx-instagram .ig-cta:hover{background:var(--ig-ember);transform:translateY(-3px)}
+.fx-instagram .ig-cta .ig-at{font-family:var(--display);font-weight:600;font-size:clamp(14px,1.4vw,19px);letter-spacing:-.02em}
+.fx-instagram .ig-cta .ig-lab{color:rgba(255,255,255,.72)}
+.fx-instagram .ig-cta .ig-arrow{font-family:var(--display);font-weight:600;font-size:20px;line-height:1}
+.fx-instagram .ig-cta-btn{min-width:150px;padding:10px 14px 11px}
+
+/* placement */
+.fx-instagram .ig-p1{grid-column:span 4;grid-row:span 4}
+.fx-instagram .ig-p2{grid-column:span 3;grid-row:span 3}
+.fx-instagram .ig-p3{grid-column:span 3;grid-row:span 3}
+.fx-instagram .ig-p4{grid-column:span 2;grid-row:span 2}
+.fx-instagram .ig-p5{grid-column:span 2;grid-row:span 2}
+.fx-instagram .ig-p6{grid-column:span 2;grid-row:span 1}
+.fx-instagram .ig-p7{grid-column:span 2;grid-row:span 1}
+.fx-instagram .ig-p8{grid-column:span 2;grid-row:span 1}
+@media(max-width:900px){
+  .fx-instagram .ig-sheet{grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(62px,10vw,96px)}
+  .fx-instagram .ig-p1{grid-column:span 6;grid-row:span 3}
+  .fx-instagram .ig-p2,.fx-instagram .ig-p3{grid-column:span 3;grid-row:span 3}
+  .fx-instagram .ig-p4,.fx-instagram .ig-p5{grid-column:span 3;grid-row:span 2}
+  .fx-instagram .ig-p6,.fx-instagram .ig-p7,.fx-instagram .ig-p8{grid-column:span 3;grid-row:span 1}
+}
+@media(max-width:520px){
+  .fx-instagram .ig-sheet{grid-template-columns:repeat(4,1fr)}
+  .fx-instagram .ig-p1{grid-column:span 4;grid-row:span 3}
+  .fx-instagram .ig-p2,.fx-instagram .ig-p3,.fx-instagram .ig-p4,.fx-instagram .ig-p5{grid-column:span 2;grid-row:span 2}
+  .fx-instagram .ig-p6,.fx-instagram .ig-p7,.fx-instagram .ig-p8{grid-column:span 4;grid-row:span 1}
+}
+
+.fx-instagram .ig-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  margin-top:clamp(16px,2.4vh,26px);padding-top:14px;border-top:1px solid var(--ig-rule)}
+.fx-instagram .ig-strap{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ig-slate)}
+.fx-instagram .ig-strap b{color:var(--ig-stone);font-weight:400}
+@media(prefers-reduced-motion:reduce){.fx-instagram .ig-tile,.fx-instagram .ig-cta{transition:none}}
