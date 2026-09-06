@@ -56,10 +56,11 @@ export default function Testimonials() {
         '<span class="loc">' + t.loc + '</span>' +
         '<span class="go">Walk in →</span></button>';
     }
+    /* each line gets its own exclusive slice of clients, so no name can ever appear in two lines at once */
+    const GROUPS = RUNS.map(() => []);
+    T.forEach((t, i) => GROUPS[i % RUNS.length].push({ t, i }));
     RUNS.forEach((run, r) => {
-      const rot = T.slice(r * 2 % T.length).concat(T.slice(0, r * 2 % T.length));
-      const idx = rot.map((t) => T.indexOf(t));
-      const html = rot.map((t, k) => card(t, idx[k])).join('');
+      const html = GROUPS[r].map(({ t, i }) => card(t, i)).join('');
       run.innerHTML = html + html + html;
       run.dataset.sp = CONF[r].sp; run.dataset.dir = CONF[r].dir;
     });
@@ -78,8 +79,9 @@ export default function Testimonials() {
     window.addEventListener('load', measure);
     measure();
 
+    let tickRaf = null;
     if (!reduce) {
-      (function tick() {
+      const tick = () => {
         state.forEach((s) => {
           s.sp += (s.tgt - s.sp) * .07;
           s.x += s.sp * s.dir;
@@ -89,8 +91,9 @@ export default function Testimonials() {
           }
           s.run.style.transform = 'translate3d(' + s.x.toFixed(2) + 'px,0,0)';
         });
-        requestAnimationFrame(tick);
-      })();
+        tickRaf = requestAnimationFrame(tick);
+      };
+      tickRaf = requestAnimationFrame(tick);
     }
 
     /* ---------- hover on one name, everything answers ---------- */
@@ -125,19 +128,23 @@ export default function Testimonials() {
       state.forEach((s, r) => s.tgt = CONF[r].sp);
     }
 
-    rowsEl.addEventListener('pointerover', (e) => {
+    const onRowsPointerOver = (e) => {
       const it = e.target.closest('.item'); if (it) react(+it.dataset.i);
-    });
-    rowsEl.addEventListener('focusin', (e) => {
+    };
+    const onRowsFocusIn = (e) => {
       const it = e.target.closest('.item'); if (it) react(+it.dataset.i);
-    });
-    rowsEl.addEventListener('pointerleave', relax);
-    rowsEl.addEventListener('focusout', (e) => {
+    };
+    const onRowsFocusOut = (e) => {
       if (!rowsEl.contains(e.relatedTarget)) relax();
-    });
-    rowsEl.addEventListener('click', (e) => {
+    };
+    const onRowsClick = (e) => {
       const it = e.target.closest('.item'); if (it) open(+it.dataset.i);
-    });
+    };
+    rowsEl.addEventListener('pointerover', onRowsPointerOver);
+    rowsEl.addEventListener('focusin', onRowsFocusIn);
+    rowsEl.addEventListener('pointerleave', relax);
+    rowsEl.addEventListener('focusout', onRowsFocusOut);
+    rowsEl.addEventListener('click', onRowsClick);
 
     /* ---------- rooms ---------- */
     const NS = 'http://www.w3.org/2000/svg';
@@ -255,7 +262,8 @@ export default function Testimonials() {
       [...$('tnav').children].forEach((b, n) => b.classList.toggle('on', n === i));
     }
     $('tnav').innerHTML = T.map((_, i) => '<button data-i="' + i + '" aria-label="Client ' + (i + 1) + '"></button>').join('');
-    $('tnav').addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) swap(+b.dataset.i); });
+    const onNavClick = (e) => { const b = e.target.closest('button'); if (b) swap(+b.dataset.i); };
+    $('tnav').addEventListener('click', onNavClick);
 
     function open(i) {
       cur = i; openState = true; split = 0; paint();
@@ -284,9 +292,11 @@ export default function Testimonials() {
         setTimeout(() => autoTo(64, 1100), 260);
       }, 230);
     }
+    const onPrev = () => swap(cur - 1);
+    const onNext = () => swap(cur + 1);
     $('tclose').addEventListener('click', close);
-    $('tprev').addEventListener('click', () => swap(cur - 1));
-    $('tnext').addEventListener('click', () => swap(cur + 1));
+    $('tprev').addEventListener('click', onPrev);
+    $('tnext').addEventListener('click', onNext);
     const onKeydown = (e) => {
       if (!openState) return;
       if (e.key === 'Escape') close();
@@ -302,14 +312,40 @@ export default function Testimonials() {
       const r = scene.getBoundingClientRect();
       split = Math.max(0, Math.min(100, ((e.clientX - r.left) / r.width) * 100)); paint();
     }
-    scene.addEventListener('pointerdown', (e) => {
+    const onScenePointerDown = (e) => {
       if (e.target.closest('.spot')) return;
       cancelAnimationFrame(autoR); drag = true; scene.setPointerCapture(e.pointerId); at(e);
-    });
-    scene.addEventListener('pointermove', (e) => { if (drag) at(e); });
-    scene.addEventListener('pointerup', () => drag = false);
-    scene.addEventListener('pointercancel', () => drag = false);
+    };
+    const onScenePointerMove = (e) => { if (drag) at(e); };
+    const onScenePointerUp = () => drag = false;
+    const onScenePointerCancel = () => drag = false;
+    scene.addEventListener('pointerdown', onScenePointerDown);
+    scene.addEventListener('pointermove', onScenePointerMove);
+    scene.addEventListener('pointerup', onScenePointerUp);
+    scene.addEventListener('pointercancel', onScenePointerCancel);
     paint();
+
+    return () => {
+      window.removeEventListener('resize', measure);
+      window.removeEventListener('load', measure);
+      window.removeEventListener('keydown', onKeydown);
+      cancelAnimationFrame(tickRaf);
+      cancelAnimationFrame(autoR);
+      rowsEl.removeEventListener('pointerover', onRowsPointerOver);
+      rowsEl.removeEventListener('focusin', onRowsFocusIn);
+      rowsEl.removeEventListener('pointerleave', relax);
+      rowsEl.removeEventListener('focusout', onRowsFocusOut);
+      rowsEl.removeEventListener('click', onRowsClick);
+      $('tnav').removeEventListener('click', onNavClick);
+      $('tclose').removeEventListener('click', close);
+      $('tprev').removeEventListener('click', onPrev);
+      $('tnext').removeEventListener('click', onNext);
+      scene.removeEventListener('pointerdown', onScenePointerDown);
+      scene.removeEventListener('pointermove', onScenePointerMove);
+      scene.removeEventListener('pointerup', onScenePointerUp);
+      scene.removeEventListener('pointercancel', onScenePointerCancel);
+      document.body.style.overflow = '';
+    };
   }, []);
 
   return (
@@ -337,10 +373,8 @@ export default function Testimonials() {
           <span className="mono">Click to walk the build, bare shell to handover</span>
         </div>
         <div className="card" id="tcard">
-          <div className="cleft">
-            <blockquote className="cq" id="tcq"></blockquote>
-            <div className="cwho"><i></i><b id="tcwho"></b><span className="mono" id="tcmeta"></span></div>
-          </div>
+          <blockquote className="cq" id="tcq"></blockquote>
+          <div className="cwho"><i></i><b id="tcwho"></b><span className="mono" id="tcmeta"></span></div>
           <div className="cspecs" id="tcspecs"></div>
         </div>
       </div>

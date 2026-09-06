@@ -49,41 +49,38 @@
 .fx-testimonials .item.match .go{opacity:1;transform:none}
 .fx-testimonials .mq span::after{content:none}
 
-/* ---------- the detail that glides in: quote (left) / about the client (right) ---------- */
-.fx-testimonials .det{position:relative;margin-top:clamp(14px,2.2vh,26px);min-height:clamp(120px,15vh,150px)}
+/* ---------- the detail that glides in ---------- */
+.fx-testimonials .det{position:relative;margin-top:clamp(20px,3.2vh,38px);min-height:clamp(158px,23vh,206px)}
 .fx-testimonials .det .idle{position:absolute;inset:0;display:flex;align-items:flex-start;justify-content:space-between;
   gap:16px;flex-wrap:wrap;transition:opacity .3s}
 .fx-testimonials .det.on .idle{opacity:0}
-.fx-testimonials .card{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .35s;
-  display:flex;justify-content:space-between;align-items:flex-start;gap:clamp(20px,3vw,40px);
-  cursor:default;perspective:none}
+.fx-testimonials .card{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .35s}
 .fx-testimonials .det.on .card{opacity:1;pointer-events:auto}
-.fx-testimonials .cleft{flex:1 1 auto;min-width:0}
-.fx-testimonials .cq{font-family:var(--display);font-weight:400;font-size:clamp(16px,2vw,26px);line-height:1.14;
-  letter-spacing:-.03em;max-width:30ch}
+.fx-testimonials .cq{font-family:var(--display);font-weight:400;font-size:clamp(18px,2.5vw,34px);line-height:1.12;
+  letter-spacing:-.03em;max-width:26ch}
 .fx-testimonials .cq .w{display:inline-block;opacity:0;transform:translateY(14px);
   transition:opacity .45s,transform .55s cubic-bezier(.2,.7,.3,1)}
 .fx-testimonials .det.on .cq .w{opacity:1;transform:none}
-.fx-testimonials .cwho{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:11px}
+.fx-testimonials .cwho{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
 .fx-testimonials .cwho i{width:6px;height:6px;background:var(--t-orange);display:block}
-.fx-testimonials .cwho b{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:-.02em}
-.fx-testimonials .cspecs{flex:0 0 clamp(180px,22vw,260px);display:flex;flex-direction:column;gap:1px;
-  background:var(--t-rule);border:1px solid var(--t-rule)}
-.fx-testimonials .cspecs div{background:var(--t-deep);padding:7px 11px;display:flex;justify-content:space-between;
-  align-items:center;gap:10px;opacity:0;transform:translateX(9px);transition:opacity .35s,transform .35s}
+.fx-testimonials .cwho b{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:-.02em}
+.fx-testimonials .cspecs{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--t-rule);
+  border-block:1px solid var(--t-rule);margin-top:16px}
+.fx-testimonials .cspecs div{background:var(--t-deep);padding:9px 11px 11px;opacity:0;transform:translateY(9px);
+  transition:opacity .35s,transform .35s}
 .fx-testimonials .det.on .cspecs div{opacity:1;transform:none}
-.fx-testimonials .det.on .cspecs div:nth-child(1){transition-delay:.1s}
-.fx-testimonials .det.on .cspecs div:nth-child(2){transition-delay:.14s}
-.fx-testimonials .det.on .cspecs div:nth-child(3){transition-delay:.18s}
-.fx-testimonials .det.on .cspecs div:nth-child(4){transition-delay:.22s}
-.fx-testimonials .det.on .cspecs div:nth-child(5){transition-delay:.26s}
-.fx-testimonials .cspecs span{font-family:var(--mono);font-size:8.5px;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--t-slate)}
-.fx-testimonials .cspecs b{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:-.02em;white-space:nowrap}
+.fx-testimonials .det.on .cspecs div:nth-child(1){transition-delay:.16s}
+.fx-testimonials .det.on .cspecs div:nth-child(2){transition-delay:.21s}
+.fx-testimonials .det.on .cspecs div:nth-child(3){transition-delay:.26s}
+.fx-testimonials .det.on .cspecs div:nth-child(4){transition-delay:.31s}
+.fx-testimonials .det.on .cspecs div:nth-child(5){transition-delay:.36s}
+.fx-testimonials .cspecs span{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--t-slate);margin-bottom:3px}
+.fx-testimonials .cspecs b{font-family:var(--display);font-weight:600;font-size:clamp(13px,1.4vw,18px);letter-spacing:-.02em}
 @media(max-width:760px){
-  .fx-testimonials .card{flex-direction:column}
-  .fx-testimonials .cspecs{flex:1 1 auto;width:100%}
-  .fx-testimonials .det{min-height:clamp(220px,34vh,280px)}
+  .fx-testimonials .cspecs{grid-template-columns:repeat(2,1fr)}
+  .fx-testimonials .cspecs div:last-child{grid-column:span 2}
+  .fx-testimonials .det{min-height:clamp(230px,40vh,300px)}
 }
 
 /* the whole section answers the hover */
