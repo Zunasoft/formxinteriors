@@ -5,48 +5,71 @@ import "./Projects.css";
 export default function Projects() {
   useEffect(() => {
     const P = [
-      { n: 'Kokapet duplex', loc: 'Kokapet', type: 'Apartment', tier: 'Platinum', area: '3,400 sq ft',
-        promised: 48, actual: 46, value: '₹34–39L', rooms: '4 BHK', year: '2026', frames: [] },
-      { n: 'Jubilee Hills flat', loc: 'Jubilee Hills', type: 'Apartment', tier: 'Platinum', area: '1,850 sq ft',
-        promised: 48, actual: 44, value: '₹18–22L', rooms: '3 BHK', year: '2026', frames: [] },
-      { n: 'Gachibowli office', loc: 'Gachibowli', type: 'Commercial', tier: 'Gold', area: '2,200 sq ft',
-        promised: 48, actual: 48, value: '₹21–24L', rooms: '40 desks', year: '2025', frames: [] },
-      { n: 'Narsingi villa', loc: 'Narsingi', type: 'Villa', tier: 'Gold', area: '3,100 sq ft',
-        promised: 48, actual: 47, value: '₹26–30L', rooms: '4 BHK', year: '2025', frames: [] },
-      { n: 'Banjara reception', loc: 'Banjara Hills', type: 'Commercial', tier: 'Platinum', area: '240 sq ft',
-        promised: 30, actual: 28, value: '₹6–7L', rooms: 'Feature wall', year: '2025', frames: [] },
-      { n: 'Manikonda modulars', loc: 'Manikonda', type: 'Modular', tier: 'Gold', area: '620 sq ft',
-        promised: 32, actual: 31, value: '₹9–11L', rooms: 'Kitchen + wardrobes', year: '2025', frames: [] },
-      { n: 'Tellapur villa', loc: 'Tellapur', type: 'Villa', tier: 'Platinum', area: '4,200 sq ft',
-        promised: 48, actual: 48, value: '₹42–48L', rooms: '5 BHK', year: '2025', frames: [] },
-      { n: 'Hitec City wardrobes', loc: 'Hitec City', type: 'Modular', tier: 'Gold', area: '380 sq ft',
-        promised: 24, actual: 23, value: '₹5–6L', rooms: '4 wardrobes', year: '2024', frames: [] }
+      { n: 'Emerald Residence', loc: 'Jubilee Hills, Hyderabad', type: 'Villa',
+        room: 'Living room · Green marble wall', res: '1920 × 1080', frames: 23,
+        idea: 'One material decides the house. Everything else steps back.',
+        tag: 'Homepage lead', imgs: ['/projects/emerald-residence.jpeg'] },
+      { n: 'Rajan Residence', loc: 'Financial District, Hyderabad', type: 'Villa',
+        room: 'Lounge · Backlit niche wall', res: '1920 × 1080', frames: 43,
+        idea: 'Every room gets designed, or it is not a home project. Nothing is left to be figured out on site.',
+        tag: 'Proof of capability', imgs: ['/projects/rajan-residence.jpeg'] },
+      { n: 'Pranthi Residence — Phase II', loc: 'Narsingi, Hyderabad', type: 'Villa',
+        room: 'Living room · Double height', res: '1450 × 1085', frames: 20,
+        idea: 'Height is a material. Use it, or stop paying for it.',
+        tag: 'Category lead', imgs: ['/projects/pranthi-phase-2.jpeg'] },
+      { n: 'Pranthi Residence — Phase I', loc: 'Narsingi, Hyderabad', type: 'Apartment',
+        room: 'Media wall · Living', res: '1120 × 840', frames: 19,
+        idea: 'The joinery is the architecture. Shape the room with built-ins, not with furniture.',
+        tag: 'Two-part story', imgs: ['/projects/pranthi-phase-1.jpeg'] },
+      { n: 'Project 001', loc: 'Kokapet, Hyderabad', type: 'Apartment',
+        room: 'Dining · Crockery display wall', res: '2400 × 1689', frames: 15,
+        idea: 'One piece of joinery, running the length of the flat, so the public half reads as a single room.',
+        tag: 'Clearest single idea', imgs: ['/projects/project-001.jpeg'] },
+      { n: 'Project MBR — Classic Suite', loc: 'Banjara Hills, Hyderabad', type: 'Apartment',
+        room: 'Master bedroom · Classic', res: '2400 × 1522', frames: 4,
+        idea: 'Classic is not old. Classic is what still looks right in twelve years.',
+        tag: 'Style statement', imgs: ['/projects/project-mbr.jpeg'] },
+      { n: 'Project B115', loc: 'Banjara Hills, Hyderabad', type: 'Apartment',
+        room: 'Living room · Media wall', res: '1440 × 913', frames: 8,
+        idea: 'Four rooms, one palette, no exceptions. Walnut, olive, warm white — everywhere.',
+        tag: 'Small-flat proof', imgs: ['/projects/project-b115.jpeg'] },
+      { n: 'Project 004', loc: 'Kokapet, Hyderabad', type: 'Apartment',
+        room: 'Master bedroom · Monstera wall', res: '2400 × 1689', frames: 8,
+        idea: 'One joinery system, three personalities. The colour changes; the language does not.',
+        tag: "Kids' rooms answer", imgs: ['/projects/project-004.jpeg'] },
+      { n: 'Corporate Workplace', loc: 'Financial District, Hyderabad', type: 'Commercial',
+        room: 'MD cabin · Office', res: '2400 × 1350', frames: 8,
+        idea: 'An office gets specified the way a home does. Same drawings, same care, same hardware.',
+        tag: 'Commercial proof', imgs: ['/projects/corporate-workplace.jpeg'] },
+      { n: 'Little Explorers Play School', loc: 'Hyderabad, Telangana', type: 'Commercial',
+        room: 'Activity hall · Play school', res: '1115 × 600', frames: 6,
+        idea: 'Build it at their height. If a four-year-old cannot reach it, it is decoration.',
+        tag: 'Local search', imgs: ['/projects/little-explorers.jpeg'] }
     ];
     const $ = (id) => document.getElementById(id);
-    const NF = 5;
     const TONE = ['#1D2C34', '#33454E', '#7C6B57', '#BFA57F', '#E2D5BE'];
     function frameHTML(p, i, n) {
-      if (p.frames && p.frames[i]) return '<img src="' + p.frames[i] + '" alt="">';
-      const a = TONE[Math.min(4, Math.round(i / (n - 1) * 4))], b = TONE[Math.max(0, Math.round(i / (n - 1) * 4) - 1)];
+      if (p.imgs && p.imgs[i]) return '<img src="' + p.imgs[i] + '" alt="">';
+      const k = n > 1 ? i / (n - 1) : 0;
+      const a = TONE[Math.min(4, Math.round(k * 4))], b = TONE[Math.max(0, Math.round(k * 4) - 1)];
       return '<div style="width:100%;height:100%;background:linear-gradient(158deg,' + a + ',' + b + ' 60%,#16242B)"></div>';
     }
 
     /* ---------- build the wall ---------- */
     const wall = $('wall');
-    let fType = 'all', fTier = 'all', PN = [], vis = [], active = 0, hovered = -1;
+    let fType = 'all', PN = [], vis = [], active = 0, hovered = -1;
 
     function render() {
       wall.innerHTML = ''; PN = [];
       wall.parentElement.querySelectorAll('.empty').forEach((e) => e.remove());
-      vis = P.map((p, i) => ({ p, i })).filter((o) =>
-        (fType === 'all' || o.p.type === fType) && (fTier === 'all' || o.p.tier === fTier));
+      vis = P.map((p, i) => ({ p, i })).filter((o) => fType === 'all' || o.p.type === fType);
       if (!vis.length) {
         const d = document.createElement('div'); d.className = 'empty';
         d.innerHTML = '<span class="mono">No projects in this filter yet</span>';
         wall.parentElement.appendChild(d); sizeStage(); return;
       }
       vis.forEach((o, vi) => {
-        const p = o.p, n = p.frames.length || NF, ok = p.actual <= p.promised;
+        const p = o.p, n = (p.imgs && p.imgs.length) || 1;
         const el = document.createElement('article');
         el.className = 'pn'; el.tabIndex = 0; el.dataset.vi = vi; el.dataset.i = o.i;
         el.innerHTML =
@@ -55,21 +78,20 @@ export default function Projects() {
           '<div class="spine"><span class="n">' + String(o.i + 1).padStart(2, '0') + '</span>' +
           '<span class="v">' + p.n + '</span><span class="ico"><i></i></span></div>' +
           '<div class="open">' +
-          '<div class="orow"><span class="dayc">Day 1</span>' +
-          '<span class="bd">' + (ok ? p.actual + ' / ' + p.promised + ' days' : p.actual + ' days') + '</span></div>' +
+          '<div class="orow"><span class="dayc">Frame 1</span>' +
+          '<span class="bd">' + p.frames + ' frames</span></div>' +
           '<div class="obot"><h3>' + p.n + '</h3>' +
-          '<div class="osub">' + p.loc + ' · ' + p.tier + ' · ' + p.year + '</div>' +
-          '<div class="ofacts"><i>' + p.rooms + '</i><i>' + p.area + '</i><i>' + p.value + '</i></div>' +
-          '<button class="more" data-open="' + o.i + '"><span>→</span>Open the build log</button></div>' +
+          '<div class="osub">' + p.loc + ' · ' + p.room + '</div>' +
+          '<div class="ofacts"><i>' + p.type + '</i><i>' + p.frames + ' frames</i><i>' + p.res + '</i></div>' +
+          '<button class="more" data-open="' + o.i + '"><span>→</span>See the idea</button></div>' +
           '</div><span class="prog"></span>';
         wall.appendChild(el);
         PN.push({ el, p, i: o.i, vi, frs: [...el.querySelectorAll('.fr')],
           day: el.querySelector('.dayc'), prog: el.querySelector('.prog'), raf: null });
       });
       PN.forEach((o) => {
-        o.el.addEventListener('pointerenter', () => { hovered = o.vi; setActive(o.vi); });
-        o.el.addEventListener('pointerleave', () => { hovered = -1; });
         o.el.addEventListener('focus', () => { hovered = o.vi; setActive(o.vi); });
+        o.el.addEventListener('blur', () => { hovered = -1; });
         o.el.addEventListener('click', (e) => { if (!e.target.closest('.more')) openOv(o.i); });
         o.el.addEventListener('keydown', (e) => { if (e.key === 'Enter') openOv(o.i); });
       });
@@ -90,7 +112,7 @@ export default function Projects() {
         const k = Math.min(1, (t - t0) / 2400);
         const f = Math.min(n - 1, Math.floor(k * n * 0.999));
         o.frs.forEach((el, z) => el.classList.toggle('on', z === f));
-        o.day.textContent = 'Day ' + Math.max(1, Math.round(k * o.p.actual));
+        o.day.textContent = 'Frame ' + (f + 1);
         o.prog.style.width = (k * 100) + '%';
         if (k < 1) o.raf = requestAnimationFrame(step);
       })(t0);
@@ -98,7 +120,7 @@ export default function Projects() {
     function resetBuild(o) {
       cancelAnimationFrame(o.raf);
       o.frs.forEach((el, z) => el.classList.toggle('on', z === 0));
-      o.day.textContent = 'Day 1'; o.prog.style.width = 0;
+      o.day.textContent = 'Frame 1'; o.prog.style.width = 0;
     }
     function setActive(vi) {
       if (vi === active || !PN.length) return;
@@ -127,7 +149,7 @@ export default function Projects() {
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', () => { sizeStage(); onScroll(); });
 
-    /* ---------- cursor tilts the wall ---------- */
+    /* ---------- cursor tilts the wall (visual only — does not change the active project) ---------- */
     const ww = $('wallwrap');
     let tx = 0, ty = 0, cx = 0, cy = 0;
     ww.addEventListener('pointermove', (e) => {
@@ -167,34 +189,35 @@ export default function Projects() {
       });
     }
     group('ftype', (b) => fType = b.dataset.f);
-    group('ftier', (b) => fTier = b.dataset.t);
 
     /* ---------- takeover ---------- */
     const ov = $('ov'), stageimg = $('stageimg'), tline = $('timeline');
     let cur = 0, pos = 0, liveOv = false, autoR = null;
     function buildOv(i) {
-      const p = P[i], n = p.frames.length || NF;
+      const p = P[i], n = (p.imgs && p.imgs.length) || 1;
       stageimg.innerHTML = Array.from({ length: n }, (_, f) =>
         '<div class="fr' + (f === 0 ? ' on' : '') + '">' + frameHTML(p, f, n) + '</div>').join('');
       $('ot').textContent = p.n;
-      $('osub').textContent = p.loc + ' · ' + p.type + ' · ' + p.year;
-      const ok = p.actual <= p.promised;
+      $('osub').textContent = p.idea;
       $('ospecs').innerHTML =
-        '<div><span>Scope</span><b>' + p.rooms + '</b></div>' +
-        '<div><span>Area</span><b>' + p.area + '</b></div>' +
-        '<div><span>Tier</span><b>' + p.tier + '</b></div>' +
-        '<div><span>Value</span><b>' + p.value + '</b></div>' +
-        '<div><span>Promised</span><b>' + p.promised + ' days</b></div>' +
-        '<div class="' + (ok ? 'ok' : '') + '"><span>Delivered</span><b>' + p.actual + ' days</b></div>';
-      $('ticks').innerHTML = '<span>Day 1</span><span>Day ' + Math.round(p.actual / 2) + '</span><span>Handover</span>';
+        '<div><span>Space</span><b>' + p.room + '</b></div>' +
+        '<div><span>Category</span><b>' + p.type + '</b></div>' +
+        '<div><span>Frames</span><b>' + p.frames + '</b></div>' +
+        '<div><span>Resolution</span><b>' + p.res + '</b></div>' +
+        '<div><span>Locality</span><b>' + p.loc + '</b></div>' +
+        '<div class="ok"><span>Best use</span><b>' + p.tag + '</b></div>';
+      $('timeline').style.display = n > 1 ? '' : 'none';
+      $('ticks').innerHTML = n > 1
+        ? '<span>Frame 1</span><span>Frame ' + Math.round(n / 2) + '</span><span>Frame ' + n + '</span>'
+        : '';
     }
     function paintOv() {
-      const p = P[cur], frs = [...stageimg.children], n = frs.length;
+      const frs = [...stageimg.children], n = frs.length;
       const f = Math.min(n - 1, Math.floor(pos * n * 0.999));
       frs.forEach((el, z) => el.classList.toggle('on', z === f));
       $('tlfill').style.width = (pos * 100) + '%';
       $('knob').style.left = (pos * 100) + '%'; $('dayb').style.left = (pos * 100) + '%';
-      $('dayb').textContent = 'Day ' + Math.max(1, Math.round(pos * p.actual));
+      $('dayb').textContent = 'Frame ' + (f + 1);
     }
     function autoTo(to, ms) {
       cancelAnimationFrame(autoR);
@@ -257,7 +280,7 @@ export default function Projects() {
       const io = new IntersectionObserver((es) => es.forEach((e) => {
         if (!e.isIntersecting) return;
         io.disconnect();
-        [[$('t1'), P.length, ''], [$('t2'), 100, '%'], [$('t3'), 100, '%']].forEach(([el, to, suf]) => {
+        [[$('t1'), P.length, ''], [$('t2'), 162, ''], [$('t3'), 291, '']].forEach(([el, to, suf]) => {
           const t0 = performance.now();
           (function s(t) {
             const k = Math.min(1, (t - t0) / 900), e2 = 1 - Math.pow(1 - k, 3);
@@ -274,26 +297,20 @@ export default function Projects() {
       <div className="stage" id="stage">
         <div className="stick">
           <div className="wrap">
-            <div className="eyebrow"><span className="mono">Projects</span></div>
-            <h2>Eight delivered. Every one photographed daily.</h2>
+            <div className="eyebrow"><span className="mono">Portfolio selection</span></div>
+            <h2>Ten projects, ten ideas.</h2>
             <div className="trust" id="pwtrust">
-              <div><b id="t1">8</b><span>Projects delivered</span></div>
-              <div><b id="t2">100%</b><span>Met the 48-day promise</span></div>
-              <div><b id="t3">100%</b><span>Designed by architects</span></div>
-              <div><b>4.9</b><span>Google rating · 37 reviews</span></div>
+              <div><b id="t1">10</b><span>Projects delivered</span></div>
+              <div><b id="t2">162</b><span>Frames selected</span></div>
+              <div><b id="t3">291</b><span>Renders reviewed</span></div>
+              <div><b>100%</b><span>Designed by architects</span></div>
             </div>
             <div className="bar">
               <div className="chips" id="ftype">
                 <button className="chip" aria-pressed="true" data-f="all">All</button>
-                <button className="chip" data-f="Apartment">Apartment</button>
                 <button className="chip" data-f="Villa">Villa</button>
-                <button className="chip" data-f="Modular">Modular</button>
+                <button className="chip" data-f="Apartment">Apartment</button>
                 <button className="chip" data-f="Commercial">Commercial</button>
-              </div>
-              <div className="chips" id="ftier">
-                <button className="chip" aria-pressed="true" data-t="all">Both tiers</button>
-                <button className="chip" data-t="Gold">Gold</button>
-                <button className="chip" data-t="Platinum">Platinum</button>
               </div>
             </div>
           </div>
@@ -314,7 +331,7 @@ export default function Projects() {
           </div>
 
           <div className="wrap foot">
-            <span className="mono" id="counter">01 / 08</span>
+            <span className="mono" id="counter">01 / 10</span>
             <div className="pbar"><i id="pfill"></i></div>
             <span className="mono">Scroll · left to right</span>
           </div>
@@ -337,7 +354,7 @@ export default function Projects() {
             <div className="timeline" id="timeline">
               <div className="tl"><i id="tlfill"></i></div>
               <div className="knob" id="knob"></div>
-              <div className="dayb" id="dayb">Day 1</div>
+              <div className="dayb" id="dayb">Frame 1</div>
               <div className="ticks" id="ticks"></div>
             </div>
             <div className="ospecs" id="ospecs"></div>
