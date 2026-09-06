@@ -38,7 +38,7 @@ export default function CTAFooter() {
             <h4>Studio</h4>
             <ul>
               <li><a href="#work">Selected work</a></li>
-              <li><a href="#process">Our process</a></li>
+              <li><a href="#offers-cards">Our process</a></li>
               <li><a href="#reviews">Reviews</a></li>
             </ul>
           </div>

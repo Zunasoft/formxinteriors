@@ -18,11 +18,11 @@ export default function Advantage() {
 (function () {
   var cards = q('.fx-cards'), GAP = 12;
   function fit() {
-    if (window.innerWidth <= 900) { cards.style.removeProperty('--card'); return; }
-    cards.style.removeProperty('--card');
+    if (window.innerWidth <= 900) { root.style.removeProperty('--card'); return; }
+    root.style.removeProperty('--card');
     var h = cards.clientHeight, w = cards.clientWidth;
     var size = Math.floor(Math.min(h, (w - GAP * 2) / 3));
-    cards.style.setProperty('--card', size + 'px');
+    root.style.setProperty('--card', size + 'px');
   }
   window.addEventListener("resize", fit);
   window.addEventListener("orientationchange", fit);

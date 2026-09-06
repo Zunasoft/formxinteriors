@@ -190,16 +190,19 @@
 .fx-why .fx-stage .dash{stroke-dasharray:3 5}
 
 /* ================= cta ================= */
-.fx-why .fx-cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;
-  flex:none;margin-top:clamp(14px,2vh,26px);padding-top:clamp(12px,1.8vh,24px);
+.fx-why .fx-cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;
+  flex:none;align-self:flex-start;width:var(--card,100%);
+  margin-top:clamp(14px,2vh,26px);padding-top:clamp(12px,1.8vh,24px);
   border-top:1px solid var(--fx-line)}
-.fx-why .fx-cta{padding:clamp(13px,1.7vh,18px) clamp(22px,2.2vw,30px);text-decoration:none;
+.fx-why .fx-cta{flex:1 1 0;display:flex;align-items:center;justify-content:center;white-space:nowrap;
+  padding:clamp(13px,1.7vh,18px) clamp(10px,1.2vw,20px);text-decoration:none;
   background:var(--fx-orange);color:var(--fx-on-orange);
-  font-weight:600;font-size:clamp(14px,.5vw + .4vh,16px);transition:background .25s,transform .25s}
+  font-weight:600;font-size:clamp(13px,.4vw + .4vh,16px);transition:background .25s,transform .25s}
 .fx-why .fx-cta:hover{background:var(--fx-orange-hi);transform:translateY(-2px)}
-.fx-why .fx-cta2{padding:clamp(13px,1.7vh,18px) clamp(22px,2.2vw,30px);text-decoration:none;
+.fx-why .fx-cta2{flex:1 1 0;display:flex;align-items:center;justify-content:center;white-space:nowrap;
+  padding:clamp(13px,1.7vh,18px) clamp(10px,1.2vw,20px);text-decoration:none;
   border:1px solid var(--fx-line);color:var(--fx-paper);
-  font-family:var(--fx-mono);font-size:10.5px;letter-spacing:.16em;transition:border-color .25s,color .25s}
+  font-family:var(--fx-mono);font-size:clamp(9px,.4vw,10.5px);letter-spacing:.1em;transition:border-color .25s,color .25s}
 .fx-why .fx-cta2:hover{border-color:var(--fx-orange);color:var(--fx-orange)}
 .fx-why .fx-cta:focus-visible,.fx-why .fx-cta2:focus-visible{outline:2px solid var(--fx-orange);outline-offset:3px}
 

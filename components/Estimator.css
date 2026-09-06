@@ -90,6 +90,9 @@
 .fx-quote .fx-fig{font-family:var(--fx-display);font-weight:700;letter-spacing:-.03em;
   font-size:clamp(27px,2.8vw,38px);line-height:1.05;margin-top:14px}
 .fx-quote .fx-rate{margin-top:7px;font-family:var(--fx-mono);font-size:10.5px;letter-spacing:.1em;color:var(--fx-dim)}
+.fx-quote .fx-fig,.fx-quote .fx-rate{transition:filter .5s ease}
+.fx-quote .fx-card:not(.fx-revealed) .fx-fig,
+.fx-quote .fx-card:not(.fx-revealed) .fx-rate{filter:blur(7px);user-select:none}
 .fx-quote .fx-spec{list-style:none;margin-top:14px;padding-top:12px;border-top:1px solid var(--fx-line-soft)}
 .fx-quote .fx-spec li{padding:5px 0;font-size:12px;line-height:1.4;color:var(--fx-muted)}
 
@@ -97,7 +100,7 @@
 .fx-quote .fx-trust span{font-family:var(--fx-mono);font-size:9.5px;letter-spacing:.14em;color:var(--fx-dim);
   padding:8px 11px;border:1px solid var(--fx-line-soft)}
 .fx-quote .fx-cta{display:block;margin-top:20px;padding:19px 24px;text-align:center;text-decoration:none;
-  background:var(--fx-orange);color:var(--fx-on-orange);font-weight:600;font-size:15px;transition:background .25s;border-radius:40px}
+  background:var(--fx-orange);color:var(--fx-on-orange);font-weight:600;font-size:15px;transition:background .25s;border-radius:0}
 .fx-quote .fx-cta:hover{background:var(--fx-orange-hover)}
 .fx-quote .fx-cta:focus-visible{outline:2px solid var(--fx-paper);outline-offset:3px}
 .fx-quote .fx-cta2{display:block;margin-top:9px;padding:14px 24px;text-align:center;text-decoration:none;

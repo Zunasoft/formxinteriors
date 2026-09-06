@@ -12,7 +12,6 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Instagram from "@/components/Instagram";
 import FAQ from "@/components/FAQ";
-import Guarantee from "@/components/Guarantee";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import CTAModal from "@/components/CTAModal";
@@ -37,7 +36,6 @@ export default function Page() {
       {/* ---- menu ---- */}
       <button suppressHydrationWarning
         id="xbtn"
-        className="sq"
         aria-label="Open menu"
         aria-expanded="false"
         data-cursor="menu"
@@ -63,7 +61,7 @@ export default function Page() {
             <i>Estimate</i>
           </span>
         </a>
-        <a href="#process">
+        <a href="#offers-cards">
           <span className="sw">
             <i>Process</i>
             <i>Process</i>
@@ -169,60 +167,6 @@ export default function Page() {
       {/* ---- cost anatomy ---- */}
       <MoneyBreakdown />
 
-      {/* ---- Why Us (Four things) ---- */}
-      <section className="stages wrap" id="process">
-        <div className="stage-head">
-          <div style={{ maxWidth: "600px" }}>
-            <div className="eyebrow rv">
-              <span className="mono">Why people pick us</span>
-            </div>
-            <h2 data-split>Four things nobody else in this city puts in writing.</h2>
-          </div>
-          <p className="lead">
-            We are not the cheapest quote you will get. We are the one you can check,
-            line by line, before you sign.
-          </p>
-        </div>
-        <div className="grid4">
-          <article className="cell rv">
-            <span className="no">01</span>
-            <h3>The drawing is yours</h3>
-            <p>
-              After the first site visit you get a measured drawing — dimensions, plug
-              points, everything. Take it to any contractor in Hyderabad. No charge,
-              no obligation, no watermark.
-            </p>
-          </article>
-          <article className="cell rv">
-            <span className="no">02</span>
-            <h3>Materials named, not implied</h3>
-            <p>
-              “Premium ply” means nothing. Our quote says BWP 710 in wet zones, Merino
-              1mm laminate, Hettich channels — brand, grade, thickness. Compare it
-              against anyone.
-            </p>
-          </article>
-          <article className="cell rv">
-            <span className="no">03</span>
-            <h3>A photo every Saturday</h3>
-            <p>
-              Dated site photos in your WhatsApp every week, whether you asked or not.
-              Eight of our clients ran their build from another country on nothing
-              else.
-            </p>
-          </article>
-          <article className="cell rv">
-            <span className="no">04</span>
-            <h3>Our own carpenters</h3>
-            <p>
-              Paid per project, not per day, so nobody on site profits from a slow
-              week. The handover date goes in the contract before we cut a single
-              sheet.
-            </p>
-          </article>
-        </div>
-      </section>
-
       {/* ---- testimonials ---- */}
       <Testimonials />
 
@@ -234,9 +178,6 @@ export default function Page() {
 
       {/* ---- faq ---- */}
       <FAQ />
-
-      {/* ---- guarantee ---- */}
-      <Guarantee />
 
       {/* ---- final CTA ---- */}
       <CTA />

@@ -145,13 +145,13 @@ export default function Estimator() {
       $('fx-fig-t').textContent=L(t.t);
       $('fx-fig-p').textContent=L(t.p);
       $('fx-in').innerHTML=c.inc.map(function(i){return tag(i)}).join('');
-      $('fx-out').innerHTML=c.exc.map(function(i){return tag(i,' fx-tag--out')}).join('');
     }
 
     reset();
 
     $('fx-cta-btn').addEventListener('click', function(e) {
       e.preventDefault();
+      $('fx-price-card').classList.add('fx-revealed');
       var c = CATS[key];
       var t = totals();
       var sizeStr = c.model === 'sqft' 
@@ -192,13 +192,9 @@ export default function Estimator() {
               <span className="fx-tag-lab">INCLUDED</span>
               <div className="fx-tag-row" id="fx-in"></div>
             </div>
-            <div className="fx-tags">
-              <span className="fx-tag-lab">NOT INCLUDED</span>
-              <div className="fx-tag-row" id="fx-out"></div>
-            </div>
           </div>
 
-          <div className="fx-card">
+          <div className="fx-card" id="fx-price-card">
             <span className="fx-card-lab">INDICATIVE &mdash; EXACT AFTER MEASUREMENT</span>
             <div className="fx-two">
               <div className="fx-opt">
