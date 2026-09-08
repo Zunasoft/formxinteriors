@@ -42,9 +42,10 @@
 .fx-wall .wallwrap{position:relative;flex:1 1 auto;min-height:0;margin-top:clamp(9px,1.4vh,15px);
   perspective:1600px;padding-inline:var(--pw-pad)}
 .fx-wall #wall{display:flex;height:100%;gap:clamp(5px,.6vw,9px);
-  transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.7,.3,1)}
+  transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.7,.3,1);
+  contain:layout paint}
 .fx-wall .pn{position:relative;flex:1 1 0;min-width:0;cursor:pointer;overflow:hidden;border-radius:12px;
-  background:var(--pw-deep);border:1px solid rgba(246,242,238,.13);
+  background:var(--pw-deep);border:1px solid rgba(246,242,238,.13);contain:paint;
   transition:flex-grow .72s cubic-bezier(.76,0,.24,1),border-color .4s,filter .5s,opacity .5s}
 .fx-wall .pn.on{flex-grow:8.5;border-color:rgba(242,104,41,.55)}
 .fx-wall .pn.hide{display:none}

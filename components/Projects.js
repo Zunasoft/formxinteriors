@@ -99,10 +99,11 @@ export default function Projects() {
     }
     wall.addEventListener('click', (e) => { const b = e.target.closest('.more'); if (b) openOv(+b.dataset.open); });
 
-    /* one screen-height of scroll per project, so the last one releases the pin */
+    /* a short scroll dwell per project — short enough to feel snappy,
+       long enough that each card still gets seen before the next arrives */
     function sizeStage() {
       const n = Math.max(1, vis.length);
-      $('stage').style.height = (100 + n * 40) + 'svh';
+      $('stage').style.height = (100 + n * 22) + 'svh';
     }
 
     function playBuild(o) {
@@ -161,8 +162,10 @@ export default function Projects() {
 
     /* ---------- ambient wave ---------- */
     const wv1 = $('wv1'), wv2 = $('wv2');
-    let wt = 0;
+    let wt = 0, waveRaf = null, wallVisible = true;
+    function scheduleWave() { if (waveRaf == null) waveRaf = requestAnimationFrame(wave); }
     function wave() {
+      waveRaf = null;
       wt += .012;
       const pts = (amp, ph, off) => {
         let d = 'M0 ' + (140 + off);
@@ -176,8 +179,18 @@ export default function Projects() {
       wv2.setAttribute('d', pts(18, wt * 1.3 + 1.2, 26));
       cx += (tx - cx) * .07; cy += (ty - cy) * .07;
       wall.style.transform = 'rotateY(' + (cx * 7).toFixed(2) + 'deg) rotateX(' + (-cy * 4).toFixed(2) + 'deg)';
-      requestAnimationFrame(wave);
+      // This section keeps its own rAF loop running for the ambient wave and
+      // cursor-tilt easing. Left unconditional, it burns a frame of SVG path
+      // rebuilding forever, even scrolled far away — main-thread work that
+      // competes with the panel-expand animation right here on the wall.
+      // Pause it via IntersectionObserver below whenever the wall is off-screen.
+      if (wallVisible) scheduleWave();
     }
+    const wallIO = new IntersectionObserver(([e]) => {
+      wallVisible = e.isIntersecting;
+      if (wallVisible) scheduleWave();
+    }, { threshold: 0 });
+    wallIO.observe($('work'));
 
     /* ---------- filters ---------- */
     function group(id, fn) {
@@ -275,7 +288,7 @@ export default function Projects() {
     tline.addEventListener('pointercancel', () => drag = false);
 
     /* ---------- go ---------- */
-    render(); onScroll(); wave();
+    render(); onScroll(); scheduleWave();
     (function () {
       const io = new IntersectionObserver((es) => es.forEach((e) => {
         if (!e.isIntersecting) return;
