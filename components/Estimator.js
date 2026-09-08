@@ -149,9 +149,15 @@ export default function Estimator() {
 
     reset();
 
+    // Numbers stay blurred here — only unblurred once the lead is actually
+    // captured (see the 'fx-quote-submitted' listener below), not just on
+    // opening the modal.
+    document.addEventListener('fx-quote-submitted', function () {
+      $('fx-price-card').classList.add('fx-revealed');
+    });
+
     $('fx-cta-btn').addEventListener('click', function(e) {
       e.preventDefault();
-      $('fx-price-card').classList.add('fx-revealed');
       var c = CATS[key];
       var t = totals();
       var sizeStr = c.model === 'sqft' 

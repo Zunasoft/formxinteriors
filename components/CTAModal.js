@@ -37,8 +37,11 @@ export default function CTAModal() {
   // Figure count-up animation for Pane A
   const [animatedRange, setAnimatedRange] = useState("—");
   
+  // The figure stays blurred (and un-animated — no point counting up behind
+  // a blur) until the visitor actually submits their details. The count-up
+  // then plays as the reveal moment for having handed over contact info.
   useEffect(() => {
-    if (isOpen && estimate && estimate.range) {
+    if (isOpen && estimate && estimate.range && isSubmitted) {
       const m = String(estimate.range).match(/([^\d]*)([\d.,]+)(.*)/);
       if (!m) {
         setAnimatedRange(estimate.range);
@@ -63,7 +66,10 @@ export default function CTAModal() {
       animId = requestAnimationFrame(step);
       return () => cancelAnimationFrame(animId);
     }
-  }, [isOpen, estimate]);
+    if (isOpen && estimate && estimate.range && !isSubmitted) {
+      setAnimatedRange(estimate.range);
+    }
+  }, [isOpen, estimate, isSubmitted]);
 
   // Handle open/close globally via window.FXQuote
   useEffect(() => {
@@ -186,6 +192,9 @@ export default function CTAModal() {
     setTimeout(() => {
       setIsSubmitted(true);
       setSending(false);
+      // Lets the Estimator card behind the modal unblur too, now that a
+      // lead has actually been captured — see Estimator.js's listener.
+      document.dispatchEvent(new Event("fx-quote-submitted"));
     }, 600);
   };
 
@@ -205,7 +214,7 @@ export default function CTAModal() {
           {/* Pane A: Estimate carried in */}
           <div className={`pane ${estimate ? "on" : ""}`}>
             <div className="lab"><span className="mono">YOUR ESTIMATE</span><span className="line"></span></div>
-            <p className="fig">{animatedRange}</p>
+            <p className={`fig${isSubmitted ? "" : " veiled"}`}>{animatedRange}</p>
             <div className="pills">
               {estimate && estimate.type && <span className="pill">{estimate.type}</span>}
               {estimate && estimate.size && <span className="pill">{estimate.size}</span>}

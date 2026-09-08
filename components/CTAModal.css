@@ -50,7 +50,9 @@
 #fxq .pane.on{display:flex}
 
 #fxq .fig{font-family:var(--display);font-weight:800;letter-spacing:-.05em;font-variant-numeric:tabular-nums;
-  font-size:clamp(32px,3vw + 1.4vh,60px);line-height:.92;margin-top:clamp(10px,1.4vh,18px);color:var(--shell)}
+  font-size:clamp(32px,3vw + 1.4vh,60px);line-height:.92;margin-top:clamp(10px,1.4vh,18px);color:var(--shell);
+  transition:filter .5s ease}
+#fxq .fig.veiled{filter:blur(9px);user-select:none}
 #fxq .pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:clamp(12px,1.8vh,20px)}
 #fxq .pill{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid var(--rule);
   font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
