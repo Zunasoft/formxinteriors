@@ -30,7 +30,7 @@
 .fx-quote .fx-cat:focus-visible{outline:2px solid var(--fx-orange);outline-offset:3px}
 
 .fx-quote .fx-grid{display:grid;grid-template-columns:1fr minmax(400px,560px);gap:clamp(24px,2.8vw,44px);
-  margin-top:clamp(20px,2.4vw,32px);align-items:start}
+  margin-top:clamp(20px,2.4vw,32px);align-items:stretch}
 
 /* control */
 .fx-quote .fx-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
@@ -101,7 +101,7 @@
 .fx-quote .fx-trust{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
 .fx-quote .fx-trust span{font-family:var(--fx-mono);font-size:9.5px;letter-spacing:.14em;color:var(--fx-dim);
   padding:8px 11px;border:1px solid var(--fx-line-soft)}
-.fx-quote .fx-cta{display:block;margin-top:20px;padding:19px 24px;text-align:center;text-decoration:none;
+.fx-quote .fx-cta{display:block;margin-top:auto;padding:19px 24px;text-align:center;text-decoration:none;
   background:var(--fx-orange);color:var(--fx-on-orange);font-weight:600;font-size:15px;transition:background .25s;border-radius:0}
 .fx-quote .fx-cta:hover{background:var(--fx-orange-hover)}
 .fx-quote .fx-cta:focus-visible{outline:2px solid var(--fx-paper);outline-offset:3px}
