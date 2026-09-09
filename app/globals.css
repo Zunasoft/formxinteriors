@@ -204,7 +204,7 @@ h2 {
   opacity: 0;
   padding: 0;
   outline: none;
-  transition: transform .3s cubic-bezier(.7, 0, .2, 1)
+  transition: transform .3s cubic-bezier(.7, 0, .2, 1), opacity .3s ease
 }
 
 #xbtn:focus-visible {

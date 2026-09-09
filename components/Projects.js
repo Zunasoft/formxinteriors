@@ -240,11 +240,22 @@ export default function Projects() {
         pos = from + (to - from) * e; paintOv(); if (k < 1) autoR = requestAnimationFrame(s);
       })(t0);
     }
+    // The overlay's own close button sits flush in the same top-right corner
+    // as the site-wide menu button (#xbtn, fixed, z-index 150) — with both
+    // visible at once they read as a doubled-up X. Hide the global one for
+    // as long as the overlay is open.
+    function setGlobalXVisible(v) {
+      const gx = $('xbtn');
+      if (!gx) return;
+      gx.style.opacity = v ? '1' : '0';
+      gx.style.pointerEvents = v ? '' : 'none';
+    }
     function openOv(i) {
       cur = i; liveOv = true; pos = 0; buildOv(i); paintOv();
       ov.classList.add('on'); document.body.style.overflow = 'hidden';
       ov.setAttribute('aria-hidden', 'false');
       ov.classList.add('wipe'); ov.classList.remove('rev');
+      setGlobalXVisible(false);
       setTimeout(() => {
         ov.classList.remove('wipe'); ov.classList.add('rev');
         setTimeout(() => autoTo(1, 2400), 320);
@@ -256,6 +267,7 @@ export default function Projects() {
       setTimeout(() => {
         ov.classList.remove('on', 'wipe'); document.body.style.overflow = '';
         ov.setAttribute('aria-hidden', 'true');
+        setGlobalXVisible(true);
       }, 440);
     }
     function swap(i) {
