@@ -196,9 +196,15 @@ h2 {
   top: 16px;
   right: 16px;
   z-index: 150;
-  width: 52px;
-  height: 52px;
+  /* Tied to the same clamp() driving the logo's height (1.35em of
+     .brandbar's font-size) so this box always matches the logo's own X
+     square at every viewport width, instead of holding a fixed size while
+     the logo scales down with vw and drifting out of sync with it. */
+  width: calc(clamp(28px, 3vw, 38px) * 1.35);
+  height: calc(clamp(28px, 3vw, 38px) * 1.35);
   background: var(--orange);
+  display: grid;
+  place-items: center;
   border: none;
   cursor: pointer;
   opacity: 0;
@@ -216,17 +222,13 @@ h2 {
 }
 
 #xbtn img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  width: 56%;
+  height: 56%;
   display: block
 }
 
 @media(max-width:640px) {
   #xbtn {
-    width: 44px;
-    height: 44px;
     top: 12px;
     right: 12px
   }

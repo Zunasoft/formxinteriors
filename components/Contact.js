@@ -113,24 +113,6 @@ export default function Contact() {
               <fieldset id="s1">
                 <legend className="sr-only" style={{ position: "absolute", left: "-9999px" }}>About you and the home</legend>
 
-                <div className={`f ${errors.name ? "bad" : ""}`}>
-                  <label htmlFor="name">Your name <span className="req">*</span></label>
-                  <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
-                  <p className="err">Please tell us what to call you.</p>
-                </div>
-
-                <div className={`f ${errors.phone ? "bad" : ""}`}>
-                  <label htmlFor="phone">WhatsApp number <span className="req">*</span></label>
-                  <input type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="98XXXXXXXX" maxLength={10} required />
-                  <p className="err">That does not look like a 10-digit Indian mobile number.</p>
-                </div>
-
-                <div className={`f ${errors.loc ? "bad" : ""}`}>
-                  <label htmlFor="loc">Project, tower or area <span className="req">*</span></label>
-                  <input type="text" id="loc" value={loc} onChange={(e) => setLoc(e.target.value)} placeholder="e.g. Kokapet, or your project name" required />
-                  <p className="err">An area name is enough for now.</p>
-                </div>
-
                 <div className="f">
                   <label id="lb-type">Unit type</label>
                   <div className="chips" role="group" aria-labelledby="lb-type">
@@ -147,6 +129,24 @@ export default function Contact() {
                     <button type="button" aria-pressed="true">Handover soon</button>
                     <button type="button" aria-pressed="false">Under construction</button>
                   </div>
+                </div>
+
+                <div className={`f ${errors.name ? "bad" : ""}`}>
+                  <label htmlFor="name">Your name <span className="req">*</span></label>
+                  <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
+                  <p className="err">Please tell us what to call you.</p>
+                </div>
+
+                <div className={`f ${errors.phone ? "bad" : ""}`}>
+                  <label htmlFor="phone">WhatsApp number <span className="req">*</span></label>
+                  <input type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="98XXXXXXXX" maxLength={10} required />
+                  <p className="err">That does not look like a 10-digit Indian mobile number.</p>
+                </div>
+
+                <div className={`f ${errors.loc ? "bad" : ""}`}>
+                  <label htmlFor="loc">Project, tower or area <span className="req">*</span></label>
+                  <input type="text" id="loc" value={loc} onChange={(e) => setLoc(e.target.value)} placeholder="e.g. Kokapet, or your project name" required />
+                  <p className="err">An area name is enough for now.</p>
                 </div>
 
                 <div className="rowb">
