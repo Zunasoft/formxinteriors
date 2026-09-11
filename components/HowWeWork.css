@@ -263,15 +263,20 @@
     justify-content: flex-start;
     padding-top: clamp(24px, 3vw, 40px) !important;
     padding-bottom: 0 !important;
+    /* Prevent headline text from overflowing into part-2 */
+    overflow: hidden;
   }
   .fx-process.part-1 .fx-wrap {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    min-height: 0;
   }
   .fx-process.part-1 .fx-intro-content {
     margin-top: clamp(12px, 1.5vw, 24px);
+    min-height: 0;
+    overflow: hidden;
   }
   .fx-process.part-1 .fx-wrap h2.fx-headline {
     margin-top: clamp(10px, 1.2vw, 16px) !important;

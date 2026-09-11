@@ -32,6 +32,38 @@ body {
   font-size: 17px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Page-level scroll snap */
+.vhero {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.snap-wrapper {
+  height: auto;
+  overflow: visible;
+}
+
+.snap-wrapper>section,
+.snap-wrapper>footer {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--petrol-deep);
+  color: var(--shell);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden
 }
 
@@ -58,8 +90,9 @@ a {
 }
 
 section {
-  padding-block: clamp(64px, 10vh, 128px);
-  scroll-snap-align: start;
+  padding-block: 0;
+  /* scroll-snap-align removed from global section — individual components
+     manage their own snap alignment to avoid mandatory-snap collisions */
 }
 
 h2 {
@@ -310,6 +343,7 @@ a:hover .sw i,
   height: 240vh;
   background: var(--petrol-deep);
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .vstick {
@@ -470,8 +504,8 @@ a:hover .sw i,
   background: var(--ember)
 }
 
-/* ---- marquee ---- */
-.mq {
+/* ---- hero marquee (scoped to .vhero to prevent leaking into Testimonials) ---- */
+.vhero .mq {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -485,13 +519,13 @@ a:hover .sw i,
   border-block: 1px solid var(--ink);
 }
 
-.mq div {
+.vhero .mq div {
   display: inline-flex;
   align-items: center;
   will-change: transform;
 }
 
-.mq span {
+.vhero .mq span {
   display: inline-flex;
   align-items: center;
   gap: 32px;
@@ -505,7 +539,7 @@ a:hover .sw i,
   opacity: 1;
 }
 
-.mq span::after {
+.vhero .mq span::after {
   content: "";
   width: 6px;
   height: 6px;
@@ -514,148 +548,10 @@ a:hover .sw i,
   flex-shrink: 0;
 }
 
-/* ---- offers ---- */
-.svc-timeline {
-  display: flex;
-  position: relative;
-  margin: 0 0 24px;
-}
-
-.svc-timeline::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 10%;
-  right: 10%;
-  height: 1px;
-  background: var(--rule-dk);
-  z-index: 0;
-}
-
-.pt {
-  flex: 1;
-  text-align: center;
-  position: relative;
-}
-
-.pt i {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--rule-dk);
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-  transition: background 0.4s;
-}
-
-.pt span {
-  display: block;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  color: var(--slate);
-  margin-top: 12px;
-  transition: color 0.4s;
-}
-
-.pt::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 50%;
-  right: -50%;
-  height: 1px;
-  background: var(--orange);
-  z-index: 1;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s;
-}
-
-.pt:last-child::after {
-  display: none;
-}
-
-.pt.fill-right::after {
-  transform: scaleX(1);
-}
-
-.pt.on i {
-  background: var(--orange);
-}
-
-.pt.on span {
-  color: var(--ink);
-}
-
-.offers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  background: var(--petrol-deep);
-  border-top: 1px solid var(--rule-dk);
-  border-bottom: 1px solid var(--rule-dk);
-}
-
-.offer {
-  position: relative;
-  padding: 32px 24px 42px;
-  transition: background 0.4s;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
-}
-
-.offer.active {
-  background: var(--petrol);
-  border-color: var(--orange);
-  z-index: 2;
-}
-
-.offer h3 {
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: clamp(24px, 3.2vw, 38px);
-  letter-spacing: -0.035em;
-  margin: 12px 0 10px;
-  color: var(--shell);
-}
-
-.offer p {
-  font-size: 15px;
-  color: rgba(246, 242, 238, .85);
-  max-width: 30ch;
-}
-
-.rate {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--orange);
-  margin-top: 16px;
-}
-
-.svc-list {
-  list-style: none;
-  margin-top: 24px;
-  padding: 0;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.4s, max-height 0.4s;
-}
-
-.offer.active .svc-list {
-  opacity: 1;
-  max-height: 250px;
-}
-
-.svc-list li {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  color: var(--slate);
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
+/* ---- offers / service timeline (dead — removed) ---- */
+/* .svc-timeline, .pt, .offers, .offer, .svc-list were legacy from
+   a previous offers section no longer in the page. Removed to
+   prevent accidental class collisions. */
 
 /* ---- estimator ---- */
 .est {
@@ -1347,65 +1243,10 @@ input[type=range]::-moz-range-thumb {
   margin-top: 5px
 }
 
-/* ---- project overlay ---- */
-#proj {
-  position: fixed;
-  inset: 0;
-  z-index: 160;
-  background: var(--petrol);
-  transform: translateY(101%);
-  transition: transform .7s cubic-bezier(.76, 0, .24, 1);
-  padding: clamp(56px, 9vh, 90px) var(--pad);
-  overflow-y: auto
-}
-
-#proj.on {
-  transform: none
-}
-
-#proj .close {
-  position: absolute;
-  top: 20px;
-  left: var(--pad);
-  cursor: pointer
-}
-
-#proj h3 {
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: clamp(30px, 5.4vw, 64px);
-  letter-spacing: -.035em;
-  margin: 16px 0 8px;
-  color: var(--shell)
-}
-
-#proj p {
-  color: var(--slate) !important;
-}
-
-.specs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1px;
-  background: var(--rule-dk);
-  border-block: 1px solid var(--rule-dk);
-  margin-top: 30px
-}
-
-.specs div {
-  background: var(--petrol-deep);
-  padding: 18px 16px
-}
-
-.specs b {
-  display: block;
-  font-family: var(--display);
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 6px;
-  letter-spacing: -.02em;
-  color: var(--shell)
-}
+/* ---- #proj (dead — removed) ---- */
+/* #proj was a legacy project overlay replaced by #ov in Projects.css.
+   Removed to prevent dead fixed-position element at z-index 160
+   from creating phantom stacking context. */
 
 /* ---- timeline / why people pick us ---- */
 .stages {

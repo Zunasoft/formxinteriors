@@ -89,101 +89,105 @@ export default function Page() {
       </nav>
 
       {/* ---- scroll-scrubbed film hero ---- */}
-      <header className="vhero" id="vhero">
-        <div className="vstick">
-          <canvas id="sim" aria-hidden="true"></canvas>
-          <video
-            id="film"
-            muted
-            playsInline
-            preload="auto"
-            aria-hidden="true"
-            style={{ display: "none" }}
-          ></video>
-          <canvas id="slats" aria-hidden="true" data-cursor="move it"></canvas>
-          <div className="vgrad"></div>
-          <div className="brandbar">
-            <Logo />
-          </div>
-          <div className="hero-in">
-            <p className="mono" style={{ color: "#9FB0B6", marginBottom: "16px" }}>
-              Hyderabad · Design &amp; turnkey execution
-            </p>
-            <div className="caps">
-              <h1 className="cap on">
-                Interiors priced
-                <br />
-                in the <em>open</em>.
-              </h1>
-              <h1 className="cap">
-                Drawings, materials,
-                <br />
-                carpentry, <em>site</em>.
-              </h1>
-              <h1 className="cap">
-                One team.
-                <br />
-                <em>One bill</em>.
-              </h1>
+      <div className="page-scroll">
+        <header className="vhero" id="vhero">
+          <div className="vstick">
+            <canvas id="sim" aria-hidden="true"></canvas>
+            <video
+              id="film"
+              muted
+              playsInline
+              preload="auto"
+              aria-hidden="true"
+              style={{ display: "none" }}
+            ></video>
+            <canvas id="slats" aria-hidden="true" data-cursor="move it"></canvas>
+            <div className="vgrad"></div>
+            <div className="brandbar">
+              <Logo />
             </div>
-            <div className="hero-row">
-              <p>
-                A measured drawing after the first visit — yours to keep, even if you walk.
-                Every board, laminate and hinge named in the quote.
-                A dated photo of your site every Saturday until we hand over the keys.
+            <div className="hero-in">
+              <p className="mono" style={{ color: "#9FB0B6", marginBottom: "16px" }}>
+                Hyderabad · Design &amp; turnkey execution
               </p>
-              <a className="btn mag" href="#estimate" data-cursor="price">
-                Get a price for your space →
-              </a>
+              <div className="caps">
+                <h1 className="cap on">
+                  Interiors priced
+                  <br />
+                  in the <em>open</em>.
+                </h1>
+                <h1 className="cap">
+                  Drawings, materials,
+                  <br />
+                  carpentry, <em>site</em>.
+                </h1>
+                <h1 className="cap">
+                  One team.
+                  <br />
+                  <em>One bill</em>.
+                </h1>
+              </div>
+              <div className="hero-row">
+                <p>
+                  A measured drawing after the first visit — yours to keep, even if you walk.
+                  Every board, laminate and hinge named in the quote.
+                  A dated photo of your site every Saturday until we hand over the keys.
+                </p>
+                <a className="btn mag" href="#estimate" data-cursor="price">
+                  Get a price for your space →
+                </a>
+              </div>
+            </div>
+            <div className="sind">
+              <i id="sfill"></i>
+            </div>
+            <div className="tag mono">Scroll to play</div>
+
+            {/* ---- marquee ---- */}
+            <div className="mq">
+              <div id="mqi">
+                {Array.from({ length: 60 }).map((_, idx) => (
+                  <span key={idx}>{["DESIGN", "BUILD", "DELIVER"][idx % 3]}</span>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="sind">
-            <i id="sfill"></i>
-          </div>
-          <div className="tag mono">Scroll to play</div>
+        </header>
 
-          {/* ---- marquee ---- */}
-          <div className="mq">
-            <div id="mqi">
-              {Array.from({ length: 60 }).map((_, idx) => (
-                <span key={idx}>{["DESIGN", "BUILD", "DELIVER"][idx % 3]}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </header>
+        <main>
+          <HowWeWork />
 
-      <HowWeWork />
+          {/* ---- estimator ---- */}
+          <Estimator />
 
-      {/* ---- estimator ---- */}
-      <Estimator />
+          {/* ---- three promises ---- */}
+          <Advantage />
 
-      {/* ---- three promises ---- */}
-      <Advantage />
+          {/* ---- projects wall ---- */}
+          <Projects />
 
-      {/* ---- projects wall ---- */}
-      <Projects />
+          {/* ---- cost anatomy ---- */}
+          <MoneyBreakdown />
 
-      {/* ---- cost anatomy ---- */}
-      <MoneyBreakdown />
+          {/* ---- testimonials ---- */}
+          <Testimonials />
 
-      {/* ---- testimonials ---- */}
-      <Testimonials />
+          {/* ---- book a consultation ---- */}
+          <Contact />
 
-      {/* ---- book a consultation ---- */}
-      <Contact />
+          {/* ---- instagram ---- */}
+          <Instagram />
 
-      {/* ---- instagram ---- */}
-      <Instagram />
+          {/* ---- faq ---- */}
+          <FAQ />
 
-      {/* ---- faq ---- */}
-      <FAQ />
+          {/* ---- final CTA ---- */}
+          <CTA />
 
-      {/* ---- final CTA ---- */}
-      <CTA />
-
-      {/* ---- footer ---- */}
-      <Footer />
+          {/* ---- footer ---- */}
+          <Footer />
+        </main>
+      </div>
 
       <CTAModal />
     </>

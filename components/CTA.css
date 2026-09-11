@@ -1,4 +1,3 @@
-
 /* CTA.css */
 .fx-cta-section {
   --fx-cta-ink: #0C0D0F;
@@ -13,7 +12,7 @@
   background: var(--fx-cta-orange);
   color: var(--fx-cta-ink);
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
