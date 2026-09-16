@@ -1,11 +1,13 @@
 .fx-faq-section {
-  padding: clamp(56px, 8vh, 110px) var(--pad);
+  padding: clamp(28px, 4vh, 60px) var(--pad);
   background: var(--bg);
   color: var(--fg);
-  min-height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   border-bottom: 1px solid var(--rule);
 }
 .fx-faq-wrap {
@@ -17,7 +19,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .fx-faq-eyebrow::after {
   content: "";
@@ -28,14 +30,14 @@
 .fx-faq-title {
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(28px, 4.4vw, 54px);
-  line-height: 1.02;
+  font-size: clamp(28px, 3.8vw, 46px);
+  line-height: 1.05;
   letter-spacing: -.03em;
   max-width: 20ch;
   color: var(--fg);
 }
 .fx-faq-container {
-  margin-top: clamp(30px, 5vh, 50px);
+  margin-top: clamp(18px, 2.8vh, 30px);
   border-top: 1px solid var(--rule);
   max-width: 1000px;
 }
@@ -45,11 +47,11 @@
 .fx-faq-summary {
   list-style: none;
   cursor: pointer;
-  padding: 22px 46px 22px 0;
+  padding: 16px 46px 16px 0;
   position: relative;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(18px, 2.1vw, 24px);
+  font-size: clamp(18px, 1.9vw, 22px);
   letter-spacing: -.02em;
   outline: none;
 }
@@ -87,11 +89,11 @@
   text-underline-offset: 3px;
 }
 .fx-faq-lead {
-  margin-top: 40px;
+  margin-top: 24px;
   max-width: 52ch;
   color: var(--slate);
   font-family: var(--body);
-  font-size: clamp(16px, 1.5vw, 19px);
+  font-size: clamp(15px, 1.3vw, 17px);
   line-height: 1.5;
 }
 
