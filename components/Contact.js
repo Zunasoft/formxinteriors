@@ -83,7 +83,7 @@ export default function Contact() {
               </li>
             </ul>
             <div className="rowb">
-              <button className="btn btn-s" onClick={() => { setDone(false); setStep(1); }}>Back to start</button>
+              <button suppressHydrationWarning className="btn btn-s" onClick={() => { setDone(false); setStep(1); }}>Back to start</button>
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function Contact() {
                   <label id="lb-type">Unit type</label>
                   <div className="chips" role="group" aria-labelledby="lb-type">
                     {["2 BHK", "3 BHK", "4 BHK", "Villa", "Office"].map(u => (
-                      <button type="button" key={u} aria-pressed={unitType === u} onClick={() => setUnitType(u)}>{u}</button>
+                      <button suppressHydrationWarning type="button" key={u} aria-pressed={unitType === u} onClick={() => setUnitType(u)}>{u}</button>
                     ))}
                   </div>
                 </div>
@@ -125,32 +125,32 @@ export default function Contact() {
                 <div className="f">
                   <label id="lb-poss">Possession</label>
                   <div className="chips" role="group" aria-labelledby="lb-poss">
-                    <button type="button" aria-pressed="false">Already living in it</button>
-                    <button type="button" aria-pressed="true">Handover soon</button>
-                    <button type="button" aria-pressed="false">Under construction</button>
+                    <button suppressHydrationWarning type="button" aria-pressed="false">Already living in it</button>
+                    <button suppressHydrationWarning type="button" aria-pressed="true">Handover soon</button>
+                    <button suppressHydrationWarning type="button" aria-pressed="false">Under construction</button>
                   </div>
                 </div>
 
                 <div className={`f ${errors.name ? "bad" : ""}`}>
                   <label htmlFor="name">Your name <span className="req">*</span></label>
-                  <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
+                  <input suppressHydrationWarning type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
                   <p className="err">Please tell us what to call you.</p>
                 </div>
 
                 <div className={`f ${errors.phone ? "bad" : ""}`}>
                   <label htmlFor="phone">WhatsApp number <span className="req">*</span></label>
-                  <input type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="98XXXXXXXX" maxLength={10} required />
+                  <input suppressHydrationWarning type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="98XXXXXXXX" maxLength={10} required />
                   <p className="err">That does not look like a 10-digit Indian mobile number.</p>
                 </div>
 
                 <div className={`f ${errors.loc ? "bad" : ""}`}>
                   <label htmlFor="loc">Project, tower or area <span className="req">*</span></label>
-                  <input type="text" id="loc" value={loc} onChange={(e) => setLoc(e.target.value)} placeholder="e.g. Kokapet, or your project name" required />
+                  <input suppressHydrationWarning type="text" id="loc" value={loc} onChange={(e) => setLoc(e.target.value)} placeholder="e.g. Kokapet, or your project name" required />
                   <p className="err">An area name is enough for now.</p>
                 </div>
 
                 <div className="rowb">
-                  <button className="btn btn-p" type="button" onClick={handleNext}>
+                  <button suppressHydrationWarning className="btn btn-p" type="button" onClick={handleNext}>
                     Continue
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                   </button>
@@ -167,7 +167,7 @@ export default function Contact() {
                   <label id="lb-scope">What do you need?</label>
                   <div className="chips" role="group" aria-labelledby="lb-scope">
                     {["Design + Build", "Build only", "Design only", "Not sure yet"].map(s => (
-                      <button type="button" key={s} aria-pressed={scope === s} onClick={() => setScope(s)}>{s}</button>
+                      <button suppressHydrationWarning type="button" key={s} aria-pressed={scope === s} onClick={() => setScope(s)}>{s}</button>
                     ))}
                   </div>
                 </div>
@@ -198,8 +198,8 @@ export default function Contact() {
                 </div>
 
                 <div className="rowb">
-                  <button className="btn btn-p" type="submit">Book my free consultation</button>
-                  <button className="btn btn-s" type="button" onClick={() => setStep(1)}>Back</button>
+                  <button suppressHydrationWarning className="btn btn-p" type="submit">Book my free consultation</button>
+                  <button suppressHydrationWarning className="btn btn-s" type="button" onClick={() => setStep(1)}>Back</button>
                 </div>
                 <p className="assure">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>

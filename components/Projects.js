@@ -332,10 +332,10 @@ export default function Projects() {
             </div>
             <div className="bar">
               <div className="chips" id="ftype">
-                <button className="chip" aria-pressed="true" data-f="all">All</button>
-                <button className="chip" data-f="Villa">Villa</button>
-                <button className="chip" data-f="Apartment">Apartment</button>
-                <button className="chip" data-f="Commercial">Commercial</button>
+                <button suppressHydrationWarning className="chip" aria-pressed="true" data-f="all">All</button>
+                <button suppressHydrationWarning className="chip" data-f="Villa">Villa</button>
+                <button suppressHydrationWarning className="chip" data-f="Apartment">Apartment</button>
+                <button suppressHydrationWarning className="chip" data-f="Commercial">Commercial</button>
               </div>
             </div>
           </div>
@@ -369,12 +369,12 @@ export default function Projects() {
           <div className="vgrad"></div>
           <div className="otop">
             <div><h3 id="ot"></h3><div className="mono" id="osub" style={{ marginTop: 9 }}></div></div>
-            <button className="xbtn" id="close" aria-label="Close">
+            <button suppressHydrationWarning className="xbtn" id="close" aria-label="Close">
               <svg viewBox="0 0 100 100"><path d="M24 24L76 76M76 24L24 76" stroke="#fff" strokeWidth="14" /></svg>
             </button>
           </div>
-          <div className="arrows l"><button id="prev" aria-label="Previous">←</button></div>
-          <div className="arrows r"><button id="next" aria-label="Next">→</button></div>
+          <div className="arrows l"><button suppressHydrationWarning id="prev" aria-label="Previous">←</button></div>
+          <div className="arrows r"><button suppressHydrationWarning id="next" aria-label="Next">→</button></div>
           <div className="obotbar">
             <div className="timeline" id="timeline">
               <div className="tl"><i id="tlfill"></i></div>

@@ -179,8 +179,8 @@ export default function MoneyBreakdown() {
            for a full-home turnkey job in Hyderabad.</p>
         <div className="tier" data-mid="tier" role="group" aria-label="Specification tier">
           <span className="pill" aria-hidden="true"></span>
-          <button type="button" data-t="gold" aria-pressed="true">Gold</button>
-          <button type="button" data-t="platinum" aria-pressed="false">Platinum</button>
+          <button suppressHydrationWarning type="button" data-t="gold" aria-pressed="true">Gold</button>
+          <button suppressHydrationWarning type="button" data-t="platinum" aria-pressed="false">Platinum</button>
         </div>
       </div>
 

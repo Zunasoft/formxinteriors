@@ -402,13 +402,13 @@ export default function Testimonials() {
 
           <div className="otop">
             <blockquote className="oquote" id="toquote"></blockquote>
-            <button className="xbtn" id="tclose" aria-label="Close">
+            <button suppressHydrationWarning className="xbtn" id="tclose" aria-label="Close">
               <svg viewBox="0 0 100 100"><path d="M24 24L76 76M76 24L24 76" stroke="#fff" strokeWidth="14" /></svg>
             </button>
           </div>
 
-          <div className="arrows l"><button id="tprev" aria-label="Previous">←</button></div>
-          <div className="arrows r"><button id="tnext" aria-label="Next">→</button></div>
+          <div className="arrows l"><button suppressHydrationWarning id="tprev" aria-label="Previous">←</button></div>
+          <div className="arrows r"><button suppressHydrationWarning id="tnext" aria-label="Next">→</button></div>
 
           <div className="obot">
             <div className="who"><i></i><b id="twho"></b><span className="mono" id="twhometa"></span></div>

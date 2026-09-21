@@ -36,11 +36,14 @@ export default function Page() {
       {/* ---- menu ---- */}
       <button suppressHydrationWarning
         id="xbtn"
-        aria-label="Open menu"
+        aria-label="Open sidebar"
         aria-expanded="false"
         data-cursor="menu"
       >
-        <img src="/logo-x-square.png" alt="" />
+        <img src="/close-icon.png" alt="" className="custom-x" />
+        <svg className="normal-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square">
+          <path d="M5 5l14 14M19 5L5 19" />
+        </svg>
       </button>
       <nav id="menu" aria-hidden="true">
         <a href="#work">
@@ -67,7 +70,7 @@ export default function Page() {
             <i>Process</i>
           </span>
         </a>
-        <a href="#book">
+        <a href="#book-consultation">
           <span className="sw">
             <i>Consultation</i>
             <i>Consultation</i>
@@ -83,6 +86,12 @@ export default function Page() {
           <span className="sw">
             <i>Contact</i>
             <i>Contact</i>
+          </span>
+        </a>
+        <a href="#vlog">
+          <span className="sw">
+            <i>Vlog</i>
+            <i>Vlog</i>
           </span>
         </a>
         <div className="mono foot">Hyderabad · +91 00000 00000</div>

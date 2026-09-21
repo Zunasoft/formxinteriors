@@ -395,10 +395,10 @@ export default function Advantage() {
           </div>
 
           <div className="fx-days" role="group" aria-label="Site progress by day">
-            <button className="fx-day" type="button" data-s="0" data-d="01" aria-current={true}>DAY 01</button>
-            <button className="fx-day" type="button" data-s="1" data-d="14" aria-current={false}>DAY 14</button>
-            <button className="fx-day" type="button" data-s="2" data-d="31" aria-current={false}>DAY 31</button>
-            <button className="fx-day" type="button" data-s="3" data-d="48" aria-current={false}>DAY 48</button>
+            <button suppressHydrationWarning className="fx-day" type="button" data-s="0" data-d="01" aria-current={true}>DAY 01</button>
+            <button suppressHydrationWarning className="fx-day" type="button" data-s="1" data-d="14" aria-current={false}>DAY 14</button>
+            <button suppressHydrationWarning className="fx-day" type="button" data-s="2" data-d="31" aria-current={false}>DAY 31</button>
+            <button suppressHydrationWarning className="fx-day" type="button" data-s="3" data-d="48" aria-current={false}>DAY 48</button>
           </div>
         </div>
       </article>

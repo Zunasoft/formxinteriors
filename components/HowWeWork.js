@@ -125,9 +125,9 @@ export default function HowWeWork() {
           {/* rail */}
           <div className="fx-rail" id="fx-rail" style={{ "--fx-i": 0 }}>
             <div className="fx-phases">
-              <button className="fx-phase" type="button" data-i="0">DESIGN</button>
-              <button className="fx-phase" type="button" data-i="1">BUILD</button>
-              <button className="fx-phase" type="button" data-i="2">DELIVER</button>
+              <button suppressHydrationWarning className="fx-phase" type="button" data-i="0">DESIGN</button>
+              <button suppressHydrationWarning className="fx-phase" type="button" data-i="1">BUILD</button>
+              <button suppressHydrationWarning className="fx-phase" type="button" data-i="2">DELIVER</button>
             </div>
             <div className="fx-line">
               <div className="fx-bar"></div>
@@ -151,7 +151,7 @@ export default function HowWeWork() {
           {/* cards */}
           <div className="fx-cards" id="fx-cards">
             <article className="fx-card" data-i="0">
-              <button className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-1" aria-label="Design phase, show what it covers"></button>
+              <button suppressHydrationWarning className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-1" aria-label="Design phase, show what it covers"></button>
               <span className="fx-idx">01</span>
               <span className="fx-kicker">WHERE EVERY DECISION GETS MADE</span>
               <h3 className="fx-title">DESIGN</h3>
@@ -172,7 +172,7 @@ export default function HowWeWork() {
             </article>
 
             <article className="fx-card" data-i="1">
-              <button className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-2" aria-label="Build phase, show what it covers"></button>
+              <button suppressHydrationWarning className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-2" aria-label="Build phase, show what it covers"></button>
               <span className="fx-idx">02</span>
               <span className="fx-kicker">WHERE YOU STOP DECIDING AND START GETTING UPDATES</span>
               <h3 className="fx-title">BUILD</h3>
@@ -193,7 +193,7 @@ export default function HowWeWork() {
             </article>
 
             <article className="fx-card" data-i="2">
-              <button className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-3" aria-label="Deliver phase, show what it covers"></button>
+              <button suppressHydrationWarning className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-3" aria-label="Deliver phase, show what it covers"></button>
               <span className="fx-idx">03</span>
               <span className="fx-kicker">THE PART MOST CONTRACTORS LEAVE YOU TO CHASE</span>
               <h3 className="fx-title">DELIVER</h3>

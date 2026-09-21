@@ -223,7 +223,6 @@ h2 {
   opacity: 0
 }
 
-/* ---- X button ---- */
 #xbtn {
   position: fixed;
   top: 16px;
@@ -243,21 +242,54 @@ h2 {
   opacity: 0;
   padding: 0;
   outline: none;
-  transition: transform .3s cubic-bezier(.7, 0, .2, 1), opacity .3s ease
+  transform-origin: top right;
+  /* translateZ(0) forces the browser to promote #xbtn to its own GPU
+     compositing layer. Without this, Chrome can batch fixed siblings
+     (#xbtn and #menu) into the same layer and cause #xbtn to visually
+     ride along with #menu's translateX animation during closing. */
+  transform: translateZ(0) scale(1);
+  will-change: transform, opacity;
+  transition: transform .3s ease, opacity .3s ease;
 }
 
 #xbtn:focus-visible {
-  outline: none
+  outline: none;
 }
 
+/* The X button scales down slightly when the menu is open (Reference 1),
+   and scales back to normal when closing (Reference 2).
+   translateZ(0) ensures this transform animation doesn't get batched with
+   the #menu translateX animation, preventing the bug where the X button
+   slides away horizontally. */
 #xbtn.on {
-  transform: scale(.92)
+  transform: translateZ(0) scale(.92);
+  opacity: 1;
 }
 
-#xbtn img {
+#xbtn .custom-x {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  grid-area: 1 / 1;
+}
+
+#xbtn .normal-x {
   width: 56%;
   height: 56%;
-  display: block
+  color: #fff;
+  display: none;
+  grid-area: 1 / 1;
+  place-self: center;
+}
+
+#xbtn.on .custom-x {
+  display: none;
+}
+
+#xbtn.on .normal-x {
+  display: block;
 }
 
 @media(max-width:640px) {
