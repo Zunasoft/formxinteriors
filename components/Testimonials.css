@@ -4,9 +4,12 @@
   --t-pad:clamp(20px,5vw,72px);
 
   background:var(--t-petrol);color:var(--t-shell);font-family:var(--body);font-size:17px;
-  line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;
+  line-height:1.5;-webkit-font-smoothing:antialiased;position:relative;
   padding:clamp(28px,4.5vh,60px) 0;
+  height:100dvh;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
   scroll-snap-align:start;
+  scroll-snap-stop:always;
 }
 .fx-testimonials *{box-sizing:border-box;margin:0;padding:0}
 .fx-testimonials button{font-family:inherit;color:inherit;background:none;border:none;cursor:pointer}
