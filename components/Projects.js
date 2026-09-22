@@ -337,6 +337,9 @@ export default function Projects() {
                 <button suppressHydrationWarning className="chip" data-f="Apartment">Apartment</button>
                 <button suppressHydrationWarning className="chip" data-f="Commercial">Commercial</button>
               </div>
+              <button suppressHydrationWarning className="morebtn" type="button">
+                More projects <i className="morebtn-ar">→</i>
+              </button>
             </div>
           </div>
 

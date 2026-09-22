@@ -116,7 +116,7 @@ export default function Page() {
               <Logo />
             </div>
             <div className="hero-in">
-              <p className="mono" style={{ color: "#9FB0B6", marginBottom: "16px" }}>
+              <p className="mono" style={{ color: "#9FB0B6", marginBottom: "26px" }}>
                 Hyderabad · Design &amp; turnkey execution
               </p>
               <div className="caps">
