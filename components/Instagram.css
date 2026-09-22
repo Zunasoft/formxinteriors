@@ -7,8 +7,9 @@
 
   background:var(--ig-petrol);color:var(--ig-shell);font-family:var(--body);font-size:17px;
   line-height:1.5;-webkit-font-smoothing:antialiased;
-  padding:clamp(48px,7vh,96px) var(--ig-pad);
-  scroll-snap-align:start;
+  padding:clamp(28px,5vh,64px) var(--ig-pad);
+  min-height:100svh;display:flex;flex-direction:column;
+  scroll-snap-align:start;scroll-snap-stop:always;
 }
 .fx-instagram *{box-sizing:border-box;margin:0;padding:0}
 .fx-instagram a{color:inherit;text-decoration:none}
@@ -30,8 +31,8 @@
 
 /* ---------- contact sheet ---------- */
 .fx-instagram .ig-sheet{display:grid;grid-template-columns:repeat(12,1fr);
-  grid-auto-rows:clamp(66px,7.4vw,104px);gap:clamp(8px,1vw,14px);
-  margin-top:clamp(20px,3vh,34px)}
+  grid-template-rows:repeat(4,minmax(0,1fr));gap:clamp(8px,1vw,14px);
+  margin-top:clamp(16px,2.4vh,30px);flex:1 1 auto;min-height:clamp(300px,54vh,560px)}
 .fx-instagram .ig-tile{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--ig-rule);
   background:var(--ig-deep);display:block;transition:border-color .3s,transform .3s cubic-bezier(.2,.7,.3,1)}
 .fx-instagram .ig-tile:hover{border-color:rgba(242,104,41,.6);transform:translateY(-3px)}
@@ -96,7 +97,9 @@
 .fx-instagram .ig-p7{grid-column:span 2;grid-row:span 1}
 .fx-instagram .ig-p8{grid-column:span 2;grid-row:span 1}
 @media(max-width:900px){
-  .fx-instagram .ig-sheet{grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(62px,10vw,96px)}
+  .fx-instagram{min-height:0}
+  .fx-instagram .ig-sheet{grid-template-columns:repeat(6,1fr);grid-template-rows:none;
+    grid-auto-rows:clamp(62px,10vw,96px);min-height:0}
   .fx-instagram .ig-p1{grid-column:span 6;grid-row:span 3}
   .fx-instagram .ig-p2,.fx-instagram .ig-p3{grid-column:span 3;grid-row:span 3}
   .fx-instagram .ig-p4,.fx-instagram .ig-p5{grid-column:span 3;grid-row:span 2}
