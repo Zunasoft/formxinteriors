@@ -88,10 +88,10 @@ export default function Page() {
             <i>Contact</i>
           </span>
         </a>
-        <a href="#vlog">
+        <a href="#blog">
           <span className="sw">
-            <i>Vlog</i>
-            <i>Vlog</i>
+            <i>Blog</i>
+            <i>Blog</i>
           </span>
         </a>
         <div className="mono foot">Hyderabad · +91 00000 00000</div>
