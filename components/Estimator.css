@@ -406,9 +406,11 @@
   padding: 5px 8px;
 }
 
-/* panes */
+/* panes — the hidden pane is stacked over the visible one and clipped,
+   so it never adds scroll height to the dialog */
+.est-panes { position: relative; overflow: hidden; }
 .est-pane { transition: opacity .3s ease, transform .38s cubic-bezier(.2,.7,.3,1); }
-.est-pane--out { opacity: 0; transform: translateY(-10px); position: absolute; pointer-events: none; visibility: hidden; }
+.est-pane--out { opacity: 0; transform: translateY(-10px); position: absolute; top: 0; left: 0; right: 0; pointer-events: none; visibility: hidden; }
 .est-pane--in { opacity: 1; transform: none; }
 
 /* form fields */

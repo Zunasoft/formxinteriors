@@ -332,6 +332,7 @@ export default function Estimator() {
 
         <div className="est-recap" id="est-recap"></div>
 
+        <div className="est-panes">
         {/* pane A — form */}
         <div className="est-pane est-pane--in" id="est-paneForm">
           <div style={{ marginTop: 16 }}>
@@ -409,6 +410,7 @@ export default function Estimator() {
             </div>
             <div className="est-fine">Your estimate stays on the page below for this visit.</div>
           </div>
+        </div>
         </div>
       </div>
     </section>

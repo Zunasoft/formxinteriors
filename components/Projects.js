@@ -59,10 +59,6 @@ export default function Projects() {
     const wall = $('wall');
     let fType = 'all', PN = [], vis = [], active = 0;
 
-    /* track timing for debouncing/locking scroll navigations */
-    let lastScrollTime = 0;
-    const TRANSITION_LOCK_MS = 500;
-
     function render() {
       wall.innerHTML = ''; PN = [];
       wall.parentElement.querySelectorAll('.empty').forEach((e) => e.remove());
@@ -93,82 +89,14 @@ export default function Projects() {
         PN.push({ el, p, i: o.i, vi, frs: [...el.querySelectorAll('.fr')],
           day: el.querySelector('.dayc'), prog: el.querySelector('.prog'), raf: null });
       });
-      const hasHover = matchMedia('(hover: hover)').matches;
       PN.forEach((o) => {
-<<<<<<< HEAD
         o.el.addEventListener('focus', () => setActive(o.vi));
-=======
-        if (hasHover) {
-          o.el.addEventListener('pointerenter', (e) => {
-            if (e.pointerType === 'mouse') {
-              hovered = o.vi;
-              if (active !== o.vi) syncToActive(o.vi);
-            }
-          });
-          o.el.addEventListener('pointerleave', (e) => {
-            if (e.pointerType === 'mouse') hovered = -1;
-          });
-        }
-        o.el.addEventListener('focus', () => { hovered = o.vi; syncToActive(o.vi); });
-        o.el.addEventListener('blur', () => { hovered = -1; });
->>>>>>> origin/main
         o.el.addEventListener('click', (e) => { if (!e.target.closest('.more')) openOv(o.i); });
         o.el.addEventListener('keydown', (e) => { if (e.key === 'Enter') openOv(o.i); });
       });
       active = -1; setActive(0); lastVi = scrollVi(); sizeStage();
     }
-    wall.innerHTML = ''; // initial state placeholder
-    wall.parentElement.querySelectorAll('.empty').forEach((e) => e.remove());
     wall.addEventListener('click', (e) => { const b = e.target.closest('.more'); if (b) openOv(+b.dataset.open); });
-
-    /* ---------- wheel navigation over gallery ---------- */
-    const stage = $('stage');
-
-    function syncToActive(vi) {
-      if (vi < 0 || vi >= vis.length) return;
-      setActive(vi);
-      const st = $('stage');
-      if (st && vis.length > 1) {
-        const r = st.getBoundingClientRect();
-        const stageTop = window.scrollY + r.top;
-        const total = st.offsetHeight - innerHeight;
-        const targetScroll = stageTop + total * (vi / (vis.length - 1));
-        window.scrollTo({ top: targetScroll, behavior: 'instant' });
-      }
-    }
-
-    function onWheel(e) {
-      if (liveOv) return; // allow standard overlay scroll if any, or ignore
-      if (!vis.length) return;
-
-      const dy = e.deltaY;
-      if (Math.abs(dy) < 5) return; // ignore tiny unintentional touch/wheel jitters
-
-      const now = performance.now();
-
-      // If we are still in the transition lock from a PREVIOUS navigation,
-      // swallow the wheel event entirely to prevent inertia from flinging us out.
-      if (now - lastScrollTime < TRANSITION_LOCK_MS) {
-        e.preventDefault();
-        return;
-      }
-
-      // Let native scroll take over at the boundaries so user can exit the gallery
-      if (dy > 0 && active >= vis.length - 1) return;
-      if (dy < 0 && active <= 0) return;
-
-      // Inside gallery boundaries: prevent native scroll and handle item-by-item navigation
-      e.preventDefault();
-
-      if (dy > 0) {
-        lastScrollTime = now;
-        syncToActive(active + 1);
-      } else if (dy < 0) {
-        lastScrollTime = now;
-        syncToActive(active - 1);
-      }
-    }
-    stage.addEventListener('wheel', onWheel, { passive: false });
 
     /* a short scroll dwell per project — short enough to feel snappy,
        long enough that each card still gets seen before the next arrives */
@@ -206,16 +134,11 @@ export default function Projects() {
       }
     }
 
-<<<<<<< HEAD
     /* ---------- scroll drives left -> right ---------- */
     let prog = 0, lastVi = 0;
     function scrollVi() {
       return Math.min(vis.length - 1, Math.floor(prog * vis.length * 0.9999));
     }
-=======
-    /* ---------- window scroll sync ---------- */
-    let prog = 0;
->>>>>>> origin/main
     function onScroll() {
       const st = $('stage'), r = st.getBoundingClientRect();
       const total = st.offsetHeight - innerHeight;
