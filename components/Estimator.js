@@ -243,11 +243,11 @@ export default function Estimator() {
         <div className="est-field">
           <div className="est-flabel"><span className="mono">Project type</span></div>
           <div className="est-opts" id="est-ptype">
-            <button className="est-opt" aria-pressed="true" data-v="apartment">Apartment</button>
-            <button className="est-opt" data-v="villa">Villa</button>
-            <button className="est-opt" data-v="modular">Modulars only</button>
-            <button className="est-opt" data-v="commercial">Commercial</button>
-            <button className="est-opt" data-v="showflat">Show flat</button>
+            <button suppressHydrationWarning className="est-opt" aria-pressed="true" data-v="apartment">Apartment</button>
+            <button suppressHydrationWarning className="est-opt" data-v="villa">Villa</button>
+            <button suppressHydrationWarning className="est-opt" data-v="modular">Modulars only</button>
+            <button suppressHydrationWarning className="est-opt" data-v="commercial">Commercial</button>
+            <button suppressHydrationWarning className="est-opt" data-v="showflat">Show flat</button>
           </div>
         </div>
 
@@ -256,9 +256,9 @@ export default function Estimator() {
           <div className="est-flabel"><span className="mono">Configuration</span></div>
           <div className="est-cfgrow">
             <div className="est-opts" id="est-cfg">
-              <button className="est-opt" data-v="2">2 BHK</button>
-              <button className="est-opt" aria-pressed="true" data-v="3">3 BHK</button>
-              <button className="est-opt" data-v="4">4 BHK</button>
+              <button suppressHydrationWarning className="est-opt" data-v="2">2 BHK</button>
+              <button suppressHydrationWarning className="est-opt" aria-pressed="true" data-v="3">3 BHK</button>
+              <button suppressHydrationWarning className="est-opt" data-v="4">4 BHK</button>
             </div>
             <span className="est-big"><span id="est-areaV">1,750</span> sq ft</span>
           </div>
@@ -278,7 +278,7 @@ export default function Estimator() {
 
         {/* CTA bar */}
         <div className="est-gobar">
-          <button className="est-calc" id="est-calcBtn">Calculate my estimate <span>→</span></button>
+          <button suppressHydrationWarning className="est-calc" id="est-calcBtn">Calculate my estimate <span>→</span></button>
           <span className="mono">Free · no obligation · you keep the drawing either way</span>
         </div>
 
@@ -312,7 +312,7 @@ export default function Estimator() {
           </div>
           <div className="est-rfoot">
             <span className="mono">Priced on the sq ft in your agreement. Exact figure after measurement — and it does not move after that.</span>
-            <button className="est-ghost" id="est-exact">Get the exact cost in 48 hours →</button>
+            <button suppressHydrationWarning className="est-ghost" id="est-exact">Get the exact cost in 48 hours →</button>
           </div>
         </div>
 
@@ -323,7 +323,7 @@ export default function Estimator() {
       <div className="est-dlg" id="est-dlg" role="dialog" aria-modal="true" aria-labelledby="est-dtitle">
         <div className="est-dhead">
           <h3 id="est-dtitle">Where should we send the <em>number</em>?</h3>
-          <button className="est-xbtn" id="est-dclose" aria-label="Close">
+          <button suppressHydrationWarning className="est-xbtn" id="est-dclose" aria-label="Close">
             <svg viewBox="0 0 100 100" width="13" height="13">
               <path d="M24 24L76 76M76 24L24 76" stroke="#F6F2EE" strokeWidth="14" />
             </svg>
@@ -369,7 +369,7 @@ export default function Estimator() {
                 </select>
               </label>
             </div>
-            <button className="est-reveal" id="est-revealBtn">Reveal my estimate →</button>
+            <button suppressHydrationWarning className="est-reveal" id="est-revealBtn">Reveal my estimate →</button>
             <div className="est-fine">We call once to confirm the scope. No drip campaign.</div>
           </div>
         </div>
@@ -404,8 +404,8 @@ export default function Estimator() {
               <i>10-year warranty</i><i>Fixed after sign-off</i><i>Line-by-line quote</i>
             </div>
             <div className="est-done">
-              <button className="est-ghost" id="est-dExact">Get the exact cost in 48 hours →</button>
-              <button className="est-ghost" id="est-dDone">Close</button>
+              <button suppressHydrationWarning className="est-ghost" id="est-dExact">Get the exact cost in 48 hours →</button>
+              <button suppressHydrationWarning className="est-ghost" id="est-dDone">Close</button>
             </div>
             <div className="est-fine">Your estimate stays on the page below for this visit.</div>
           </div>
