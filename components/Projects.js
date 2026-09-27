@@ -57,7 +57,7 @@ export default function Projects() {
 
     /* ---------- build the wall ---------- */
     const wall = $('wall');
-    let fType = 'all', PN = [], vis = [], active = 0, hovered = -1;
+    let fType = 'all', PN = [], vis = [], active = 0;
 
     function render() {
       wall.innerHTML = ''; PN = [];
@@ -90,12 +90,11 @@ export default function Projects() {
           day: el.querySelector('.dayc'), prog: el.querySelector('.prog'), raf: null });
       });
       PN.forEach((o) => {
-        o.el.addEventListener('focus', () => { hovered = o.vi; setActive(o.vi); });
-        o.el.addEventListener('blur', () => { hovered = -1; });
+        o.el.addEventListener('focus', () => setActive(o.vi));
         o.el.addEventListener('click', (e) => { if (!e.target.closest('.more')) openOv(o.i); });
         o.el.addEventListener('keydown', (e) => { if (e.key === 'Enter') openOv(o.i); });
       });
-      active = -1; setActive(0); sizeStage();
+      active = -1; setActive(0); lastVi = scrollVi(); sizeStage();
     }
     wall.addEventListener('click', (e) => { const b = e.target.closest('.more'); if (b) openOv(+b.dataset.open); });
 
@@ -136,16 +135,22 @@ export default function Projects() {
     }
 
     /* ---------- scroll drives left -> right ---------- */
-    let prog = 0;
+    let prog = 0, lastVi = 0;
+    function scrollVi() {
+      return Math.min(vis.length - 1, Math.floor(prog * vis.length * 0.9999));
+    }
     function onScroll() {
       const st = $('stage'), r = st.getBoundingClientRect();
       const total = st.offsetHeight - innerHeight;
       prog = Math.max(0, Math.min(1, total ? (-r.top) / total : 0));
       $('pfill').style.width = (prog * 100) + '%';
-      if (hovered < 0 && vis.length) {
-        const vi = Math.min(vis.length - 1, Math.floor(prog * vis.length * 0.9999));
-        setActive(vi);
-      }
+      if (!vis.length) return;
+      /* Step relative to whatever is open rather than mapping scroll
+         position straight to an index, so a hovered panel becomes the
+         point the next scroll continues from. */
+      const vi = scrollVi(), step = vi - lastVi;
+      lastVi = vi;
+      if (step) setActive(Math.max(0, Math.min(vis.length - 1, active + step)));
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', () => { sizeStage(); onScroll(); });
@@ -157,6 +162,12 @@ export default function Projects() {
       const r = ww.getBoundingClientRect();
       tx = ((e.clientX - r.left) / r.width - .5);
       ty = ((e.clientY - r.top) / r.height - .5);
+      /* Opening the panel under the cursor rides on this same move event
+         rather than pointerenter/over, which the expanding panel's own
+         layout shift can swallow. setActive ignores repeats. */
+      if (e.pointerType === 'touch') return;
+      const pn = e.target.closest && e.target.closest('.pn');
+      if (pn) setActive(+pn.dataset.vi);
     });
     ww.addEventListener('pointerleave', () => { tx = 0; ty = 0; });
 
