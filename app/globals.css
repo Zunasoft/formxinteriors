@@ -287,25 +287,9 @@ h2 {
 }
 
 #xbtn:hover .custom-x,
-#xbtn:focus-visible .custom-x {
-  transform: translate(20.9%, 21.1%);
-}
-
-#xbtn .normal-x {
-  width: 56%;
-  height: 56%;
-  color: #fff;
-  display: none;
-  grid-area: 1 / 1;
-  place-self: center;
-}
-
+#xbtn:focus-visible .custom-x,
 #xbtn.on .custom-x {
-  display: none;
-}
-
-#xbtn.on .normal-x {
-  display: block;
+  transform: translate(20.9%, 21.1%);
 }
 
 @media(max-width:640px) {
