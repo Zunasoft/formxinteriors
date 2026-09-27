@@ -225,9 +225,12 @@ h2 {
 
 #xbtn {
   position: fixed;
-  top: 16px;
+  top: 22px;
   right: 16px;
-  z-index: 150;
+  /* Above #cur (300): the cursor is --orange with mix-blend-mode:difference,
+     so against this equally-orange button it resolves to pure black. Painting
+     the button over it hides the dot instead of showing a black smudge. */
+  z-index: 310;
   /* Tied to the same clamp() driving the logo's height (1.35em of
      .brandbar's font-size) so this box always matches the logo's own X
      square at every viewport width, instead of holding a fixed size while
@@ -242,6 +245,7 @@ h2 {
   opacity: 0;
   padding: 0;
   outline: none;
+  overflow: hidden;
   transform-origin: top right;
   /* translateZ(0) forces the browser to promote #xbtn to its own GPU
      compositing layer. Without this, Chrome can batch fixed siblings
@@ -273,6 +277,18 @@ h2 {
   object-fit: cover;
   object-position: center;
   grid-area: 1 / 1;
+  /* The artwork's X sits at 29.1%/28.9% of the square; shifting by the
+     remainder lands it dead centre. The exposed edge is the same #F26829
+     as the button, so the slide reads as the glyph moving on its own. */
+  transition: transform .38s cubic-bezier(.2, .7, .3, 1);
+  /* close-icon.png carries two dark pixel columns on its left edge that
+     become a visible seam once the image slides inward. */
+  clip-path: inset(0 0 0 1.4%);
+}
+
+#xbtn:hover .custom-x,
+#xbtn:focus-visible .custom-x {
+  transform: translate(20.9%, 21.1%);
 }
 
 #xbtn .normal-x {
@@ -294,7 +310,7 @@ h2 {
 
 @media(max-width:640px) {
   #xbtn {
-    top: 12px;
+    top: 18px;
     right: 12px
   }
 }

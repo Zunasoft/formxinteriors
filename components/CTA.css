@@ -66,12 +66,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  min-height: 64px;
-  padding: 16px 36px;
+  gap: 10px;
+  min-height: 54px;
+  padding: 13px 28px;
   font-family: var(--fx-cta-display);
   font-weight: 600;
-  font-size: 19px;
+  font-size: 17px;
   border: 1px solid transparent;
   cursor: pointer;
   transition: transform .18s var(--fx-cta-ease), background .22s, color .22s, border-color .22s;
@@ -80,8 +80,8 @@
 }
 
 .fx-cta-section .btn svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   fill: none;
   stroke: currentColor;
   stroke-width: 2;

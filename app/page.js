@@ -38,7 +38,6 @@ export default function Page() {
         id="xbtn"
         aria-label="Open sidebar"
         aria-expanded="false"
-        data-cursor="menu"
       >
         <img src="/close-icon.png" alt="" className="custom-x" />
         <svg className="normal-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square">
