@@ -56,11 +56,10 @@ export default function Contact() {
   return (
     <section className="fx-contact" id="book-consultation">
       <div className="ct-eyebrow"><span className="ct-mono">Start here</span></div>
-      <h2 data-split>Book the visit. Keep the drawing.</h2>
-
       <div className="ct-cols">
         {/* ============ left: the form ============ */}
         <div className="ct-left">
+          <h2 data-split>Book the visit. Keep the drawing.</h2>
           <div className={`ct-pane${booked ? " ct-out" : ""}`}>
             <div>
               <div className="ct-glab"><span className="ct-mono">Unit type</span></div>
