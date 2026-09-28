@@ -277,13 +277,15 @@ h2 {
   object-fit: cover;
   object-position: center;
   grid-area: 1 / 1;
+  /* Fill the img's own box with the button colour: once the glyph slides
+     to centre, the GPU-filtered left edge of the transformed image otherwise
+     shows as a thin dark vertical seam inside the button. */
+  background: var(--orange);
+  backface-visibility: hidden;
   /* The artwork's X sits at 29.1%/28.9% of the square; shifting by the
      remainder lands it dead centre. The exposed edge is the same #F26829
      as the button, so the slide reads as the glyph moving on its own. */
   transition: transform .38s cubic-bezier(.2, .7, .3, 1);
-  /* close-icon.png carries two dark pixel columns on its left edge that
-     become a visible seam once the image slides inward. */
-  clip-path: inset(0 0 0 1.4%);
 }
 
 #xbtn:hover .custom-x,
