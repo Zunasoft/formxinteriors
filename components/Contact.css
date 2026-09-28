@@ -185,6 +185,7 @@
 }
 .fx-contact .ct-done h3 em { font-style: normal; font-weight: 800; color: var(--orange) }
 .fx-contact .ct-recap { display: flex; flex-wrap: wrap; gap: 7px }
+.fx-contact .ct-done .ct-recap { margin-top: clamp(14px, 2.4vh, 26px) }
 .fx-contact .ct-recap i {
   font-style: normal; font-family: var(--mono); font-size: 9px; letter-spacing: .13em;
   text-transform: uppercase; color: var(--slate); border: 1px solid var(--ct-rule);
