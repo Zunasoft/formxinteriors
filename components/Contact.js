@@ -122,10 +122,10 @@ export default function Contact() {
           </div>
 
           <div className={`ct-pane ct-done${booked ? "" : " ct-out"}`}>
-            <h3>
-              {booked ? `Booked, ${booked.name.split(" ")[0]}. We call to ` : "Booked. We'll call to "}
-              <em>confirm the slot</em>.
-            </h3>
+            <div className="ct-donehead">
+              <div className="ct-name">{booked ? `${booked.name.split(" ")[0]},` : "Booked,"}</div>
+              <h3>We call to <em>confirm the slot</em>.</h3>
+            </div>
             <div className="ct-recap">
               {booked && [booked.unit, booked.possession, booked.place, ...booked.scope].map((b) => <i key={b}>{b}</i>)}
             </div>

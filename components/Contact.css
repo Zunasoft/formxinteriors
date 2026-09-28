@@ -12,6 +12,7 @@
   height: 100svh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   padding: clamp(14px, 2.4vh, 28px) var(--pad) clamp(14px, 2.2vh, 24px);
   scroll-snap-align: start;
@@ -39,7 +40,10 @@
 .fx-contact h2 em { font-style: normal; font-weight: 800; color: var(--orange) }
 
 .fx-contact .ct-cols {
-  flex: 1; min-height: 0; display: grid; grid-template-columns: 1.32fr .68fr;
+  /* Sized to content (not flex:1): the row is as tall as the taller column,
+     so the left form only stretches enough to match the right box instead of
+     spreading its groups across the full viewport height. */
+  flex: 0 1 auto; min-height: 0; display: grid; grid-template-columns: 1.32fr .68fr;
   gap: clamp(16px, 2.6vw, 42px)
 }
 
@@ -50,7 +54,7 @@
 .fx-contact .ct-left>h2 { margin: -.1em 0 clamp(12px, 2vh, 22px) }
 .fx-contact .ct-pane {
   flex: 1; min-height: 0; display: flex; flex-direction: column;
-  justify-content: space-between; gap: 10px
+  justify-content: space-between; gap: clamp(16px, 2.6vh, 26px)
 }
 .fx-contact .ct-pane.ct-out { display: none }
 .fx-contact .ct-glab { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 11px }
@@ -168,10 +172,16 @@
 .fx-contact .ct-arch b { font-family: var(--display); font-weight: 600; font-size: 14.5px; letter-spacing: -.02em }
 .fx-contact .ct-arch p { font-size: 12.5px; line-height: 1.4; color: var(--slate); margin-top: 4px }
 
-/* confirmation */
+/* confirmation — grouped block sitting just under the heading, name set large */
+.fx-contact .ct-done { justify-content: flex-start; gap: clamp(18px, 2.8vh, 28px); padding-top: clamp(10px, 2vh, 22px) }
+.fx-contact .ct-name {
+  font-family: var(--display); font-weight: 500; text-transform: uppercase;
+  font-size: clamp(40px, 6vw, 84px); line-height: 1; letter-spacing: -.02em;
+  color: var(--shell); overflow-wrap: anywhere
+}
 .fx-contact .ct-done h3 {
   font-family: var(--display); font-weight: 400; font-size: clamp(24px, 3vw, 38px);
-  letter-spacing: -.032em; line-height: 1.05
+  letter-spacing: -.032em; line-height: 1.05; margin-top: clamp(8px, 1.4vh, 14px)
 }
 .fx-contact .ct-done h3 em { font-style: normal; font-weight: 800; color: var(--orange) }
 .fx-contact .ct-recap { display: flex; flex-wrap: wrap; gap: 7px }
