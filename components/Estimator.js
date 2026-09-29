@@ -171,6 +171,7 @@ export default function Estimator() {
       const title = $("est-dtitle");
       if (!dlg || !f || !r) return;
       const from = dlg.offsetHeight;
+      dlg.classList.toggle("est-dlg--result", which === "result");
       if (which === "result") {
         f.className = "est-pane est-pane--out";
         r.className = "est-pane est-pane--in";

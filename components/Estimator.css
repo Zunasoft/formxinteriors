@@ -486,6 +486,29 @@
 .est-done { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
 .est-done .est-ghost { flex: 1; justify-content: center; }
 
+/* result view — compact enough to fit the viewport without scrolling */
+.est-dlg--result h3 { max-width: none; white-space: nowrap; font-size: clamp(20px, 2.7vw, 33px); }
+.est-dlg--result .est-recap { margin-top: 12px; padding: 9px 11px; gap: 5px; }
+.est-dlg--result .est-recap i { padding: 4px 7px; }
+.est-dlg--result .est-pane > div { margin-top: 12px !important; }
+.est-dlg--result .est-tiers { margin-top: 9px; grid-template-columns: 1fr 1fr; }
+.est-dlg--result .est-tier { padding: 14px 14px 14px; }
+.est-dlg--result .est-tier-fig {
+  font-size: clamp(18px, 2.6vw, 30px);
+  margin-top: 10px;
+  white-space: nowrap;
+}
+.est-dlg--result .est-tier ul { margin-top: 10px; padding-top: 8px; }
+.est-dlg--result .est-tier li { font-size: 13px; padding: 2px 0; }
+.est-dlg--result .est-badges { margin-top: 10px; }
+.est-dlg--result .est-done { margin-top: 12px; }
+.est-dlg--result .est-fine { margin-top: 8px; }
+@media(max-width:620px) {
+  .est-dlg--result .est-tier { padding: 12px 10px; }
+  .est-dlg--result .est-tier-fig { white-space: normal; font-size: 19px; }
+  .est-dlg--result .est-tier li { font-size: 12px; gap: 6px; }
+}
+
 @media(prefers-reduced-motion: reduce) {
   .est-section * { transition-duration: .01ms !important; }
   .est-section .w { transform: none; }
