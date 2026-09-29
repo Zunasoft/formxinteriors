@@ -112,9 +112,6 @@ export default function Page() {
               <Logo />
             </div>
             <div className="hero-in">
-              <p className="mono" style={{ color: "#9FB0B6", marginBottom: "26px" }}>
-                Hyderabad · Design &amp; turnkey execution
-              </p>
               <div className="caps">
                 <h1 className="cap on">
                   Interiors priced
@@ -132,6 +129,7 @@ export default function Page() {
                   <em>One bill</em>.
                 </h1>
               </div>
+              <h2 className="hero-sub">Hyderabad · Design &amp; turnkey execution</h2>
               <div className="hero-row">
                 <p>
                   A measured drawing after the first visit — yours to keep, even if you walk.
