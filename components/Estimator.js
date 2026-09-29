@@ -84,6 +84,7 @@ export default function Estimator() {
       });
       const sn = $("est-scopeN");
       if (sn) sn.textContent = ITEMS.filter((i) => i.on).length + " selected";
+      recap();
     }
 
     function group(id, fn) {
@@ -146,8 +147,11 @@ export default function Estimator() {
       if (type !== "modular" && type !== "commercial") bits.push(cfg + " BHK");
       bits.push(area.toLocaleString("en-IN") + " sq ft");
       ITEMS.filter((i) => i.on).forEach((i) => bits.push(i.n));
+      const html = bits.map((b) => `<i>${b}</i>`).join("");
       const rc = $("est-recap");
-      if (rc) rc.innerHTML = bits.map((b) => `<i>${b}</i>`).join("");
+      if (rc) rc.innerHTML = html;
+      const rr = $("est-rRecap");
+      if (rr) rr.innerHTML = html;
     }
 
     function openDlg() {
@@ -285,6 +289,10 @@ export default function Estimator() {
 
         {/* persistent result strip */}
         <div className="est-result" id="est-result">
+          <div className="est-rhead">
+            <h3>Your estimate, <em>unlocked</em>.</h3>
+            <div className="est-rrecap" id="est-rRecap"></div>
+          </div>
           <span className="mono">Indicative — exact after measurement</span>
           <div className="est-tiers">
             <div className="est-tier">
@@ -314,6 +322,14 @@ export default function Estimator() {
           <div className="est-rfoot">
             <span className="mono">Priced on the sq ft in your agreement. Exact figure after measurement — and it does not move after that.</span>
             <button suppressHydrationWarning className="est-ghost" id="est-exact">Get the exact cost in 48 hours →</button>
+          </div>
+          <div className="est-next">
+            <span className="mono">What happens next</span>
+            <ol>
+              <li><b>01</b><strong>We call once</strong><span>To confirm your scope and fix a site-visit slot.</span></li>
+              <li><b>02</b><strong>Site measurement</strong><span>A measured drawing after the first visit — yours to keep.</span></li>
+              <li><b>03</b><strong>Exact quote in 48 hours</strong><span>Every board, laminate and hinge named. Fixed after sign-off.</span></li>
+            </ol>
           </div>
         </div>
 

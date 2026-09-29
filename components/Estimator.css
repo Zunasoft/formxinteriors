@@ -209,8 +209,81 @@
   margin-top: clamp(22px, 3.4vh, 38px);
   border-color: var(--rule);
   padding-block: clamp(16px, 2vw, 24px);
-  max-height: 1000px;
+  max-height: 2400px;
+  /* once revealed the section outgrows the viewport — give the result its own
+     snap stop so the page moves form → result → next section, one "page" at a time */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-margin-top: var(--est-rgap);
+  /* margin + box + section bottom padding = exactly one viewport, so the
+     next section never peeks in under the result */
+  min-height: calc(100svh - 2 * var(--est-rgap));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+.est-section { --est-rgap: clamp(24px, 6vh, 60px); }
+
+/* result page — heading + recap on top, "what happens next" underneath */
+.est-rhead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding-bottom: clamp(14px, 2.4vh, 24px);
+  margin-bottom: clamp(14px, 2.4vh, 24px);
+  border-bottom: 1px solid var(--rule);
+}
+.est-rhead h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(26px, 3.4vw, 44px);
+  letter-spacing: -.032em;
+  line-height: 1;
+}
+.est-rhead h3 em { font-style: normal; font-weight: 800; color: var(--orange); }
+.est-rrecap { display: flex; flex-wrap: wrap; gap: 6px; max-width: 640px; justify-content: flex-end; }
+.est-rrecap i {
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--slate);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 5px 8px;
+}
+
+.est-next {
+  margin-top: clamp(16px, 2.6vh, 28px);
+  padding-top: clamp(14px, 2.4vh, 24px);
+  border-top: 1px solid var(--rule);
+}
+.est-next ol {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px clamp(16px, 3vw, 40px);
+  margin-top: 12px;
+}
+.est-next li { display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; }
+.est-next b {
+  grid-row: span 2;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--orange);
+  padding-top: 3px;
+}
+.est-next strong { font-family: var(--display); font-weight: 600; font-size: 16px; }
+.est-next li span { font-size: 13.5px; color: var(--slate); line-height: 1.45; }
+@media(max-width:760px) {
+  .est-next ol { grid-template-columns: 1fr; }
+  .est-rrecap { justify-content: flex-start; }
+}
+.est-section:has(.est-result--on) { padding-bottom: var(--est-rgap); }
 
 /* tier grid */
 .est-tiers {
