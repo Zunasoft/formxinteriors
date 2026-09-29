@@ -776,7 +776,7 @@
 /* ================= cta ================= */
 .fx-why .fx-cta-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 12px;
   align-items: stretch;
   flex: none;
@@ -886,6 +886,10 @@
 
   .fx-why .fx-48-n {
     font-size: clamp(58px, 16vw, 92px)
+  }
+
+  .fx-why .fx-cta-row {
+    flex-wrap: wrap
   }
 }
 

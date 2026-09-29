@@ -16,14 +16,19 @@ export default function Advantage() {
     
 /* ---- keep three squares and the CTA inside one screen ---- */
 (function () {
-  var cards = q('.fx-cards'), GAP = 12;
+  var cards = q('.fx-cards'), wrap = q('.fx-wrap'), GAP = 12;
   function fit() {
     if (window.innerWidth <= 900) { root.style.removeProperty('--card'); return; }
     root.style.removeProperty('--card');
     var h = cards.clientHeight, w = cards.clientWidth;
     var size = Math.floor(Math.min(h, (w - GAP * 2) / 3));
     root.style.setProperty('--card', size + 'px');
+    /* on short laptop screens the squares can still push the CTA row past the
+       bottom edge — shrink them by whatever overflows */
+    var over = wrap.scrollHeight - wrap.clientHeight;
+    if (over > 0) root.style.setProperty('--card', Math.max(160, size - over - 4) + 'px');
   }
+  if (window.ResizeObserver) new ResizeObserver(function () { requestAnimationFrame(fit); }).observe(root);
   window.addEventListener("resize", fit);
   window.addEventListener("orientationchange", fit);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);

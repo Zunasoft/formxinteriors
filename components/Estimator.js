@@ -187,10 +187,12 @@ export default function Estimator() {
       }
       if (!animate) return;
       const to = dlg.scrollHeight;
+      // hide the scrollbar while the box grows — content is briefly taller than the box
+      dlg.style.overflow = "hidden";
       dlg.style.height = from + "px";
       requestAnimationFrame(() => {
         dlg.style.height = to + "px";
-        setTimeout(() => { dlg.style.height = ""; }, 460);
+        setTimeout(() => { dlg.style.height = ""; dlg.style.overflow = ""; }, 460);
       });
     }
 
