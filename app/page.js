@@ -129,12 +129,12 @@ export default function Page() {
                   <em>One bill</em>.
                 </h1>
               </div>
-              <h2 className="hero-sub">Hyderabad · Design &amp; turnkey execution</h2>
+              <h2 className="hero-sub">Turnkey interior company in Hyderabad</h2>
               <div className="hero-row">
                 <p>
-                  A measured drawing after the first visit — yours to keep, even if you walk.
-                  Every board, laminate and hinge named in the quote.
-                  A dated photo of your site every Saturday until we hand over the keys.
+                  Getting keys in Kokapet or Tellapur? One company takes your home from
+                  empty to move-in ready — civil, electrical, modular, painting, décor.
+                  Design is free when we build. Every cut, software-checked.
                 </p>
                 <a className="btn mag" href="#estimate" data-cursor="price">
                   Get a price for your space →
@@ -150,7 +150,16 @@ export default function Page() {
             <div className="mq">
               <div id="mqi">
                 {Array.from({ length: 60 }).map((_, idx) => (
-                  <span key={idx}>{["DESIGN", "BUILD", "DELIVER"][idx % 3]}</span>
+                  <span key={idx}>
+                    {[
+                      "A–Z turnkey interiors",
+                      "Civil & false ceiling",
+                      "Electrical & plumbing",
+                      "Modular kitchens & wardrobes",
+                      "Painting & décor",
+                      "Hyderabad",
+                    ][idx % 6]}
+                  </span>
                 ))}
               </div>
             </div>
