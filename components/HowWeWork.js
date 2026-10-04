@@ -10,18 +10,18 @@ export default function HowWeWork() {
     if (!root) return;
 
     const section = root.querySelector('.part-2') || root;
-    const rail    = root.querySelector('#fx-rail');
-    const endDot  = root.querySelector('#fx-end');
-    const hint    = root.querySelector('#fx-hint');
-    const phases  = [...rail.querySelectorAll('.fx-phase')];
-    const marks   = [...rail.querySelectorAll('.fx-mark-set')];
+    const rail = root.querySelector('#fx-rail');
+    const endDot = root.querySelector('#fx-end');
+    const hint = root.querySelector('#fx-hint');
+    const phases = [...rail.querySelectorAll('.fx-phase')];
+    const marks = [...rail.querySelectorAll('.fx-mark-set')];
     // Scope .fx-card to THIS component only to avoid clashing with Advantage cards
-    const cards   = [...root.querySelectorAll('.fx-card')];
-    const hits    = [...root.querySelectorAll('.fx-hit')];
+    const cards = [...root.querySelectorAll('.fx-card')];
+    const hits = [...root.querySelectorAll('.fx-hit')];
 
     const canHover = window.matchMedia('(hover: hover)').matches;
-    const reduce   = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const wide     = window.matchMedia('(min-width: 1001px)');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const wide = window.matchMedia('(min-width: 1001px)');
 
     let active = -1, locked = null, ticking = false;
 
@@ -37,10 +37,10 @@ export default function HowWeWork() {
         const phase = parseInt(li.getAttribute('data-phase'), 10);
         li.setAttribute('data-on', phase <= i ? '1' : '0');
       });
-      cards.forEach((c, n)  => c.setAttribute('data-on', n === i ? '1' : '0'));
-      hits.forEach((h, n)   => h.setAttribute('aria-expanded', n === i ? 'true' : 'false'));
+      cards.forEach((c, n) => c.setAttribute('data-on', n === i ? '1' : '0'));
+      hits.forEach((h, n) => h.setAttribute('aria-expanded', n === i ? 'true' : 'false'));
       if (endDot) endDot.setAttribute('data-on', i === 2 ? '1' : '0');
-      if (rail)   rail.style.setProperty('--fx-i', i < 0 ? 0 : i);
+      if (rail) rail.style.setProperty('--fx-i', i < 0 ? 0 : i);
     }
 
     function fromScroll() {
@@ -79,7 +79,7 @@ export default function HowWeWork() {
       });
     }
     phases.forEach((p, i) => bind(p, i));
-    hits.forEach((h, i)   => bind(h, i));
+    hits.forEach((h, i) => bind(h, i));
 
     if (canHover) {
       section.addEventListener('mouseleave', () => { locked = null; fromScroll(); });
@@ -109,12 +109,12 @@ export default function HowWeWork() {
           <div className="fx-intro-content">
             <h2 className="fx-headline">
               <span>Three phases.</span>
-              <span>You make the decisions in the first one.</span>
+              <span>Mistakes caught<br />on screen,<br />not on site.</span>
             </h2>
 
             <p className="fx-sub">
-              Design, Build and Deliver are not three services to pick from. They are the three phases
-              every Form X project runs through &mdash; same team, same drawings, from measurement to handover.
+              Design is step one &mdash; free when we build. Then our in-house software, built by razo lab,
+              computes every measurement, cut and quantity, so the site builds exactly what you signed.
             </p>
           </div>
         </div>
@@ -136,13 +136,13 @@ export default function HowWeWork() {
             <div className="fx-marks">
               <ul className="fx-mark-set fx-mark-all">
                 <li data-phase="0">MEASURE</li>
-                <li data-phase="0">3D VIEWS</li>
+                <li data-phase="0">3D DESIGN</li>
                 <li data-phase="0">DRAWINGS</li>
-                <li data-phase="1">PROCUREMENT</li>
+                <li data-phase="1">MATERIALS</li>
                 <li data-phase="1">FABRICATION</li>
-                <li data-phase="1">SITE</li>
+                <li data-phase="1">SITE WORK</li>
                 <li data-phase="2">INSTALL</li>
-                <li data-phase="2">SNAG</li>
+                <li data-phase="2">QUALITY</li>
                 <li data-phase="2">HANDOVER</li>
               </ul>
             </div>
@@ -153,20 +153,20 @@ export default function HowWeWork() {
             <article className="fx-card" data-i="0">
               <button suppressHydrationWarning className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-1" aria-label="Design phase, show what it covers"></button>
               <span className="fx-idx">01</span>
-              <span className="fx-kicker">WHERE EVERY DECISION GETS MADE</span>
+              <span className="fx-kicker">EVERY DECISION, MADE ON SCREEN</span>
               <h3 className="fx-title">DESIGN</h3>
-              <p className="fx-lead">Every choice happens here &mdash; before anything is ordered or cut.</p>
+              <p className="fx-lead">Every choice is drawn in 3D and priced before anything is cut.</p>
               <span className="fx-cue"><i></i>WHAT THIS COVERS</span>
               <div className="fx-more" id="fx-more-1"><div>
                 <ul className="fx-list">
-                  <li>Site measurement and structure check</li>
-                  <li>Layouts, elevations and 3D views of every room</li>
-                  <li>Material and finish selection</li>
+                  <li>Site measurement by an architect</li>
+                  <li>3D views, layouts and elevations of each room</li>
+                  <li>Materials priced as you pick</li>
                 </ul>
-                <span className="fx-split">YOU CHOOSE. WE DRAW AND REVISE.</span>
+                <span className="fx-split">DESIGN IS FREE WHEN WE BUILD.</span>
                 <div className="fx-gate">
                   <span className="fx-gate-label">PHASE ENDS WHEN</span>
-                  <p className="fx-gate-text">You sign off the drawings. Scope is locked from here.</p>
+                  <p className="fx-gate-text">You sign the drawings. Scope and price lock here.</p>
                 </div>
               </div></div>
             </article>
@@ -214,14 +214,14 @@ export default function HowWeWork() {
             </article>
           </div>
 
-          <p className="fx-hint" id="fx-hint">HOVER A PHASE TO SEE WHAT IT COVERS</p>
+          <p className="fx-hint" id="fx-hint">TAP OR HOVER A PHASE TO SEE MORE</p>
 
           <div className="fx-foot">
             <div>
-              <span className="fx-foot-label">START TO KEYS</span>
+              <span className="fx-foot-label">SHELL TO KEYS</span>
               <p className="fx-foot-line">
-                One team from measurement to handover, backed by a 10-year warranty.
-                Already have drawings? We can join you at Build.
+                One architect-led team from measurement to keys, with a 10-year warranty.
+                Have drawings? Join us at Build.
               </p>
             </div>
             <div className="fx-actions">

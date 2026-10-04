@@ -5,12 +5,12 @@ import "./Estimator.css";
 export default function Estimator() {
   useEffect(() => {
     const ITEMS = [
-      { k: "kitchen",  n: "Modular kitchen",       t: 250, p: 350, on: true },
-      { k: "wardrobe", n: "Wardrobes",              t: 300, p: 420, on: true },
-      { k: "tv",       n: "TV + crockery unit",     t: 160, p: 220, on: true },
-      { k: "ceiling",  n: "False ceiling",          t: 130, p: 170, on: true },
-      { k: "paint",    n: "Painting",               t: 100, p: 120, on: true },
-      { k: "elec",     n: "Electrical + lighting",  t: 160, p: 220, on: true },
+      { k: "kitchen", n: "Modular kitchen", t: 250, p: 350, on: true },
+      { k: "wardrobe", n: "Wardrobes", t: 300, p: 420, on: true },
+      { k: "tv", n: "TV & crockery unit", t: 160, p: 220, on: true },
+      { k: "ceiling", n: "False ceiling", t: 130, p: 170, on: true },
+      { k: "paint", n: "Painting", t: 100, p: 120, on: true },
+      { k: "elec", n: "Electrical & lighting", t: 160, p: 220, on: true },
     ];
     const TYPE = { apartment: 1, villa: 1.08, modular: 1, commercial: 1.15, showflat: 0.92 };
     const SPREAD = 0.06;
@@ -142,7 +142,7 @@ export default function Estimator() {
 
     /* dialog */
     function recap() {
-      const label = { apartment: "Apartment", villa: "Villa", modular: "Modulars only", commercial: "Commercial", showflat: "Show flat" }[type];
+      const label = { apartment: "Apartment", villa: "Villa", modular: "Modular units", commercial: "Office", showflat: "Show flat" }[type];
       const bits = [label];
       if (type !== "modular" && type !== "commercial") bits.push(cfg + " BHK");
       bits.push(area.toLocaleString("en-IN") + " sq ft");
@@ -240,9 +240,9 @@ export default function Estimator() {
 
   return (
     <section className="est-section" id="estimate" aria-labelledby="est-heading">
-      <div className="est-eyebrow"><span className="mono">Your quote</span></div>
-      <h2 id="est-heading" data-split>Your number, before anyone calls you.</h2>
-      <div className="mono est-sub">Pick the job. Move the slider. Then calculate.</div>
+      <div className="est-eyebrow"><span className="mono">Your cost</span></div>
+      <h2 id="est-heading" data-split>Your interior cost, before any call.</h2>
+      <div className="mono est-sub">Pick your home. Set the area. Tick the rooms.</div>
 
       <div className="est-reqs">
 
@@ -252,8 +252,8 @@ export default function Estimator() {
           <div className="est-opts" id="est-ptype">
             <button suppressHydrationWarning className="est-opt" aria-pressed="true" data-v="apartment">Apartment</button>
             <button suppressHydrationWarning className="est-opt" data-v="villa">Villa</button>
-            <button suppressHydrationWarning className="est-opt" data-v="modular">Modulars only</button>
-            <button suppressHydrationWarning className="est-opt" data-v="commercial">Commercial</button>
+            <button suppressHydrationWarning className="est-opt" data-v="modular">Modular units</button>
+            <button suppressHydrationWarning className="est-opt" data-v="commercial">Office</button>
             <button suppressHydrationWarning className="est-opt" data-v="showflat">Show flat</button>
           </div>
         </div>
@@ -286,7 +286,7 @@ export default function Estimator() {
         {/* CTA bar */}
         <div className="est-gobar">
           <button suppressHydrationWarning className="est-calc" id="est-calcBtn">Calculate my estimate <span>→</span></button>
-          <span className="mono">Free · no obligation · you keep the drawing either way</span>
+          <span className="mono">Free · no obligation · the drawing is your either way</span>
         </div>
 
         {/* persistent result strip */}
@@ -352,84 +352,84 @@ export default function Estimator() {
         <div className="est-recap" id="est-recap"></div>
 
         <div className="est-panes">
-        {/* pane A — form */}
-        <div className="est-pane est-pane--in" id="est-paneForm">
-          <div style={{ marginTop: 16 }}>
-            <div className="est-two">
+          {/* pane A — form */}
+          <div className="est-pane est-pane--in" id="est-paneForm">
+            <div style={{ marginTop: 16 }}>
+              <div className="est-two">
+                <label className="est-f">
+                  <span>Your name</span>
+                  <input type="text" id="est-fname" autoComplete="name" placeholder="Rajesh Kumar" />
+                </label>
+                <label className="est-f">
+                  <span>WhatsApp number</span>
+                  <input type="tel" id="est-fphone" autoComplete="tel" inputMode="numeric" maxLength={10} placeholder="98XXXXXXXX" />
+                </label>
+              </div>
+              <div className="est-err" id="est-err">Please add your name and a 10-digit mobile number.</div>
               <label className="est-f">
-                <span>Your name</span>
-                <input type="text" id="est-fname" autoComplete="name" placeholder="Rajesh Kumar" />
+                <span>Project, tower or area</span>
+                <input type="text" id="est-fplace" placeholder="e.g. Kokapet, or your project name" />
               </label>
-              <label className="est-f">
-                <span>WhatsApp number</span>
-                <input type="tel" id="est-fphone" autoComplete="tel" inputMode="numeric" maxLength={10} placeholder="98XXXXXXXX" />
-              </label>
+              <div className="est-two">
+                <label className="est-f">
+                  <span>Possession</span>
+                  <select id="est-fposs">
+                    <option>Already living in it</option>
+                    <option defaultValue="">Handover soon</option>
+                    <option>Under construction</option>
+                  </select>
+                </label>
+                <label className="est-f">
+                  <span>Start work</span>
+                  <select id="est-fstart">
+                    <option>Immediately</option>
+                    <option defaultValue="">After 1 month</option>
+                    <option>After 3 months</option>
+                    <option>After 6 months</option>
+                  </select>
+                </label>
+              </div>
+              <button suppressHydrationWarning className="est-reveal" id="est-revealBtn">Reveal my estimate →</button>
+              <div className="est-fine">We call once to confirm the scope. No drip campaign.</div>
             </div>
-            <div className="est-err" id="est-err">Please add your name and a 10-digit mobile number.</div>
-            <label className="est-f">
-              <span>Project, tower or area</span>
-              <input type="text" id="est-fplace" placeholder="e.g. Kokapet, or your project name" />
-            </label>
-            <div className="est-two">
-              <label className="est-f">
-                <span>Possession</span>
-                <select id="est-fposs">
-                  <option>Already living in it</option>
-                  <option defaultValue="">Handover soon</option>
-                  <option>Under construction</option>
-                </select>
-              </label>
-              <label className="est-f">
-                <span>Start work</span>
-                <select id="est-fstart">
-                  <option>Immediately</option>
-                  <option defaultValue="">After 1 month</option>
-                  <option>After 3 months</option>
-                  <option>After 6 months</option>
-                </select>
-              </label>
-            </div>
-            <button suppressHydrationWarning className="est-reveal" id="est-revealBtn">Reveal my estimate →</button>
-            <div className="est-fine">We call once to confirm the scope. No drip campaign.</div>
           </div>
-        </div>
 
-        {/* pane B — numbers */}
-        <div className="est-pane est-pane--out" id="est-paneResult">
-          <div style={{ marginTop: 16 }}>
-            <span className="mono">Indicative — exact after measurement</span>
-            <div className="est-tiers">
-              <div className="est-tier">
-                <div className="est-tier-nm">Titanium</div>
-                <div className="est-tier-brands">Indian brands</div>
-                <div className="est-tier-fig" id="est-dFigT">—</div>
-                <div className="est-tier-per" id="est-dPerT"></div>
-                <ul>
-                  <li>BWP ply carcass</li><li>Merino laminate</li>
-                  <li>Hettich India hardware</li><li>Quartz counter</li>
-                </ul>
+          {/* pane B — numbers */}
+          <div className="est-pane est-pane--out" id="est-paneResult">
+            <div style={{ marginTop: 16 }}>
+              <span className="mono">Indicative — exact after measurement</span>
+              <div className="est-tiers">
+                <div className="est-tier">
+                  <div className="est-tier-nm">Titanium</div>
+                  <div className="est-tier-brands">Indian brands</div>
+                  <div className="est-tier-fig" id="est-dFigT">—</div>
+                  <div className="est-tier-per" id="est-dPerT"></div>
+                  <ul>
+                    <li>BWP ply carcass</li><li>Merino laminate</li>
+                    <li>Hettich India hardware</li><li>Quartz counter</li>
+                  </ul>
+                </div>
+                <div className="est-tier est-tier--best">
+                  <div className="est-tier-nm">Platinum</div>
+                  <div className="est-tier-brands">Imported brands</div>
+                  <div className="est-tier-fig" id="est-dFigP">—</div>
+                  <div className="est-tier-per" id="est-dPerP"></div>
+                  <ul>
+                    <li>BWP ply carcass</li><li>Acrylic / PU shutters</li>
+                    <li>Imported soft-close hardware</li><li>Upgraded counters</li>
+                  </ul>
+                </div>
               </div>
-              <div className="est-tier est-tier--best">
-                <div className="est-tier-nm">Platinum</div>
-                <div className="est-tier-brands">Imported brands</div>
-                <div className="est-tier-fig" id="est-dFigP">—</div>
-                <div className="est-tier-per" id="est-dPerP"></div>
-                <ul>
-                  <li>BWP ply carcass</li><li>Acrylic / PU shutters</li>
-                  <li>Imported soft-close hardware</li><li>Upgraded counters</li>
-                </ul>
+              <div className="est-badges">
+                <i>10-year warranty</i><i>Fixed after sign-off</i><i>Line-by-line quote</i>
               </div>
+              <div className="est-done">
+                <button suppressHydrationWarning className="est-ghost" id="est-dExact">Get the exact cost in 48 hours →</button>
+                <button suppressHydrationWarning className="est-ghost" id="est-dDone">Close</button>
+              </div>
+              <div className="est-fine">Your estimate stays on the page below for this visit.</div>
             </div>
-            <div className="est-badges">
-              <i>10-year warranty</i><i>Fixed after sign-off</i><i>Line-by-line quote</i>
-            </div>
-            <div className="est-done">
-              <button suppressHydrationWarning className="est-ghost" id="est-dExact">Get the exact cost in 48 hours →</button>
-              <button suppressHydrationWarning className="est-ghost" id="est-dDone">Close</button>
-            </div>
-            <div className="est-fine">Your estimate stays on the page below for this visit.</div>
           </div>
-        </div>
         </div>
       </div>
     </section>
