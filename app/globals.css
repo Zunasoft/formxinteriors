@@ -344,6 +344,21 @@ h2 {
   margin-top: 34px
 }
 
+/* phone link in the menu footer — keep the small mono line, not the big link style */
+#menu .foot a {
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  padding: 0;
+  opacity: 1;
+  text-decoration: none
+}
+
+#menu .foot a:hover {
+  color: var(--orange);
+  transform: none
+}
+
 /* ---- hover swap text ---- */
 .sw {
   position: relative;

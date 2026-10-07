@@ -50,8 +50,8 @@ export default function Page() {
         </a>
         <a href="#offers">
           <span className="sw">
-            <i>Expertise</i>
-            <i>Expertise</i>
+            <i>Services</i>
+            <i>Services</i>
           </span>
         </a>
         <a href="#estimate">
@@ -68,8 +68,8 @@ export default function Page() {
         </a>
         <a href="#book-consultation">
           <span className="sw">
-            <i>Consultation</i>
-            <i>Consultation</i>
+            <i>Site visit</i>
+            <i>Site visit</i>
           </span>
         </a>
         <a href="#faq">
@@ -90,7 +90,7 @@ export default function Page() {
             <i>Blog</i>
           </span>
         </a>
-        <div className="mono foot">Hyderabad · +91 00000 00000</div>
+        <div className="mono foot">Hyderabad · <a href="tel:+919951733955">+91 99517 33955</a></div>
       </nav>
 
       {/* ---- scroll-scrubbed film hero ---- */}
