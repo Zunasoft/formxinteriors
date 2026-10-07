@@ -179,7 +179,7 @@ export default function Estimator() {
       if (which === "result") {
         f.className = "est-pane est-pane--out";
         r.className = "est-pane est-pane--in";
-        if (title) title.innerHTML = 'Your estimate, <em>unlocked</em>.';
+        if (title) title.innerHTML = 'Your estimate is <em>ready</em>.';
       } else {
         r.className = "est-pane est-pane--out";
         f.className = "est-pane est-pane--in";
@@ -229,13 +229,31 @@ export default function Estimator() {
       const cb = $("est-calcBtn");
       if (cb) cb.innerHTML = 'Recalculate <span>→</span>';
       $("est-result")?.classList.add("est-result--on");
+      spaceResult();
     });
+
+    /* The form is shorter than the screen, so the revealed result would peek in
+       under it. Push the result down so it starts exactly one screen below the
+       section top — the form stop shows only the form, the result stop only the result. */
+    function spaceResult() {
+      const sec = document.querySelector(".est-section");
+      const r = $("est-result"), bar = document.querySelector(".est-gobar");
+      if (!sec || !r || !bar || !r.classList.contains("est-result--on")) return;
+      const gap = Math.min(60, Math.max(24, window.innerHeight * 0.06)); // = --est-rgap
+      const formBottom = bar.getBoundingClientRect().bottom - sec.getBoundingClientRect().top;
+      const need = window.innerHeight + gap - formBottom;
+      r.style.marginTop = Math.max(38, need) + "px";
+    }
+    window.addEventListener("resize", spaceResult);
 
     const kbHandler = (e) => { if (e.key === "Escape") closeDlg(); };
     window.addEventListener("keydown", kbHandler);
 
     paint(false);
-    return () => { window.removeEventListener("keydown", kbHandler); };
+    return () => {
+      window.removeEventListener("keydown", kbHandler);
+      window.removeEventListener("resize", spaceResult);
+    };
   }, []);
 
   return (
@@ -292,13 +310,13 @@ export default function Estimator() {
         {/* persistent result strip */}
         <div className="est-result" id="est-result">
           <div className="est-rhead">
-            <h3>Your estimate, <em>unlocked</em>.</h3>
+            <h3>Your estimate is <em>ready</em>.</h3>
             <div className="est-rrecap" id="est-rRecap"></div>
           </div>
-          <span className="mono">Indicative — exact after measurement</span>
+          <span className="mono">Indicative — fixed after measurement</span>
           <div className="est-tiers">
             <div className="est-tier">
-              <div className="est-tier-nm">Titanium</div>
+              <div className="est-tier-nm">Gold</div>
               <div className="est-tier-brands">Indian brands</div>
               <div className="est-tier-fig" id="est-figT">—</div>
               <div className="est-tier-per" id="est-perT"></div>
@@ -323,7 +341,7 @@ export default function Estimator() {
           </div>
           <div className="est-rfoot">
             <span className="mono">Priced on the sq ft in your agreement. Exact figure after measurement — and it does not move after that.</span>
-            <button suppressHydrationWarning className="est-ghost" id="est-exact">Get the exact cost in 48 hours →</button>
+            <button suppressHydrationWarning className="est-ghost" id="est-exact">Get my exact quote in 48 hrs →</button>
           </div>
           <div className="est-next">
             <span className="mono">What happens next</span>
@@ -397,10 +415,10 @@ export default function Estimator() {
           {/* pane B — numbers */}
           <div className="est-pane est-pane--out" id="est-paneResult">
             <div style={{ marginTop: 16 }}>
-              <span className="mono">Indicative — exact after measurement</span>
+              <span className="mono">Indicative — fixed after measurement</span>
               <div className="est-tiers">
                 <div className="est-tier">
-                  <div className="est-tier-nm">Titanium</div>
+                  <div className="est-tier-nm">Gold</div>
                   <div className="est-tier-brands">Indian brands</div>
                   <div className="est-tier-fig" id="est-dFigT">—</div>
                   <div className="est-tier-per" id="est-dPerT"></div>
@@ -424,7 +442,7 @@ export default function Estimator() {
                 <i>10-year warranty</i><i>Fixed after sign-off</i><i>Line-by-line quote</i>
               </div>
               <div className="est-done">
-                <button suppressHydrationWarning className="est-ghost" id="est-dExact">Get the exact cost in 48 hours →</button>
+                <button suppressHydrationWarning className="est-ghost" id="est-dExact">Get my exact quote in 48 hrs →</button>
                 <button suppressHydrationWarning className="est-ghost" id="est-dDone">Close</button>
               </div>
               <div className="est-fine">Your estimate stays on the page below for this visit.</div>
