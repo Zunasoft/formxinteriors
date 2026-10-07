@@ -54,7 +54,7 @@ export default function Page() {
             <i>Services</i>
           </span>
         </a>
-        <a href="#estimate">
+        <a href="#cost-calculator">
           <span className="sw">
             <i>Estimate</i>
             <i>Estimate</i>
@@ -66,7 +66,7 @@ export default function Page() {
             <i>Process</i>
           </span>
         </a>
-        <a href="#book-consultation">
+        <a href="#book-visit">
           <span className="sw">
             <i>Site visit</i>
             <i>Site visit</i>
@@ -136,15 +136,22 @@ export default function Page() {
                   empty to move-in ready — civil, electrical, modular, painting, décor.
                   Design is free when we build. Every cut, software-checked.
                 </p>
-                <a className="btn mag" href="#estimate" data-cursor="price">
-                  Get a price for your space →
-                </a>
+                <div className="hero-cta">
+                  <div className="hero-cta-row">
+                    <a className="btn mag" href="#cost-calculator" data-cursor="price">
+                      Get my interior cost →
+                    </a>
+                    <a className="hero-link" href="#book-visit">Book a free site visit</a>
+                  </div>
+                  <div className="hero-note">
+                    Free design when we build · No sales team · Keys 48 days after sign-off
+                  </div>
+                </div>
               </div>
             </div>
             <div className="sind">
               <i id="sfill"></i>
             </div>
-            <div className="tag mono">Scroll to play</div>
 
             {/* ---- marquee ---- */}
             <div className="mq">

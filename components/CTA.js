@@ -8,7 +8,7 @@ export default function CTA() {
         <h2>Book the visit.<br/>Keep the drawing.</h2>
         <p>Ninety minutes at your flat, a measured drawing within a week, an itemised quote within 48 hours of that. If you take all three somewhere else, that is a fair outcome for us too.</p>
         <div className="row">
-          <a className="btn btn-p" href="#book-consultation">
+          <a className="btn btn-p" href="#book-visit">
             Book a free consultation
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>

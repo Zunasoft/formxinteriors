@@ -33,7 +33,7 @@ export default function Footer() {
             <li><a href="#">Design</a></li>
             <li><a href="#">Build</a></li>
             <li><a href="#">Design + Build</a></li>
-            <li><a href="#estimate">Pricing breakdown</a></li>
+            <li><a href="#cost-calculator">Pricing breakdown</a></li>
           </ul>
         </div>
         <div>
@@ -41,7 +41,7 @@ export default function Footer() {
           <ul>
             <li><a href="#work">Selected work</a></li>
             <li><a href="#offers-cards">Our process</a></li>
-            <li><a href="#book-consultation">Reviews</a></li>
+            <li><a href="#book-visit">Reviews</a></li>
           </ul>
         </div>
         <div>

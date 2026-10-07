@@ -174,20 +174,20 @@ export default function HowWeWork() {
             <article className="fx-card" data-i="1">
               <button suppressHydrationWarning className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-2" aria-label="Build phase, show what it covers"></button>
               <span className="fx-idx">02</span>
-              <span className="fx-kicker">WHERE YOU STOP DECIDING AND START GETTING UPDATES</span>
+              <span className="fx-kicker">WHERE SOFTWARE CHECKS EVERY CUT BEFORE IT&rsquo;S MADE</span>
               <h3 className="fx-title">BUILD</h3>
-              <p className="fx-lead">Frozen drawings go to the factory and the site on the same day.</p>
+              <p className="fx-lead">Our in-house software turns your drawings into exact cut lists.</p>
               <span className="fx-cue"><i></i>WHAT THIS COVERS</span>
               <div className="fx-more" id="fx-more-2"><div>
                 <ul className="fx-list">
-                  <li>Procurement against the approved scope</li>
-                  <li>In-house carpentry and modular fabrication</li>
-                  <li>Civil, electrical, plumbing and false ceiling on site</li>
+                  <li>Materials bought to the approved scope</li>
+                  <li>Modular units made in our own workshop</li>
+                  <li>Civil, electrical, plumbing, ceiling and painting</li>
                 </ul>
-                <span className="fx-split">YOU APPROVE. WE PROCURE AND EXECUTE.</span>
+                <span className="fx-split">YOU APPROVE. WE BUILD TO THE MM.</span>
                 <div className="fx-gate">
                   <span className="fx-gate-label">PHASE ENDS WHEN</span>
-                  <p className="fx-gate-text">Every element is fabricated, delivered and checked against the drawing.</p>
+                  <p className="fx-gate-text">Every piece is made, delivered and checked against your drawing.</p>
                 </div>
               </div></div>
             </article>
@@ -195,20 +195,20 @@ export default function HowWeWork() {
             <article className="fx-card" data-i="2">
               <button suppressHydrationWarning className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-3" aria-label="Deliver phase, show what it covers"></button>
               <span className="fx-idx">03</span>
-              <span className="fx-kicker">THE PART MOST CONTRACTORS LEAVE YOU TO CHASE</span>
+              <span className="fx-kicker">THE PART CONTRACTORS LEAVE YOU TO CHASE</span>
               <h3 className="fx-title">DELIVER</h3>
-              <p className="fx-lead">Installation, snagging, cleaning, keys.</p>
+              <p className="fx-lead">Fitted, checked twice, cleaned, keys.</p>
               <span className="fx-cue"><i></i>WHAT THIS COVERS</span>
               <div className="fx-more" id="fx-more-3"><div>
                 <ul className="fx-list">
-                  <li>Installation and finishing</li>
-                  <li>Snag list &mdash; ours first, then yours</li>
-                  <li>Deep clean and styling before you walk in</li>
+                  <li>Fitting and fine finishing</li>
+                  <li>Snag check &mdash; ours, then yours</li>
+                  <li>Deep clean and styling before move-in</li>
                 </ul>
-                <span className="fx-split">WE FINISH. YOU INSPECT. THEN KEYS.</span>
+                <span className="fx-split">WE FINISH. YOU CHECK. YOU MOVE IN.</span>
                 <div className="fx-gate">
                   <span className="fx-gate-label">PHASE ENDS WHEN</span>
-                  <p className="fx-gate-text">You walk in, walk through and take the keys. Nothing pending.</p>
+                  <p className="fx-gate-text">You walk through, sign off, take the keys. Nothing pending.</p>
                 </div>
               </div></div>
             </article>
@@ -225,7 +225,7 @@ export default function HowWeWork() {
               </p>
             </div>
             <div className="fx-actions">
-              <a className="fx-btn fx-btn--solid" href="#estimate">GET MY 3D IN 48 HOURS</a>
+              <a className="fx-btn fx-btn--solid" href="#book-visit">GET MY FREE 3D IN 48H</a>
             </div>
           </div>
         </div>

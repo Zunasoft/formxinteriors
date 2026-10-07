@@ -183,7 +183,7 @@ export default function Estimator() {
       } else {
         r.className = "est-pane est-pane--out";
         f.className = "est-pane est-pane--in";
-        if (title) title.innerHTML = 'Where should we send the <em>number</em>?';
+        if (title) title.innerHTML = 'Where do we send your <em>estimate</em>?';
       }
       if (!animate) return;
       const to = dlg.scrollHeight;
@@ -239,7 +239,7 @@ export default function Estimator() {
   }, []);
 
   return (
-    <section className="est-section" id="estimate" aria-labelledby="est-heading">
+    <section className="est-section" id="cost-calculator" aria-labelledby="est-heading">
       <div className="est-eyebrow"><span className="mono">Your cost</span></div>
       <h2 id="est-heading" data-split>Your interior cost, before any call.</h2>
       <div className="mono est-sub">Pick your home. Set the area. Tick the rooms.</div>
@@ -341,7 +341,7 @@ export default function Estimator() {
       <div className="est-scrim" id="est-scrim"></div>
       <div className="est-dlg" id="est-dlg" role="dialog" aria-modal="true" aria-labelledby="est-dtitle">
         <div className="est-dhead">
-          <h3 id="est-dtitle">Where should we send the <em>number</em>?</h3>
+          <h3 id="est-dtitle">Where do we send your <em>estimate</em>?</h3>
           <button suppressHydrationWarning className="est-xbtn" id="est-dclose" aria-label="Close">
             <svg viewBox="0 0 100 100" width="13" height="13">
               <path d="M24 24L76 76M76 24L24 76" stroke="#F6F2EE" strokeWidth="14" />
@@ -368,7 +368,7 @@ export default function Estimator() {
               <div className="est-err" id="est-err">Please add your name and a 10-digit mobile number.</div>
               <label className="est-f">
                 <span>Project, tower or area</span>
-                <input type="text" id="est-fplace" placeholder="e.g. Kokapet, or your project name" />
+                <input type="text" id="est-fplace" placeholder="e.g. Tower B, Kokapet" />
               </label>
               <div className="est-two">
                 <label className="est-f">
@@ -382,15 +382,15 @@ export default function Estimator() {
                 <label className="est-f">
                   <span>Start work</span>
                   <select id="est-fstart">
-                    <option>Immediately</option>
-                    <option defaultValue="">After 1 month</option>
-                    <option>After 3 months</option>
-                    <option>After 6 months</option>
+                    <option>Right away</option>
+                    <option defaultValue="">In 1 month</option>
+                    <option>In 3 months</option>
+                    <option>In 6 months</option>
                   </select>
                 </label>
               </div>
-              <button suppressHydrationWarning className="est-reveal" id="est-revealBtn">Reveal my estimate →</button>
-              <div className="est-fine">We call once to confirm the scope. No drip campaign.</div>
+              <button suppressHydrationWarning className="est-reveal" id="est-revealBtn">Show my estimate →</button>
+              <div className="est-fine">An architect calls once to confirm. No sales calls.</div>
             </div>
           </div>
 

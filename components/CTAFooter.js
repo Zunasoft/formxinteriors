@@ -11,7 +11,7 @@ export default function CTAFooter() {
         <h2>Book the visit.<br/>Keep the drawing.</h2>
         <p>Ninety minutes at your flat, a measured drawing within a week, an itemised quote within 48 hours of that. If you take all three somewhere else, that is a fair outcome for us too.</p>
         <div className="row">
-          <a className="btn btn-p" href="#book-consultation">Book a free consultation →</a>
+          <a className="btn btn-p" href="#book-visit">Book a free consultation →</a>
           <a className="btn btn-s" href="tel:+919000000000">Call +91 90000 00000</a>
         </div>
         <small>NO OBLIGATION · WE REPLY WITHIN 2 WORKING HOURS · SERVING ALL OF HYDERABAD</small>

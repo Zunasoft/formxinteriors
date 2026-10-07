@@ -155,7 +155,7 @@ export default function CTAModal() {
 
   const handleEditClick = () => {
     window.FXQuote.close();
-    const c = document.getElementById("estimate");
+    const c = document.getElementById("cost-calculator");
     if (c) c.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 

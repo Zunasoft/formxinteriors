@@ -512,7 +512,10 @@
 .est-f input:focus,
 .est-f select:focus { outline: none; border-bottom-color: var(--orange); }
 .est-f input::placeholder { color: rgba(110,123,128,.7); }
-.est-f select option { background: var(--deep); color: var(--shell); }
+/* --deep isn't defined in this section's scope, so give the native dropdown an
+   explicit dark fallback — otherwise the list renders white with light text */
+.est-f select { color-scheme: dark; }
+.est-f select option { background: var(--deep, #0E181D); color: var(--shell); }
 
 .est-two {
   display: grid;

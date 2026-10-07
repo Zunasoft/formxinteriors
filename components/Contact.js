@@ -54,7 +54,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="fx-contact" id="book-consultation">
+    <section className="fx-contact" id="book-visit">
       <div className="ct-eyebrow"><span className="ct-mono">Start here</span></div>
       <div className="ct-cols">
         {/* ============ left: the form ============ */}
