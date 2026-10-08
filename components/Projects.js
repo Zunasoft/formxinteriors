@@ -132,6 +132,13 @@ export default function Projects() {
         playBuild(cur);
         $('counter').textContent = String(cur.i + 1).padStart(2, '0') + ' / ' + String(P.length).padStart(2, '0');
       }
+      fillTo(vi);
+    }
+    /* The red line follows the open project (same as the counter), not raw
+       scroll — hover can open a different panel, which made the two disagree. */
+    function fillTo(vi) {
+      const n = PN.length;
+      $('pfill').style.width = (n ? ((vi + 1) / n) * 100 : 0) + '%';
     }
 
     /* ---------- scroll drives left -> right ---------- */
@@ -143,7 +150,6 @@ export default function Projects() {
       const st = $('stage'), r = st.getBoundingClientRect();
       const total = st.offsetHeight - innerHeight;
       prog = Math.max(0, Math.min(1, total ? (-r.top) / total : 0));
-      $('pfill').style.width = (prog * 100) + '%';
       if (!vis.length) return;
       /* Step relative to whatever is open rather than mapping scroll
          position straight to an index, so a hovered panel becomes the
@@ -167,8 +173,19 @@ export default function Projects() {
          layout shift can swallow. setActive ignores repeats. */
       if (e.pointerType === 'touch') return;
       const pn = e.target.closest && e.target.closest('.pn');
-      if (pn) setActive(+pn.dataset.vi);
+      if (pn) { const vi = +pn.dataset.vi; if (vi !== active) { setActive(vi); syncScroll(vi); } }
     });
+    /* After a hover opens a panel, move the (pinned, so invisible) scroll position
+       to that panel's slot — the next scroll then continues 8 → 9 → 10 instead of
+       running out because the page was already scrolled near the end. */
+    function syncScroll(vi) {
+      const st = $('stage'), r = st.getBoundingClientRect();
+      const total = st.offsetHeight - innerHeight;
+      if (!vis.length || total <= 0 || r.top > 0 || r.bottom < innerHeight) return; // only while pinned
+      const top = r.top + scrollY + ((vi + 0.5) / vis.length) * total;
+      lastVi = vi;
+      window.scrollTo({ top, behavior: 'instant' });
+    }
     ww.addEventListener('pointerleave', () => { tx = 0; ty = 0; });
 
     /* ---------- ambient wave ---------- */
