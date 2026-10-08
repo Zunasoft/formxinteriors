@@ -546,7 +546,9 @@
 .fx-why .fx-48 {
   display: flex;
   flex-direction: column;
-  gap: 2px
+  gap: 2px;
+  /* lift the two numbers off the warranty bar; the bar + chip stay at the bottom */
+  margin-bottom: clamp(12px, 3.4vh, 36px)
 }
 
 .fx-why .fx-48-n {

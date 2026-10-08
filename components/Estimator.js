@@ -340,15 +340,15 @@ export default function Estimator() {
             <i>10-year warranty</i><i>Fixed after sign-off</i><i>Line-by-line quote</i>
           </div>
           <div className="est-rfoot">
-            <span className="mono">Priced on the sq ft in your agreement. Exact figure after measurement — and it does not move after that.</span>
+            <span className="mono">Priced on the area in your agreement. Exact figure after measurement — fixed once you sign.</span>
             <button suppressHydrationWarning className="est-ghost" id="est-exact">Get my exact quote in 48 hrs →</button>
           </div>
           <div className="est-next">
             <span className="mono">What happens next</span>
             <ol>
-              <li><b>01</b><strong>We call once</strong><span>To confirm your scope and fix a site-visit slot.</span></li>
-              <li><b>02</b><strong>Site measurement</strong><span>A measured drawing after the first visit — yours to keep.</span></li>
-              <li><b>03</b><strong>Exact quote in 48 hours</strong><span>Every board, laminate and hinge named. Fixed after sign-off.</span></li>
+              <li><b>01</b><strong>One call</strong><span>An architect confirms scope and books a visit.</span></li>
+              <li><b>02</b><strong>Free measurement</strong><span>A measured drawing of your home — yours to keep.</span></li>
+              <li><b>03</b><strong>Itemised quote, 48 hrs</strong><span>Every board, laminate and hinge named. Fixed once you sign.</span></li>
             </ol>
           </div>
         </div>

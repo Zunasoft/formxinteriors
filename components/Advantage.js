@@ -215,16 +215,16 @@ export default function Advantage() {
 
     <div className="fx-head">
     <div className="fx-top"><span className="fx-eyebrow">WHY FORM X</span><span className="fx-rule"></span></div>
-    <h2 className="fx-h2" id="why-h2"><span>Three promises.</span><span>Nothing <em>else</em> to read.</span></h2>
+    <h2 className="fx-h2" id="why-h2"><span>Three promises.</span><span><em>No sales</em> pitch.</span></h2>
     </div>
 
     <div className="fx-cards">
 
       {/**/}
       <article className="fx-card" data-anim tabIndex="0">
-        <div className="fx-tagrow"><span className="fx-num">01</span><span className="fx-kick">ARCHITECT-LED</span></div>
-        <h3 className="fx-title">100% designed<br />by architects.</h3>
-        <p className="fx-line">Walls, services and every piece of furniture planned before anything is cut.</p>
+        <div className="fx-tagrow"><span className="fx-num">01</span><span className="fx-kick">NO SALES TEAM</span></div>
+        <h3 className="fx-title">Architects,<br />no sales reps.</h3>
+        <p className="fx-line">Your first call, site visit and every sign-off are with an architect.</p>
 
         <div className="fx-vis">
           <div className="iso" id="iso"><div className="sway"><div className="world" id="world"><div className="floor"><svg className="fx-plan" viewBox="0 0 320 232" aria-hidden={true}>
@@ -297,21 +297,21 @@ export default function Advantage() {
       {/**/}
       <article className="fx-card" data-anim tabIndex="0">
         <div className="fx-tagrow"><span className="fx-num">02</span><span className="fx-kick">THE 48 &amp; 48</span></div>
-        <h3 className="fx-title">Two numbers<br />we hold to.</h3>
-        <p className="fx-line">One for how fast we answer. One for how fast we finish.</p>
+        <h3 className="fx-title">Two numbers<br />in writing.</h3>
+        <p className="fx-line">One for how fast we fix. One for how fast you move in.</p>
 
         <div className="fx-vis">
           <div className="fx-48">
             <div>
               <span className="fx-48-n" data-count="48">0</span>
               <p className="fx-48-lab">HOURS TO ACT</p>
-              <p className="fx-48-sub">Any service call, any time after handover.</p>
+              <p className="fx-48-sub">Any service call, any time after move-in.</p>
             </div>
             <span className="fx-amp">&amp;</span>
             <div>
               <span className="fx-48-n" data-count="48">0</span>
               <p className="fx-48-lab">DAYS TO HANDOVER</p>
-              <p className="fx-48-sub">From drawing sign-off. Standard 3BHK &mdash; bigger scope adds days, agreed before we start.</p>
+              <p className="fx-48-sub">From drawing sign-off, standard 3BHK. Bigger homes: date agreed upfront.</p>
             </div>
           </div>
           <div className="fx-bar"><i></i></div>
@@ -321,9 +321,9 @@ export default function Advantage() {
 
       {/**/}
       <article className="fx-card" data-anim tabIndex="0">
-        <div className="fx-tagrow"><span className="fx-num">03</span><span className="fx-kick">EVERY SINGLE DAY</span></div>
-        <h3 className="fx-title">A photo from<br />your site. Daily.</h3>
-        <p className="fx-line">From day one to handover. You never have to ask, and never have to drive down to check.</p>
+        <div className="fx-tagrow"><span className="fx-num">03</span><span className="fx-kick">DAILY SITE PHOTO</span></div>
+        <h3 className="fx-title">Site photos,<br />every single day.</h3>
+        <p className="fx-line">Day one to handover, on your WhatsApp. No chasing, no drives across Hyderabad to check.</p>
 
         <div className="fx-vis">
           <div className="fx-film">
@@ -411,8 +411,8 @@ export default function Advantage() {
     </div>
 
     <div className="fx-cta-row">
-      <a className="fx-cta" href="#quote">See your number</a>
-      <a className="fx-cta2" href="#contact">TALK TO THE ARCHITECT</a>
+      <a className="fx-cta" href="#cost-calculator">See my estimate</a>
+      <a className="fx-cta2" href="https://wa.me/919951733955" target="_blank" rel="noopener noreferrer">TALK TO AN ARCHITECT</a>
     </div>
 
   </div>

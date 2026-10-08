@@ -333,8 +333,8 @@ export default function Projects() {
       <div className="stage" id="stage">
         <div className="stick">
           <div className="wrap">
-            <div className="eyebrow"><span className="mono">Portfolio selection</span></div>
-            <h2>Ten projects, ten ideas.</h2>
+            <div className="eyebrow"><span className="mono">Hyderabad projects</span></div>
+            <h2>Our Hyderabad interiors.</h2>
             <div className="trust" id="pwtrust">
               <div><b id="t1">10</b><span>Projects delivered</span></div>
               <div><b id="t2">162</b><span>Frames selected</span></div>
@@ -346,10 +346,10 @@ export default function Projects() {
                 <button suppressHydrationWarning className="chip" aria-pressed="true" data-f="all">All</button>
                 <button suppressHydrationWarning className="chip" data-f="Villa">Villa</button>
                 <button suppressHydrationWarning className="chip" data-f="Apartment">Apartment</button>
-                <button suppressHydrationWarning className="chip" data-f="Commercial">Commercial</button>
+                <button suppressHydrationWarning className="chip" data-f="Commercial">Office</button>
               </div>
               <button suppressHydrationWarning className="morebtn" type="button">
-                More projects <i className="morebtn-ar">→</i>
+                All projects <i className="morebtn-ar">→</i>
               </button>
             </div>
           </div>
