@@ -77,6 +77,14 @@
   transition: transform .18s var(--fx-cta-ease), background .22s, color .22s, border-color .22s;
   text-decoration: none;
   text-align: center;
+  white-space: nowrap;
+}
+
+/* phones: stack the three buttons full-width so no label wraps */
+@media (max-width: 640px) {
+  .fx-cta-section .wrap { width: 100%; }
+  .fx-cta-section .row { flex-direction: column; align-items: stretch; gap: 10px; }
+  .fx-cta-section .btn { width: 100%; }
 }
 
 .fx-cta-section .btn svg {

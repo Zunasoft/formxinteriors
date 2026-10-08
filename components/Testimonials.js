@@ -349,7 +349,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <div className="fx-testimonials">
+    <div className="fx-testimonials" id="reviews">
       <div className="wrap head">
         <div>
           <div className="eyebrow"><span className="mono">Clients</span></div>

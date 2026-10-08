@@ -2,6 +2,37 @@
 import { useEffect, useRef } from "react";
 import "./MoneyBreakdown.css";
 
+/* ================== DATA ================== */
+var LINES = [
+  ['BWP ply & carcass',               28, 26, '#F26829',
+   'BWP ply in wet zones, MR ply elsewhere, HDHMR shutters. This is the line most quotes cut to reach a low number, and the one that decides whether the wardrobe survives a decade.'],
+  ['Surface & edge banding',           13, 18, '#C4501E',
+   'Laminate, acrylic or PU on the face, and the edge band that holds it there. Edge banding is where a cheap job shows first, usually within two monsoons.'],
+  ['Hardware',                         11, 15, '#B08B4F',
+   'Hinges, channels, lift-ups, handles. Hardware is the only part of a wardrobe you touch every single day, and the only part with a moving-part failure rate.'],
+  ['Counters, glass, mirror',           4,  6, '#8C8A5E',
+   'Kitchen counter, dresser mirrors, glass shutters and back-painted panels. Small share, long lead time, and the item most often forgotten in a rushed quote.'],
+  ['Carpentry & site labour',          20, 17, '#5E7681',
+   'The people who cut, assemble, install and finish — from cut lists our software makes. Priced against the drawing, not the day, so the number holds if the job runs long.'],
+  ['Transport, hoisting, protection',   5,  4, '#7C929B',
+   'Factory to flat, up the lift or up the stairs, and the floor protection that keeps your new vitrified tile intact while we work over it.'],
+  ['Design & drawings',                 4,  4, '#4A6270',
+   'Measurement, layouts, elevations, 3D views and the working drawings the factory cuts from. Every one of them signed by an architect.'],
+  ['Project management',                4,  4, '#3C5261',
+   'One person owning your dates, your material approvals and your snag list. Not a shared queue and not a call centre.'],
+  ['Studio & overheads',               11,  6, '#2C3E4A',
+   'Rent, salaries, software, the factory and the warranty reserve. Every firm has this line. Most do not print it.']
+];
+var BASE = { gold: 1979000, platinum: 2940000 };
+var MIN_OPEN = 15;
+var OPEN_X   = 1.35;
+/* ============================================ */
+
+/* figures for the default (Gold) tier — also used to print every slice into the
+   server HTML so search engines can read them, not only after a click */
+function moneyOf(tier, i) { return '₹' + (BASE[tier] * LINES[i][tier === 'gold' ? 1 : 2] / 100 / 100000).toFixed(2) + 'L'; }
+function noteText(tier, i) { return LINES[i][4] + ' On the example above: ' + moneyOf(tier, i) + '.'; }
+
 export default function MoneyBreakdown() {
   const rootRef = useRef(null);
 
@@ -11,31 +42,6 @@ export default function MoneyBreakdown() {
 
     const $ = sel => root.querySelector('[data-mid="'+sel+'"]');
 
-    /* ================== DATA ================== */
-    var LINES = [
-      ['Plywood & carcass',               28, 26, '#F26829',
-       'BWP ply in wet zones, MR ply elsewhere, HDHMR shutters. This is the line most quotes cut to reach a low number, and the one that decides whether the wardrobe survives a decade.'],
-      ['Surface & edge banding',           13, 18, '#C4501E',
-       'Laminate, acrylic or PU on the face, and the edge band that holds it there. Edge banding is where a cheap job shows first, usually within two monsoons.'],
-      ['Hardware',                         11, 15, '#B08B4F',
-       'Hinges, channels, lift-ups, handles. Hardware is the only part of a wardrobe you touch every single day, and the only part with a moving-part failure rate.'],
-      ['Counters, glass, mirror',           4,  6, '#8C8A5E',
-       'Kitchen counter, dresser mirrors, glass shutters and back-painted panels. Small share, long lead time, and the item most often forgotten in a rushed quote.'],
-      ['Carpentry & site labour',          20, 17, '#5E7681',
-       'The people who cut, assemble, install and finish. Priced against the drawing, not against the day, which is why the number does not move when the job runs long.'],
-      ['Transport, hoisting, protection',   5,  4, '#7C929B',
-       'Factory to flat, up the lift or up the stairs, and the floor protection that keeps your new vitrified tile intact while we work over it.'],
-      ['Design & drawings',                 4,  4, '#4A6270',
-       'Measurement, layouts, elevations, 3D views and the working drawings the factory cuts from. Every one of them signed by an architect.'],
-      ['Project management',                4,  4, '#3C5261',
-       'One person owning your dates, your material approvals and your snag list. Not a shared queue and not a call centre.'],
-      ['Studio & overheads',               11,  6, '#2C3E4A',
-       'Rent, salaries, software, the factory and the warranty reserve. Every firm has this line. Most do not print it.']
-    ];
-    var BASE = { gold: 1979000, platinum: 2940000 };
-    var MIN_OPEN = 15;
-    var OPEN_X   = 1.35;
-    /* ============================================ */
 
     var bar = $('bar'), legend = $('legend'), note = $('note');
     if (!bar || !legend || !note) return;
@@ -99,7 +105,7 @@ export default function MoneyBreakdown() {
       note.classList.remove('in');
       setTimeout(function () {
         $('note-h').textContent = LINES[i][0] + ' \u00B7 ' + pct(i) + '% \u00B7 ' + money(i);
-        $('note-p').textContent = LINES[i][4] + ' On the worked example above, that is ' + money(i) + '.';
+        $('note-p').textContent = noteText(tier, i);
         note.classList.add('in');
       }, 160);
     }
@@ -171,12 +177,12 @@ export default function MoneyBreakdown() {
 
   return (
     <div className="fx-money" ref={rootRef}>
-      <div className="eyebrow"><span className="mono">Where your money goes</span></div>
-      <h2>Every rupee, accounted for.</h2>
+      <div className="eyebrow"><span className="mono">Hyderabad cost guide</span></div>
+      <h2>Every rupee, line by line.</h2>
 
       <div className="row">
-        <p className="sub">Most quotes in this city are a single number. Here is ours, opened up &mdash;
-           for a full-home turnkey job in Hyderabad.</p>
+        <p className="sub">Most Hyderabad interior quotes are one lump sum. Ours is opened up,
+           for a full-home turnkey project.</p>
         <div className="tier" data-mid="tier" role="group" aria-label="Specification tier">
           <span className="pill" aria-hidden="true"></span>
           <button suppressHydrationWarning type="button" data-t="gold" aria-pressed="true">Gold</button>
@@ -188,9 +194,20 @@ export default function MoneyBreakdown() {
       <div className="legend" data-mid="legend"></div>
 
       <div className="note in" data-mid="note">
-        <p className="note-h fade" data-mid="note-h"></p>
-        <p className="fade" data-mid="note-p"></p>
+        <p className="note-h fade" data-mid="note-h">
+          {LINES[0][0] + " · " + LINES[0][1] + "% · " + moneyOf("gold", 0)}
+        </p>
+        <p className="fade" data-mid="note-p">{noteText("gold", 0)}</p>
       </div>
+
+      {/* every slice in the HTML on load (not only on hover) so search engines can read it */}
+      <ul className="mb-sr">
+        {LINES.map((L, i) => (
+          <li key={L[0]}>
+            <strong>{L[0]} &middot; {L[1]}% &middot; {moneyOf("gold", i)}</strong> {noteText("gold", i)}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

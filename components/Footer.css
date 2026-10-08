@@ -135,7 +135,7 @@
   font-family: var(--fx-foot-mono);
   font-size: 10.5px;
   letter-spacing: .12em;
-  text-transform: uppercase;
+  /* no uppercase — "razo lab" is always lowercase */
   color: #6E7B80;
   text-align: center;
 }

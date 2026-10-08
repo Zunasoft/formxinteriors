@@ -86,3 +86,6 @@
   .fx-money .note{min-height:180px}
 }
 @media(prefers-reduced-motion:reduce){.fx-money *{transition-duration:.01ms!important;animation:none!important}}
+
+/* full slice list for search engines / screen readers — visually hidden, the bar + note show it on screen */
+.fx-money .mb-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
