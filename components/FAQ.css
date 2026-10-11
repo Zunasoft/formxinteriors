@@ -36,10 +36,16 @@
   max-width: 20ch;
   color: var(--fg);
 }
+/* 13 questions on one screen: two columns using the full width, tighter rows */
 .fx-faq-container {
-  margin-top: clamp(18px, 2.8vh, 30px);
+  margin-top: clamp(14px, 2.2vh, 26px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 clamp(28px, 4vw, 64px);
+  align-items: start;
+}
+.fx-faq-col {
   border-top: 1px solid var(--rule);
-  max-width: 1000px;
 }
 .fx-faq-q {
   border-bottom: 1px solid var(--rule);
@@ -47,11 +53,11 @@
 .fx-faq-summary {
   list-style: none;
   cursor: pointer;
-  padding: 16px 46px 16px 0;
+  padding: clamp(9px, 1.5vh, 14px) 40px clamp(9px, 1.5vh, 14px) 0;
   position: relative;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(18px, 1.9vw, 22px);
+  font-size: clamp(15px, 1.3vw, 19px);
   letter-spacing: -.02em;
   outline: none;
 }
@@ -73,23 +79,30 @@
   transform: translateY(-50%) rotate(135deg);
 }
 .fx-faq-a {
-  padding: 0 60px 24px 0;
+  padding: 0 40px clamp(12px, 2vh, 20px) 0;
   color: var(--mid);
   max-width: 72ch;
   animation: fx-faq-fade .3s var(--ease);
 }
 .fx-faq-a p {
   font-family: var(--body);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.55;
 }
 .fx-faq-a a {
   color: var(--ember);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+/* tablets / phones: one column, and let the section grow instead of clipping */
+@media (max-width: 900px) {
+  .fx-faq-section { height: auto; min-height: 100dvh; overflow: visible; }
+  .fx-faq-container { grid-template-columns: 1fr; }
+  .fx-faq-col + .fx-faq-col { border-top: none; }
+  .fx-faq-summary { font-size: 17px; padding-block: 14px; }
+}
 .fx-faq-lead {
-  margin-top: 24px;
+  margin-top: clamp(14px, 2.4vh, 24px);
   max-width: 52ch;
   color: var(--slate);
   font-family: var(--body);

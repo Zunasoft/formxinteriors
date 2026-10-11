@@ -4,12 +4,12 @@ import "./Contact.css";
 
 const UNITS = ["2 BHK", "3 BHK", "4 BHK", "Villa", "Office"];
 const POSSESSIONS = ["Already living in it", "Handover soon", "Under construction"];
-const SCOPES = ["Modular kitchen", "Wardrobes", "Living + dining", "False ceiling", "Pooja unit", "Full home"];
+const SCOPES = ["Modular kitchen", "Wardrobes", "Living & dining", "False ceiling", "Pooja unit", "Full home"];
 const STAGES = [
-  { when: "Within 2 hrs", what: "We call you", note: "To confirm the slot. A Hyderabad number, not a call centre." },
-  { when: "Day 2–3", what: "The visit", note: "An architect attends. We measure every room and photograph it." },
-  { when: "Day 5–6", what: "Your drawing", note: "A measured floor plan sent to you. Yours whether you hire us or not." },
-  { when: "Within 48 hrs of that", what: "Layouts and quote", note: "Two layout options, itemised line by line. Two rounds of changes included." }
+  { when: "Within 2 hrs", what: "We call you", note: "To fix the slot. An architect, not a call centre." },
+  { when: "Day 2–3", what: "The visit", note: "An architect measures and photographs every room." },
+  { when: "Day 5–6", what: "Your drawing", note: "A measured floor plan, yours whether you hire us or not." },
+  { when: "48 hrs later", what: "3D + quote", note: "Two layouts in 3D, priced line by line. Two rounds of changes." }
 ];
 
 export default function Contact() {
@@ -55,14 +55,14 @@ export default function Contact() {
 
   return (
     <section className="fx-contact" id="book-visit">
-      <div className="ct-eyebrow"><span className="ct-mono">Start here</span></div>
+      <div className="ct-eyebrow"><span className="ct-mono">Free visit</span></div>
       <div className="ct-cols">
         {/* ============ left: the form ============ */}
         <div className="ct-left">
-          <h2 data-split>Book the visit. Keep the drawing.</h2>
+          <h2 data-split>Free visit. The drawing is yours.</h2>
           <div className={`ct-pane${booked ? " ct-out" : ""}`}>
             <div>
-              <div className="ct-glab"><span className="ct-mono">Unit type</span></div>
+              <div className="ct-glab"><span className="ct-mono">Home type</span></div>
               <div className="ct-opts">
                 {UNITS.map((u) => (
                   <button suppressHydrationWarning type="button" key={u} className="ct-opt"
@@ -110,14 +110,15 @@ export default function Contact() {
             <label className="ct-f"><span>Project, tower or area <i>*</i></span>
               <input suppressHydrationWarning type="text" ref={placeRef} placeholder="e.g. Kokapet, or your project name"
                 value={place} onChange={(e) => setPlace(e.target.value)} />
+              <small className="ct-help">Just the area, e.g. Kokapet.</small>
             </label>
             <div className={`ct-err${errB ? " on" : ""}`}>An area name is enough for now.</div>
 
             <div className="ct-gorow">
               <button suppressHydrationWarning type="button" className="ct-btn mag" data-cursor="book" onClick={submit}>
-                Book the visit <span>→</span>
+                Book my visit <span>→</span>
               </button>
-              <span className="ct-mono">The slot and the rest we settle on the call</span>
+              <span className="ct-mono">An architect calls to fix the day and time.</span>
             </div>
           </div>
 
@@ -137,15 +138,15 @@ export default function Contact() {
 
         {/* ============ right ============ */}
         <aside className="ct-side">
-          <div className="ct-fee"><i></i><b>Free — and you keep the drawing either way</b></div>
+          <div className="ct-fee"><i></i><b>Free — and the drawing is yours either way</b></div>
 
           <div className="ct-sbox">
             <h3>What you get</h3>
             <ul className="ct-gets">
-              <li>A measured drawing of your flat, yours to keep</li>
-              <li>Two layout directions, not one</li>
-              <li>An indicative cost, itemised by room</li>
-              <li>Straight answers on materials and timelines</li>
+              <li>A measured drawing of your home, yours to keep</li>
+              <li>Two layout options, not one</li>
+              <li>An indicative cost, room by room</li>
+              <li>Straight answers on materials and timing</li>
             </ul>
           </div>
 
@@ -168,8 +169,8 @@ export default function Contact() {
             <div className="ct-arch">
               <span className="ct-ic">X</span>
               <div>
-                <b>An architect attends</b>
-                <p>Every consultation is taken by a registered architect. We don't send a sales executive with a tablet.</p>
+                <b>No sales team. Ever.</b>
+                <p>Every visit is led by a registered architect. No sales executive, no tablet, no upsell.</p>
               </div>
             </div>
           </div>

@@ -85,6 +85,7 @@
 .fx-contact textarea::placeholder { color: rgba(110, 123, 128, .6) }
 .fx-contact textarea { resize: none; min-height: 46px }
 .fx-contact .ct-two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 26px }
+.fx-contact .ct-help { display: block; margin-top: 7px; font-size: 12.5px; color: var(--slate) }
 .fx-contact .ct-err { color: #E0794D; font-size: 12.5px; display: none }
 .fx-contact .ct-err.on { display: block }
 

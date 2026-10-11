@@ -52,8 +52,9 @@ export default function Testimonials() {
     function card(t, i) {
       return '<button class="item" type="button" data-i="' + i + '">' +
         '<span class="idx">' + String(i + 1).padStart(2, '0') + '</span>' +
-        '<span class="nm">' + t.n + '</span>' +
-        '<span class="loc">' + t.loc + '</span>' +
+        /* locality · area · tier · date under each name — locality words help local search */
+        '<span class="who"><span class="nm">' + t.n + '</span>' +
+        '<span class="loc">' + [t.loc, t.d.Area, t.d.Tier, t.when].join(' · ') + '</span></span>' +
         '<span class="go">Walk in →</span></button>';
     }
     /* each line gets its own exclusive slice of clients, so no name can ever appear in two lines at once */
@@ -352,8 +353,8 @@ export default function Testimonials() {
     <div className="fx-testimonials" id="reviews">
       <div className="wrap head">
         <div>
-          <div className="eyebrow"><span className="mono">Clients</span></div>
-          <h2>Fourteen homes, and the people who live in them.</h2>
+          <div className="eyebrow"><span className="mono">Reviews</span></div>
+          <h2>Hyderabad homes, and the families in them.</h2>
         </div>
         <div className="rating">
           <div className="stars" id="tstars"></div>
@@ -369,8 +370,8 @@ export default function Testimonials() {
 
       <div className="wrap det" id="tdet">
         <div className="idle">
-          <span className="mono">Glide across any name — all three lines answer, and the job opens below.</span>
-          <span className="mono">Click to walk the build, bare shell to handover</span>
+          <span className="mono">Hover or tap a name — their review opens below.</span>
+          <span className="mono">Tap to watch the build, bare shell to handover</span>
         </div>
         <div className="card" id="tcard">
           <blockquote className="cq" id="tcq"></blockquote>
@@ -380,8 +381,8 @@ export default function Testimonials() {
       </div>
 
       <div className="wrap hintline">
-        <span className="mono">Pick a name — then drag the seam to run their build from bare shell to handover.</span>
-        <span className="mono">Every quote is attached to a real job</span>
+        <span className="mono">Pick a name, then drag the slider: bare shell to handover.</span>
+        <span className="mono">Every review is from a home we built.</span>
       </div>
 
       <div id="tover" aria-hidden="true">
