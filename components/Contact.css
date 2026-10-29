@@ -1,0 +1,209 @@
+.fx-contact {
+  --ct-deep: #0E181D;
+  --ct-stone: #D8D2CB;
+  --ct-rule: rgba(216, 210, 203, .18);
+
+  background: var(--petrol);
+  color: var(--shell);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: clamp(14px, 2.4vh, 28px) var(--pad) clamp(14px, 2.2vh, 24px);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.fx-contact * { box-sizing: border-box; margin: 0; padding: 0 }
+.fx-contact button,
+.fx-contact input,
+.fx-contact textarea { font-family: inherit; color: inherit }
+.fx-contact a { color: inherit; text-decoration: none }
+.fx-contact :focus-visible { outline: 2px solid var(--orange); outline-offset: 3px }
+.fx-contact .ct-mono {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--slate)
+}
+
+.fx-contact .ct-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 10px }
+.fx-contact .ct-eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--ct-rule) }
+.fx-contact h2 {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(26px, 3.6vw, 46px); line-height: 1.02; letter-spacing: -.034em;
+  max-width: none;
+}
+.fx-contact h2 em { font-style: normal; font-weight: 800; color: var(--orange) }
+
+.fx-contact .ct-cols {
+  /* Sized to content (not flex:1): the row is as tall as the taller column,
+     so the left form only stretches enough to match the right box instead of
+     spreading its groups across the full viewport height. */
+  flex: 0 1 auto; min-height: 0; display: grid; grid-template-columns: 1.32fr .68fr;
+  gap: clamp(16px, 2.6vw, 42px)
+}
+
+/* ---------- left ---------- */
+/* The heading lives inside the left column so the right box shares its top
+   edge with the heading and its bottom edge with the Book button. */
+.fx-contact .ct-left { display: flex; flex-direction: column; min-height: 0 }
+.fx-contact .ct-left>h2 { margin: -.1em 0 clamp(12px, 2vh, 22px) }
+.fx-contact .ct-pane {
+  flex: 1; min-height: 0; display: flex; flex-direction: column;
+  justify-content: space-between; gap: clamp(16px, 2.6vh, 26px)
+}
+.fx-contact .ct-pane.ct-out { display: none }
+.fx-contact .ct-glab { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 11px }
+.fx-contact .ct-opts { display: flex; gap: 7px; flex-wrap: wrap }
+.fx-contact .ct-opt {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--slate); border: 1px solid var(--ct-rule); border-radius: 7px; padding: 11px 16px;
+  cursor: pointer; background: none; transition: .2s
+}
+.fx-contact .ct-opt:hover { color: var(--shell); border-color: var(--ct-stone); transform: translateY(-1px) }
+.fx-contact .ct-opt[aria-pressed=true] { background: var(--orange); border-color: var(--orange); color: #fff }
+
+.fx-contact .ct-f { display: block }
+.fx-contact .ct-f>span {
+  display: flex; gap: 5px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--slate); margin-bottom: 8px
+}
+.fx-contact .ct-f>span i { color: var(--orange); font-style: normal }
+.fx-contact input[type=text],
+.fx-contact input[type=tel],
+.fx-contact textarea {
+  width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ct-rule);
+  padding: 10px 0; font-size: 17px; transition: border-color .22s
+}
+.fx-contact input:focus,
+.fx-contact textarea:focus { outline: none; border-bottom-color: var(--orange) }
+.fx-contact input::placeholder,
+.fx-contact textarea::placeholder { color: rgba(110, 123, 128, .6) }
+.fx-contact textarea { resize: none; min-height: 46px }
+.fx-contact .ct-two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 26px }
+.fx-contact .ct-help { display: block; margin-top: 7px; font-size: 12.5px; color: var(--slate) }
+.fx-contact .ct-err { color: #E0794D; font-size: 12.5px; display: none }
+.fx-contact .ct-err.on { display: block }
+
+.fx-contact .ct-gorow { display: flex; align-items: center; gap: 14px; flex-wrap: wrap }
+.fx-contact .ct-btn {
+  display: inline-flex; align-items: center; gap: 11px; background: var(--orange); color: #fff;
+  border: none; border-radius: 9px; font-family: var(--display); font-weight: 600; font-size: 16px;
+  padding: 15px 24px; cursor: pointer; transition: background .22s; will-change: transform
+}
+.fx-contact .ct-btn:hover { background: var(--ember) }
+.fx-contact .ct-btn span {
+  width: 21px; height: 21px; border-radius: 6px; background: rgba(255, 255, 255, .2);
+  display: grid; place-items: center; font-size: 12px
+}
+
+/* ---------- right ---------- */
+.fx-contact .ct-side {
+  border: 1px solid var(--ct-rule); border-radius: 14px; background: var(--ct-deep);
+  display: flex; flex-direction: column; min-height: 0; overflow: hidden
+}
+.fx-contact .ct-fee {
+  display: flex; align-items: flex-start; gap: 10px; padding: 13px 16px;
+  border-bottom: 1px solid var(--ct-rule); background: rgba(242, 104, 41, .1)
+}
+.fx-contact .ct-fee b { font-family: var(--display); font-weight: 600; font-size: 14.5px; letter-spacing: -.022em; line-height: 1.25 }
+.fx-contact .ct-fee i { width: 7px; height: 7px; border-radius: 50%; background: var(--orange); flex: none; margin-top: 6px }
+.fx-contact .ct-sbox { padding: clamp(13px, 1.4vw, 18px) }
+.fx-contact .ct-sbox+.ct-sbox { border-top: 1px solid var(--ct-rule) }
+.fx-contact .ct-sbox h3 {
+  font-family: var(--display); font-weight: 600; font-size: clamp(15px, 1.4vw, 18px);
+  letter-spacing: -.022em; margin-bottom: 11px
+}
+
+.fx-contact .ct-gets { list-style: none; display: grid; grid-template-columns: 1fr; gap: 2px }
+.fx-contact .ct-gets li {
+  display: flex; gap: 9px; padding: 5px 0; font-size: 13.5px; line-height: 1.35;
+  color: var(--ct-stone); transition: color .25s
+}
+.fx-contact .ct-gets li::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--orange);
+  flex: none; margin-top: 8px; transition: transform .3s
+}
+.fx-contact .ct-gets li:hover { color: var(--shell) }
+.fx-contact .ct-gets li:hover::before { transform: scale(1.5) }
+
+/* interactive timeline */
+.fx-contact .ct-tlbox { flex: 1; min-height: 0; display: flex; flex-direction: column }
+.fx-contact .ct-tl {
+  list-style: none; position: relative; margin-left: 5px; flex: 1;
+  display: flex; flex-direction: column; justify-content: space-between
+}
+.fx-contact .ct-tl::before {
+  content: ""; position: absolute; left: 4px; top: 9px; bottom: 9px; width: 1px; background: var(--ct-rule)
+}
+.fx-contact .ct-fillline {
+  position: absolute; left: 4px; top: 9px; width: 1px; background: var(--orange);
+  height: 0; transition: height .7s cubic-bezier(.76, 0, .24, 1)
+}
+.fx-contact .ct-tl li { position: relative; padding-left: 24px; cursor: default }
+.fx-contact .ct-tl li::before {
+  content: ""; position: absolute; left: 0; top: 5px; width: 9px; height: 9px; border-radius: 50%;
+  background: var(--ct-deep); border: 1.5px solid var(--ct-rule);
+  transition: border-color .35s, background .35s, transform .35s
+}
+.fx-contact .ct-tl li.lit::before { border-color: var(--orange) }
+.fx-contact .ct-tl li.now::before { background: var(--orange); transform: scale(1.35) }
+.fx-contact .ct-tl .ct-when {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--slate); transition: color .3s
+}
+.fx-contact .ct-tl li.lit .ct-when { color: var(--orange) }
+.fx-contact .ct-tl .ct-what {
+  font-family: var(--display); font-weight: 600; font-size: 14.5px; letter-spacing: -.02em;
+  margin-top: 3px; transition: color .3s
+}
+.fx-contact .ct-tl li:not(.lit) .ct-what { color: var(--ct-stone) }
+.fx-contact .ct-tl p { font-size: 12.5px; line-height: 1.4; color: var(--slate); margin-top: 5px }
+
+.fx-contact .ct-arch { display: flex; gap: 11px; align-items: flex-start }
+.fx-contact .ct-arch .ct-ic {
+  width: 32px; height: 32px; flex: none; border-radius: 9px; background: rgba(242, 104, 41, .14);
+  border: 1px solid rgba(242, 104, 41, .42); display: grid; place-items: center;
+  font-family: var(--display); font-weight: 800; color: var(--orange); font-size: 16px
+}
+.fx-contact .ct-arch b { font-family: var(--display); font-weight: 600; font-size: 14.5px; letter-spacing: -.02em }
+.fx-contact .ct-arch p { font-size: 12.5px; line-height: 1.4; color: var(--slate); margin-top: 4px }
+
+/* confirmation — grouped block sitting just under the heading, name set large */
+.fx-contact .ct-done { justify-content: flex-start; gap: clamp(18px, 2.8vh, 28px); padding-top: clamp(10px, 2vh, 22px) }
+.fx-contact .ct-name {
+  font-family: var(--display); font-weight: 500; text-transform: uppercase;
+  font-size: clamp(40px, 6vw, 84px); line-height: 1; letter-spacing: -.02em;
+  color: var(--shell); overflow-wrap: anywhere
+}
+.fx-contact .ct-done h3 {
+  font-family: var(--display); font-weight: 400; font-size: clamp(24px, 3vw, 38px);
+  letter-spacing: -.032em; line-height: 1.05; margin-top: clamp(8px, 1.4vh, 14px)
+}
+.fx-contact .ct-done h3 em { font-style: normal; font-weight: 800; color: var(--orange) }
+.fx-contact .ct-recap { display: flex; flex-wrap: wrap; gap: 7px }
+.fx-contact .ct-done .ct-recap { margin-top: clamp(14px, 2.4vh, 26px) }
+.fx-contact .ct-recap i {
+  font-style: normal; font-family: var(--mono); font-size: 9px; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--slate); border: 1px solid var(--ct-rule);
+  border-radius: 6px; padding: 6px 9px
+}
+
+@media(max-width:1000px) {
+  .fx-contact { height: auto; min-height: 100svh; overflow: visible }
+  .fx-contact .ct-cols { grid-template-columns: 1fr }
+}
+@media(max-width:560px) { .fx-contact .ct-two { grid-template-columns: 1fr } }
+@media(max-height:800px) {
+  .fx-contact .ct-tl p { font-size: 12px }
+  .fx-contact .ct-gets li { font-size: 13px; padding: 4px 0 }
+}
+@media(max-height:700px) {
+  .fx-contact .ct-arch p { display: none }
+  .fx-contact .ct-sbox { padding: 12px 16px }
+}
+@media(prefers-reduced-motion:reduce) { .fx-contact * { transition-duration: .01ms !important } }

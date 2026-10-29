@@ -1,0 +1,235 @@
+"use client";
+import { useEffect, useRef } from "react";
+import "./HowWeWork.css";
+
+export default function HowWeWork() {
+  const rootRef = useRef(null);
+
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+
+    const section = root.querySelector('.part-2') || root;
+    const rail = root.querySelector('#fx-rail');
+    const endDot = root.querySelector('#fx-end');
+    const hint = root.querySelector('#fx-hint');
+    const phases = [...rail.querySelectorAll('.fx-phase')];
+    const marks = [...rail.querySelectorAll('.fx-mark-set')];
+    // Scope .fx-card to THIS component only to avoid clashing with Advantage cards
+    const cards = [...root.querySelectorAll('.fx-card')];
+    const hits = [...root.querySelectorAll('.fx-hit')];
+
+    const canHover = window.matchMedia('(hover: hover)').matches;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const wide = window.matchMedia('(min-width: 1001px)');
+
+    let active = -1, locked = null, ticking = false;
+
+    if (hint && !canHover) hint.textContent = 'TAP A PHASE TO SEE WHAT IT COVERS';
+
+    function paint(i) {
+      if (i === active) return;
+      active = i;
+      phases.forEach((p, n) => p.setAttribute('data-on', n === i ? '1' : '0'));
+      // cumulative mark highlight: light all marks whose phase <= active
+      const allMarks = [...rail.querySelectorAll('.fx-mark-all li')];
+      allMarks.forEach(li => {
+        const phase = parseInt(li.getAttribute('data-phase'), 10);
+        li.setAttribute('data-on', phase <= i ? '1' : '0');
+      });
+      cards.forEach((c, n) => c.setAttribute('data-on', n === i ? '1' : '0'));
+      hits.forEach((h, n) => h.setAttribute('aria-expanded', n === i ? 'true' : 'false'));
+      if (endDot) endDot.setAttribute('data-on', i === 2 ? '1' : '0');
+      if (rail) rail.style.setProperty('--fx-i', i < 0 ? 0 : i);
+    }
+
+    function fromScroll() {
+      if (locked !== null) return;
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      if (wide.matches) {
+        const r = section.getBoundingClientRect();
+        let t = (vh * 0.78 - r.top) / (r.height * 0.82);
+        t = t < 0 ? 0 : (t > 1 ? 1 : t);
+        paint(Math.min(2, Math.floor(t * 3)));
+      } else {
+        let best = 0, min = Infinity;
+        cards.forEach((c, n) => {
+          const b = c.getBoundingClientRect();
+          const d = Math.abs((b.top + b.height / 2) - vh * 0.45);
+          if (d < min) { min = d; best = n; }
+        });
+        paint(best);
+      }
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => { fromScroll(); ticking = false; });
+    }
+
+    function bind(el, i) {
+      if (canHover) el.addEventListener('mouseenter', () => { locked = i; paint(i); });
+      el.addEventListener('focus', () => { locked = i; paint(i); });
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        locked = (locked === i && !canHover) ? null : i;
+        paint(locked === null ? active : i);
+        if (locked === null) fromScroll();
+      });
+    }
+    phases.forEach((p, i) => bind(p, i));
+    hits.forEach((h, i) => bind(h, i));
+
+    if (canHover) {
+      section.addEventListener('mouseleave', () => { locked = null; fromScroll(); });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+
+    setTimeout(fromScroll, 100);
+    if (reduce) paint(0);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, []);
+
+  return (
+    <div ref={rootRef} className="fx-process-container">
+      <section className="fx-process part-1" id="offers">
+        <div className="fx-wrap">
+          <div className="fx-eyebrow-row">
+            <span className="fx-eyebrow">HOW WE WORK</span>
+            <span className="fx-eyebrow-rule"></span>
+          </div>
+
+          <div className="fx-intro-content">
+            <h2 className="fx-headline">
+              <span>Three phases.</span>
+              <span>Mistakes caught<br />on screen,<br />not on site.</span>
+            </h2>
+
+            <p className="fx-sub">
+              Design is step one &mdash; free when we build. Then our in-house software, built by razo lab,
+              computes every measurement, cut and quantity, so the site builds exactly what you signed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="fx-process part-2" id="offers-cards">
+        <div className="fx-wrap">
+          {/* rail */}
+          <div className="fx-rail" id="fx-rail" style={{ "--fx-i": 0 }}>
+            <div className="fx-phases">
+              <button suppressHydrationWarning className="fx-phase" type="button" data-i="0">DESIGN</button>
+              <button suppressHydrationWarning className="fx-phase" type="button" data-i="1">BUILD</button>
+              <button suppressHydrationWarning className="fx-phase" type="button" data-i="2">DELIVER</button>
+            </div>
+            <div className="fx-line">
+              <div className="fx-bar"></div>
+              <span className="fx-end" id="fx-end"></span>
+            </div>
+            <div className="fx-marks">
+              <ul className="fx-mark-set fx-mark-all">
+                <li data-phase="0">MEASURE</li>
+                <li data-phase="0">3D DESIGN</li>
+                <li data-phase="0">DRAWINGS</li>
+                <li data-phase="1">MATERIALS</li>
+                <li data-phase="1">FABRICATION</li>
+                <li data-phase="1">SITE WORK</li>
+                <li data-phase="2">INSTALL</li>
+                <li data-phase="2">QUALITY</li>
+                <li data-phase="2">HANDOVER</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* cards */}
+          <div className="fx-cards" id="fx-cards">
+            <article className="fx-card" data-i="0">
+              <button suppressHydrationWarning className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-1" aria-label="Design phase, show what it covers"></button>
+              <span className="fx-idx">01</span>
+              <span className="fx-kicker">EVERY DECISION, MADE ON SCREEN</span>
+              <h3 className="fx-title">DESIGN</h3>
+              <p className="fx-lead">Every choice is drawn in 3D and priced before anything is cut.</p>
+              <span className="fx-cue"><i></i>WHAT THIS COVERS</span>
+              <div className="fx-more" id="fx-more-1"><div>
+                <ul className="fx-list">
+                  <li>Site measurement by an architect</li>
+                  <li>3D views, layouts and elevations of each room</li>
+                  <li>Materials priced as you pick</li>
+                </ul>
+                <span className="fx-split">DESIGN IS FREE WHEN WE BUILD.</span>
+                <div className="fx-gate">
+                  <span className="fx-gate-label">PHASE ENDS WHEN</span>
+                  <p className="fx-gate-text">You sign the drawings. Scope and price lock here.</p>
+                </div>
+              </div></div>
+            </article>
+
+            <article className="fx-card" data-i="1">
+              <button suppressHydrationWarning className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-2" aria-label="Build phase, show what it covers"></button>
+              <span className="fx-idx">02</span>
+              <span className="fx-kicker">WHERE SOFTWARE CHECKS EVERY CUT BEFORE IT&rsquo;S MADE</span>
+              <h3 className="fx-title">BUILD</h3>
+              <p className="fx-lead">Our in-house software turns your drawings into exact cut lists.</p>
+              <span className="fx-cue"><i></i>WHAT THIS COVERS</span>
+              <div className="fx-more" id="fx-more-2"><div>
+                <ul className="fx-list">
+                  <li>Materials bought to the approved scope</li>
+                  <li>Modular units made in our own workshop</li>
+                  <li>Civil, electrical, plumbing, ceiling and painting</li>
+                </ul>
+                <span className="fx-split">YOU APPROVE. WE BUILD TO THE MM.</span>
+                <div className="fx-gate">
+                  <span className="fx-gate-label">PHASE ENDS WHEN</span>
+                  <p className="fx-gate-text">Every piece is made, delivered and checked against your drawing.</p>
+                </div>
+              </div></div>
+            </article>
+
+            <article className="fx-card" data-i="2">
+              <button suppressHydrationWarning className="fx-hit" type="button" aria-expanded="false" aria-controls="fx-more-3" aria-label="Deliver phase, show what it covers"></button>
+              <span className="fx-idx">03</span>
+              <span className="fx-kicker">THE PART CONTRACTORS LEAVE YOU TO CHASE</span>
+              <h3 className="fx-title">DELIVER</h3>
+              <p className="fx-lead">Fitted, checked twice, cleaned, keys.</p>
+              <span className="fx-cue"><i></i>WHAT THIS COVERS</span>
+              <div className="fx-more" id="fx-more-3"><div>
+                <ul className="fx-list">
+                  <li>Fitting and fine finishing</li>
+                  <li>Snag check &mdash; ours, then yours</li>
+                  <li>Deep clean and styling before move-in</li>
+                </ul>
+                <span className="fx-split">WE FINISH. YOU CHECK. YOU MOVE IN.</span>
+                <div className="fx-gate">
+                  <span className="fx-gate-label">PHASE ENDS WHEN</span>
+                  <p className="fx-gate-text">You walk through, sign off, take the keys. Nothing pending.</p>
+                </div>
+              </div></div>
+            </article>
+          </div>
+
+          <p className="fx-hint" id="fx-hint">TAP OR HOVER A PHASE TO SEE MORE</p>
+
+          <div className="fx-foot">
+            <div>
+              <span className="fx-foot-label">SHELL TO KEYS</span>
+              <p className="fx-foot-line">
+                One architect-led team from measurement to keys, with a 10-year warranty.
+                Have drawings? Join us at Build.
+              </p>
+            </div>
+            <div className="fx-actions">
+              <a className="fx-btn fx-btn--solid" href="#book-visit">GET MY FREE 3D IN 48H</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

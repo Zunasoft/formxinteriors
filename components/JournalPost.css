@@ -1,0 +1,133 @@
+/* Journal post — one screen, built like the project view. Prefixed jp-.
+   Left: a 12px frame showing one visual per section (a close-up of a render, a line drawing or a figure); each scroll notch
+   moves to the next section, and the title rides from the bottom left to the top left as soon as scrolling starts. Right: the
+   post's summary, then its sections in step with the visuals, then the price CTA; X closes. Below: a thin row with the topic,
+   reading time, a related project, and the previous and next posts. */
+.jp {
+  --jp-ink: #0C0D0F;
+  --jp-petrol: #16242B;
+  --jp-deep: #0E181D;
+  --jp-shell: #F6F2EE;
+  --jp-orange: #F26829;
+  --jp-slate: #6E7B80;
+  --jp-rule: rgba(246, 242, 238, .18);
+  --jp-veil: 14, 24, 29;
+  --jp-pad: clamp(16px, 2.6vw, 44px);
+  --jp-r: 12px;
+  --jp-ease: cubic-bezier(.2, .7, .2, 1);
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: var(--jp-deep);
+  color: var(--jp-shell);
+  font: 400 15px/1.5 var(--body);
+  -webkit-font-smoothing: antialiased;
+  color-scheme: dark;
+}
+.jp *, .jp *::before, .jp *::after { box-sizing: border-box; }
+.jp :focus-visible { outline: 2px solid var(--jp-shell); outline-offset: 3px; }
+.jp-wrap { height: 100%; padding: var(--jp-pad); display: flex; flex-direction: column; gap: clamp(8px, 1.2vh, 12px); max-width: 1680px; margin-inline: auto; }
+.jp-main { flex: 1 1 0; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) clamp(300px, 28vw, 440px); gap: clamp(14px, 2vw, 30px); }
+
+/* the visuals */
+.jp-stage { position: relative; min-height: 0; overflow: hidden; border-radius: var(--jp-r); background: var(--jp-petrol); touch-action: none; user-select: none; -webkit-user-select: none; }
+.jp-layers { position: absolute; inset: 0; }
+.jp-lay { position: absolute; left: 0; top: 0; opacity: 0; will-change: opacity, transform; }
+img.jp-lay { max-width: none; transform-origin: 0 0; -webkit-user-drag: none; }
+.jp-lay.a { left: 8%; right: 8%; top: 14%; bottom: 20%; }
+.jp-lay.a .jp-art { width: 100%; height: 100%; }
+.jp-lay.f { inset: 0; display: grid; place-items: center; font: 600 clamp(90px, 15vw, 230px)/.85 var(--display); letter-spacing: -.06em; font-variant-numeric: tabular-nums; }
+.jp-lay.f em { font-style: normal; color: var(--jp-orange); }
+.jp-shade { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(0deg, rgba(var(--jp-veil), .9) 0, rgba(var(--jp-veil), .38) 30%, rgba(var(--jp-veil), 0) 56%); opacity: calc(1 - var(--t, 0) * .75); }
+.jp-stage::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 38%; z-index: 3; pointer-events: none; opacity: var(--t, 0); background: linear-gradient(180deg, rgba(var(--jp-veil), .82), rgba(var(--jp-veil), 0)); }
+.jp-title { position: absolute; left: clamp(18px, 2.4vw, 36px); top: clamp(16px, 2.6vh, 26px); z-index: 4; max-width: 80%; transform-origin: 0 0; will-change: transform; pointer-events: none; }
+.jp-title h1 { margin: 0; font: 600 clamp(30px, min(4.6vw, 8.5vh), 68px)/1 var(--display); letter-spacing: -.035em; text-wrap: balance; }
+.jp-title h1 em { font-style: normal; color: var(--jp-orange); }
+.jp-sub { margin-top: clamp(8px, 1.2vh, 14px); font: 500 clamp(10px, .8vw, 12px)/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: rgba(246, 242, 238, .78); }
+.jp-prog { position: absolute; left: 0; right: 0; bottom: 0; z-index: 5; height: 2px; background: rgba(246, 242, 238, .12); }
+.jp-prog b { display: block; height: 100%; background: var(--jp-orange); transform-origin: left; transform: scaleX(0); }
+
+/* line drawings */
+.jp-art { display: block; overflow: visible; color: var(--jp-shell); }
+.jp-art .lnf { fill: none; stroke: currentColor; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.jp-art .soft { opacity: .45; }
+.jp-art .acc { stroke: var(--jp-orange); }
+.jp-art .accf { fill: var(--jp-orange); }
+.jp-art .fc { fill: currentColor; }
+.jp-art .fs { fill: currentColor; fill-opacity: .08; }
+.jp-art .cone { fill: currentColor; fill-opacity: .07; stroke: currentColor; stroke-opacity: .35; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.jp-art .cone.acc { fill: var(--jp-orange); fill-opacity: .16; stroke: var(--jp-orange); stroke-opacity: 1; }
+.jp-art .zone { fill: var(--jp-orange); fill-opacity: .22; stroke: var(--jp-orange); stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+.jp-art .dash { stroke-dasharray: 3 4; }
+.jp-art text { font: 500 8px var(--mono); letter-spacing: .08em; fill: currentColor; }
+.jp-art .tacc { fill: var(--jp-orange); }
+.jp-art .tsoft { opacity: .6; }
+
+/* the text */
+.jp-copy { min-height: 0; display: flex; flex-direction: column; }
+.jp-lab { flex: none; display: flex; align-items: center; gap: 12px; padding-bottom: 12px; font: 500 10px/1 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--jp-slate); }
+.jp-lab b { color: var(--jp-shell); font-weight: 500; }
+.jp-lab::after { content: ""; flex: 1 1 0; order: 1; height: 1px; background: var(--jp-rule); }
+.jp-cnt { order: 2; font-variant-numeric: tabular-nums; }
+.jp-xclose { order: 3; flex: none; width: 34px; height: 34px; border-radius: 4px; background: var(--jp-orange); color: var(--jp-shell); display: grid; place-items: center; transition: background .2s, color .2s; }
+.jp-xclose:hover { background: var(--jp-shell); color: var(--jp-ink); }
+.jp-xclose svg { width: 14px; height: 14px; }
+.jp-view { position: relative; flex: 1 1 0; min-height: 0; overflow: hidden; touch-action: none;
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0, #000 12px, #000 calc(100% - 30px), rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0) 0, #000 12px, #000 calc(100% - 30px), rgba(0, 0, 0, 0) 100%); }
+.jp-in { position: relative; padding: 6px 0 44px; will-change: transform; }
+.jp-idea { position: relative; margin: 0 0 20px; font: 400 clamp(20px, 1.7vw, 27px)/1.26 var(--display); letter-spacing: -.015em; }
+.jp-gh { color: transparent; }
+.jp-ty { position: absolute; left: 0; top: 0; right: 0; }
+.jp-caret { position: absolute; display: inline-block; width: .4em; height: .85em; margin: .22em 0 0 3px; background: var(--jp-orange); }
+.jp-copy.typed .jp-caret { animation: jpBlink .5s steps(1) 4 forwards; }
+@keyframes jpBlink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 0; } }
+.jp-secs { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--jp-rule); }
+.jp-secs li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 10px; padding: 14px 0; border-top: 1px solid var(--jp-rule); opacity: .42; cursor: pointer; transition: opacity .35s; }
+.jp-secs li:hover { opacity: .75; }
+.jp-secs li.on { opacity: 1; }
+.jp-k { padding-top: 4px; font: 500 10px/1.2 var(--mono); letter-spacing: .1em; color: var(--jp-slate); font-variant-numeric: tabular-nums; transition: color .35s; }
+.jp-secs li.on .jp-k { color: var(--jp-orange); }
+.jp-secs h2 { margin: 0 0 6px; max-width: none; font: 600 clamp(17px, 1.3vw, 21px)/1.2 var(--display); letter-spacing: -.02em; }
+.jp-secs p { margin: 0; max-width: 46ch; color: rgba(246, 242, 238, .8); font: 400 clamp(14px, 1.02vw, 15.5px)/1.6 var(--body); }
+.jp-cta { flex: none; align-self: flex-start; margin-top: 12px; display: inline-flex; align-items: center; gap: 10px; padding: 13px 18px; border-radius: 3px;
+  background: var(--jp-orange); color: var(--jp-shell); font: 600 14px/1 var(--body); text-decoration: none; transition: background .2s, color .2s; }
+.jp-cta:hover { background: var(--jp-shell); color: var(--jp-ink); }
+
+/* thin row below */
+.jp-facts { margin: 0; flex: none; display: grid; grid-template-columns: repeat(2, minmax(0, .8fr)) repeat(3, minmax(0, 1.3fr)); border-block: 1px solid var(--jp-rule); }
+.jp-fact { min-width: 0; padding: 7px 14px 8px; border-inline-start: 1px solid var(--jp-rule); }
+.jp-fact:first-child { border-inline-start: 0; padding-inline-start: 0; }
+.jp-fact dt { margin-bottom: 4px; font: 500 9px/1 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--jp-slate); }
+.jp-fact dd { margin: 0; font: 600 clamp(12.5px, 1vw, 15px)/1.2 var(--display); letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.jp-fact a { color: inherit; text-decoration: none; transition: color .2s; }
+.jp-fact a:hover { color: var(--jp-orange); }
+.jp-fact.f-next a, .jp-fact.f-rel a { color: var(--jp-orange); }
+.jp-fact.f-next a:hover, .jp-fact.f-rel a:hover { color: var(--jp-shell); }
+
+/* round cursor over the visuals (mouse and trackpad only) */
+.jp-cur { position: absolute; inset: 0; z-index: 7; pointer-events: none; opacity: 0; transition: opacity .2s; }
+.jp-cur.show { opacity: 1; }
+.jp.fine .jp-stage, .jp.fine .jp-stage * { cursor: none !important; }
+.jp-dot, .jp-bub { position: absolute; left: 0; top: 0; width: 0; height: 0; }
+.jp-dot b { position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 50%; background: var(--jp-orange); transition: opacity .2s; }
+.jp-bub b { position: absolute; left: -38px; top: -38px; width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; padding: 8px; text-align: center;
+  background: var(--jp-orange); color: var(--jp-ink); font: 500 9px/1.3 var(--mono); letter-spacing: .12em; text-transform: uppercase; scale: 0; transition: scale .35s var(--jp-ease); }
+.jp-cur.on .jp-bub b { scale: 1; }
+.jp-cur.on .jp-dot b { opacity: 0; }
+
+@media (max-width: 1100px) {
+  .jp-facts { grid-template-columns: minmax(0, .8fr) repeat(2, minmax(0, 1.3fr)); }
+  .jp-fact.f-read, .jp-fact.f-prev { display: none; }
+}
+@media (max-width: 760px) {
+  .jp-main { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); }
+  .jp-title { max-width: 92%; }
+  .jp-lay.a { left: 6%; right: 6%; top: 16%; bottom: 22%; }
+  .jp-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jp-fact.f-cat, .jp-fact.f-rel { display: none; }
+  .jp-fact.f-prev { display: block; }
+}
+@media (max-height: 560px) { .jp-facts { display: none; } }
+@media (prefers-reduced-motion: reduce) { .jp-secs li { transition: none; } }

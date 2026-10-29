@@ -1,0 +1,2007 @@
+{
+ "rows": [
+  [
+   "p0",
+   "p1",
+   "p2",
+   "n0",
+   "p5:2",
+   "p9",
+   "n2",
+   "p13:2",
+   "p14",
+   "p10",
+   "cta"
+  ],
+  [
+   "p3:2",
+   "p4",
+   "n1",
+   "p6",
+   "p7:2",
+   "n3",
+   "p8",
+   "p11",
+   "n4",
+   "p12",
+   "p15"
+  ]
+ ],
+ "projects": [
+  {
+   "num": "01",
+   "slug": "awantika-residence-villa-jubilee-hills",
+   "name": "Awantika Residence",
+   "h1": "Awantika Residence",
+   "em": "Residence",
+   "sub": "VILLA INTERIORS · JUBILEE HILLS, HYDERABAD",
+   "where": "Jubilee Hills, Hyderabad",
+   "loc": "Jubilee Hills",
+   "cat": "Villa",
+   "space": "Living room · Green stone wall",
+   "idea": "One material decides the house. Everything else steps back.",
+   "brief": "Awantika Residence is a villa in Jubilee Hills, Hyderabad, designed by Form X's architects around two stones. Green stone wraps the living room's TV wall around a single white marble slab, and the sofas pick up the same green in velvet. Black marble takes over in the open kitchen, where the island doubles as a breakfast bar, then returns as the backlit shelving of the study nook and home office. Two materials, used wherever they appear, keep eight different views reading as one house.",
+   "title": "Villa Interior Design, Jubilee Hills | Awantika · Form X",
+   "meta": "Green stone, black marble and velvet: see how Form X's architects designed Awantika Residence, a villa in Jubilee Hills, Hyderabad. Get a price for yours.",
+   "keywords": [
+    "villa interior design Jubilee Hills",
+    "luxury villa interiors Hyderabad",
+    "green marble TV wall",
+    "black marble kitchen island"
+   ],
+   "lead": 0,
+   "og": 0,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Living room · Green stone wall",
+     "img": 0
+    },
+    {
+     "label": "WALL",
+     "line": "Green stone, one white marble slab.",
+     "img": 3
+    },
+    {
+     "label": "KITCHEN",
+     "line": "Black marble, repeated as the island.",
+     "img": 5
+    },
+    {
+     "label": "ISLAND",
+     "line": "Bar stools pull up to the stone.",
+     "img": 6
+    },
+    {
+     "label": "STUDY",
+     "line": "Shelves lit from behind the marble.",
+     "img": 2
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/awantika-residence-villa-jubilee-hills/luxury-living-room-green-velvet-villa-jubilee-hills-hyderabad-01.webp",
+     "sm": "/images/projects/awantika-residence-villa-jubilee-hills/luxury-living-room-green-velvet-villa-jubilee-hills-hyderabad-01-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Living room with green velvet sofas and a green stone TV wall, Awantika Residence villa in Jubilee Hills, Hyderabad"
+    },
+    {
+     "src": "/images/projects/awantika-residence-villa-jubilee-hills/kitchen-island-black-marble-villa-jubilee-hills-hyderabad-02.webp",
+     "sm": "/images/projects/awantika-residence-villa-jubilee-hills/kitchen-island-black-marble-villa-jubilee-hills-hyderabad-02-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Open kitchen with a black marble island, Awantika Residence, Jubilee Hills"
+    },
+    {
+     "src": "/images/projects/awantika-residence-villa-jubilee-hills/study-nook-backlit-marble-shelves-villa-jubilee-hills-hyderabad-03.webp",
+     "sm": "/images/projects/awantika-residence-villa-jubilee-hills/study-nook-backlit-marble-shelves-villa-jubilee-hills-hyderabad-03-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Study nook with backlit shelves set into marble, Awantika Residence villa"
+    },
+    {
+     "src": "/images/projects/awantika-residence-villa-jubilee-hills/green-stone-tv-wall-white-marble-villa-jubilee-hills-hyderabad-04.webp",
+     "sm": "/images/projects/awantika-residence-villa-jubilee-hills/green-stone-tv-wall-white-marble-villa-jubilee-hills-hyderabad-04-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Green stone TV wall framing a white marble slab, Awantika Residence living room"
+    },
+    {
+     "src": "/images/projects/awantika-residence-villa-jubilee-hills/study-desk-black-marble-detail-villa-jubilee-hills-hyderabad-05.webp",
+     "sm": "/images/projects/awantika-residence-villa-jubilee-hills/study-desk-black-marble-detail-villa-jubilee-hills-hyderabad-05-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Study desk with black marble detailing, Awantika Residence, Jubilee Hills"
+    },
+    {
+     "src": "/images/projects/awantika-residence-villa-jubilee-hills/open-kitchen-black-marble-island-villa-jubilee-hills-hyderabad-06.webp",
+     "sm": "/images/projects/awantika-residence-villa-jubilee-hills/open-kitchen-black-marble-island-villa-jubilee-hills-hyderabad-06-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Open-plan kitchen around a black marble island, Awantika Residence"
+    },
+    {
+     "src": "/images/projects/awantika-residence-villa-jubilee-hills/black-marble-island-bar-stools-villa-jubilee-hills-hyderabad-07.webp",
+     "sm": "/images/projects/awantika-residence-villa-jubilee-hills/black-marble-island-bar-stools-villa-jubilee-hills-hyderabad-07-800.webp",
+     "w": 1600,
+     "h": 2844,
+     "alt": "Black marble kitchen island with bar stools, Awantika Residence villa"
+    },
+    {
+     "src": "/images/projects/awantika-residence-villa-jubilee-hills/home-office-nook-backlit-shelves-villa-jubilee-hills-hyderabad-08.webp",
+     "sm": "/images/projects/awantika-residence-villa-jubilee-hills/home-office-nook-backlit-shelves-villa-jubilee-hills-hyderabad-08-800.webp",
+     "w": 1600,
+     "h": 2844,
+     "alt": "Home office nook with backlit shelves, Awantika Residence, Jubilee Hills"
+    }
+   ]
+  },
+  {
+   "num": "02",
+   "slug": "suba-residence-luxury-villa-hyderabad",
+   "name": "Suba Residence",
+   "h1": "Suba Residence",
+   "em": "Residence",
+   "sub": "LUXURY VILLA INTERIORS · HYDERABAD",
+   "where": "Hyderabad, Telangana",
+   "loc": "Hyderabad",
+   "cat": "Villa",
+   "space": "Dining room · Leaf chandelier",
+   "idea": "Double height can feel like a lobby. Curves and warm stone make it a home.",
+   "brief": "Suba Residence is a villa in Hyderabad where the living room rises a full two floors. Form X's architects kept that height from feeling like a lobby: a curved velvet sofa, a travertine wall and a gold-leaf chandelier sized for the void bring it down to human scale. The kitchen pairs a marble backsplash with an island and green velvet bar stools, while a galley kitchen with built-in ovens handles the heavy cooking. Meals move between a dining room under a leaf chandelier and a walnut-panelled nook with sculptural chairs.",
+   "title": "Luxury Villa Interior Design, Hyderabad | Suba · Form X",
+   "meta": "A double-height living room, travertine, walnut and a gold-leaf chandelier. See how Form X's architects designed Suba Residence, a luxury villa in Hyderabad.",
+   "keywords": [
+    "luxury villa interior design Hyderabad",
+    "double height living room design",
+    "travertine wall",
+    "kitchen island with bar stools"
+   ],
+   "lead": 1,
+   "og": 1,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Dining room · Leaf chandelier",
+     "img": 1
+    },
+    {
+     "label": "LIVING",
+     "line": "A curved velvet sofa under the double height.",
+     "img": 2
+    },
+    {
+     "label": "LIGHT",
+     "line": "A gold-leaf chandelier sized for the void.",
+     "img": 4
+    },
+    {
+     "label": "KITCHEN",
+     "line": "Marble island, green velvet bar stools.",
+     "img": 3
+    },
+    {
+     "label": "NOOK",
+     "line": "Sculptural chairs against a walnut wall.",
+     "img": 9
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/suba-residence-luxury-villa-hyderabad/luxury-galley-kitchen-built-in-ovens-villa-hyderabad-01.webp",
+     "sm": "/images/projects/suba-residence-luxury-villa-hyderabad/luxury-galley-kitchen-built-in-ovens-villa-hyderabad-01-800.webp",
+     "w": 1600,
+     "h": 2133,
+     "alt": "Galley kitchen with built-in ovens, Suba Residence villa, Hyderabad"
+    },
+    {
+     "src": "/images/projects/suba-residence-luxury-villa-hyderabad/luxury-dining-room-leaf-chandelier-villa-hyderabad-02.webp",
+     "sm": "/images/projects/suba-residence-luxury-villa-hyderabad/luxury-dining-room-leaf-chandelier-villa-hyderabad-02-800.webp",
+     "w": 1600,
+     "h": 914,
+     "alt": "Dining room under a leaf chandelier, Suba Residence villa in Hyderabad"
+    },
+    {
+     "src": "/images/projects/suba-residence-luxury-villa-hyderabad/double-height-living-curved-velvet-sofa-villa-hyderabad-03.webp",
+     "sm": "/images/projects/suba-residence-luxury-villa-hyderabad/double-height-living-curved-velvet-sofa-villa-hyderabad-03-800.webp",
+     "w": 1500,
+     "h": 2251,
+     "alt": "Double-height living room with a curved velvet sofa, Suba Residence"
+    },
+    {
+     "src": "/images/projects/suba-residence-luxury-villa-hyderabad/kitchen-island-green-velvet-bar-stools-villa-hyderabad-04.webp",
+     "sm": "/images/projects/suba-residence-luxury-villa-hyderabad/kitchen-island-green-velvet-bar-stools-villa-hyderabad-04-800.webp",
+     "w": 1600,
+     "h": 2133,
+     "alt": "Kitchen island with green velvet bar stools, Suba Residence villa"
+    },
+    {
+     "src": "/images/projects/suba-residence-luxury-villa-hyderabad/double-height-living-gold-leaf-chandelier-villa-hyderabad-05.webp",
+     "sm": "/images/projects/suba-residence-luxury-villa-hyderabad/double-height-living-gold-leaf-chandelier-villa-hyderabad-05-800.webp",
+     "w": 1600,
+     "h": 2133,
+     "alt": "Gold-leaf chandelier in the double-height living room, Suba Residence"
+    },
+    {
+     "src": "/images/projects/suba-residence-luxury-villa-hyderabad/modular-kitchen-marble-backsplash-island-villa-hyderabad-06.webp",
+     "sm": "/images/projects/suba-residence-luxury-villa-hyderabad/modular-kitchen-marble-backsplash-island-villa-hyderabad-06-800.webp",
+     "w": 1600,
+     "h": 2133,
+     "alt": "Modular kitchen with a marble backsplash and island, Suba Residence"
+    },
+    {
+     "src": "/images/projects/suba-residence-luxury-villa-hyderabad/living-room-curved-sofa-travertine-wall-villa-hyderabad-07.webp",
+     "sm": "/images/projects/suba-residence-luxury-villa-hyderabad/living-room-curved-sofa-travertine-wall-villa-hyderabad-07-800.webp",
+     "w": 1600,
+     "h": 2133,
+     "alt": "Living room with a curved sofa and travertine wall, Suba Residence villa"
+    },
+    {
+     "src": "/images/projects/suba-residence-luxury-villa-hyderabad/double-height-living-dining-view-villa-hyderabad-08.webp",
+     "sm": "/images/projects/suba-residence-luxury-villa-hyderabad/double-height-living-dining-view-villa-hyderabad-08-800.webp",
+     "w": 1600,
+     "h": 2133,
+     "alt": "View from the double-height living room to the dining area, Suba Residence"
+    },
+    {
+     "src": "/images/projects/suba-residence-luxury-villa-hyderabad/stone-coffee-table-styling-detail-villa-hyderabad-09.webp",
+     "sm": "/images/projects/suba-residence-luxury-villa-hyderabad/stone-coffee-table-styling-detail-villa-hyderabad-09-800.webp",
+     "w": 1600,
+     "h": 2844,
+     "alt": "Stone coffee table styling detail, Suba Residence living room"
+    },
+    {
+     "src": "/images/projects/suba-residence-luxury-villa-hyderabad/dining-nook-sculptural-chairs-walnut-wall-villa-hyderabad-10.webp",
+     "sm": "/images/projects/suba-residence-luxury-villa-hyderabad/dining-nook-sculptural-chairs-walnut-wall-villa-hyderabad-10-800.webp",
+     "w": 1500,
+     "h": 2251,
+     "alt": "Dining nook with sculptural chairs and a walnut wall, Suba Residence"
+    },
+    {
+     "src": "/images/projects/suba-residence-luxury-villa-hyderabad/living-room-cognac-sofa-timber-shelves-villa-hyderabad-11.webp",
+     "sm": "/images/projects/suba-residence-luxury-villa-hyderabad/living-room-cognac-sofa-timber-shelves-villa-hyderabad-11-800.webp",
+     "w": 1500,
+     "h": 2251,
+     "alt": "Living room with a cognac sofa and timber shelves, Suba Residence villa"
+    }
+   ]
+  },
+  {
+   "num": "03",
+   "slug": "jagadeesh-residence-villa-narsingi",
+   "name": "Jagadeesh Residence",
+   "h1": "Jagadeesh Residence",
+   "em": "Residence",
+   "sub": "VILLA INTERIORS · NARSINGI, HYDERABAD",
+   "where": "Narsingi, Hyderabad",
+   "loc": "Narsingi",
+   "cat": "Villa",
+   "space": "Living room · Double height",
+   "idea": "Height is a material. Use it, or stop paying for it.",
+   "brief": "Jagadeesh Residence is a villa in Narsingi, Hyderabad, planned by Form X's architects around its height. The double-height living room carries a chandelier and a TV wall scaled to both floors, and an indoor courtyard with a tree pulls daylight into the middle of the house. A Buddha console under a fluted ceiling marks the foyer; the family lounge has diamond-pattern timber panelling and a low sofa on a timber plinth. The bedrooms pair beds with built-in study and dressing units, and a walk-in wardrobe has its own dressing table.",
+   "title": "Villa Interior Design, Narsingi | Jagadeesh · Form X",
+   "meta": "A double-height living room, an indoor courtyard with a tree and 20 designed views. See Jagadeesh Residence, a villa in Narsingi, Hyderabad, by Form X.",
+   "keywords": [
+    "villa interior design Narsingi",
+    "double height living room interior",
+    "indoor courtyard design",
+    "bedroom with study unit"
+   ],
+   "lead": 0,
+   "og": 0,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Living room · Double height",
+     "img": 0
+    },
+    {
+     "label": "COURTYARD",
+     "line": "A tree grows in the indoor courtyard.",
+     "img": 3
+    },
+    {
+     "label": "FOYER",
+     "line": "A Buddha console under a fluted ceiling.",
+     "img": 2
+    },
+    {
+     "label": "LOUNGE",
+     "line": "Diamond-pattern timber, a low sofa on a plinth.",
+     "img": 6
+    },
+    {
+     "label": "BEDROOM",
+     "line": "A window seat set into a timber wall.",
+     "img": 14
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/double-height-living-room-chandelier-villa-narsingi-hyderabad-01.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/double-height-living-room-chandelier-villa-narsingi-hyderabad-01-800.webp",
+     "w": 1449,
+     "h": 1086,
+     "alt": "Double-height living room with a statement chandelier, Jagadeesh Residence villa in Narsingi, Hyderabad"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/master-bedroom-leather-headboard-villa-narsingi-hyderabad-02.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/master-bedroom-leather-headboard-villa-narsingi-hyderabad-02-800.webp",
+     "w": 1449,
+     "h": 1086,
+     "alt": "Master bedroom with a leather headboard, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/foyer-buddha-console-fluted-ceiling-villa-narsingi-hyderabad-03.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/foyer-buddha-console-fluted-ceiling-villa-narsingi-hyderabad-03-800.webp",
+     "w": 1449,
+     "h": 1086,
+     "alt": "Foyer with a Buddha console and fluted ceiling, Jagadeesh Residence villa"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/indoor-courtyard-tree-lounge-villa-narsingi-hyderabad-04.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/indoor-courtyard-tree-lounge-villa-narsingi-hyderabad-04-800.webp",
+     "w": 1447,
+     "h": 1087,
+     "alt": "Indoor courtyard lounge built around a tree, Jagadeesh Residence, Narsingi"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/bedroom-study-unit-guitar-display-villa-narsingi-hyderabad-05.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/bedroom-study-unit-guitar-display-villa-narsingi-hyderabad-05-800.webp",
+     "w": 1448,
+     "h": 1086,
+     "alt": "Bedroom study unit with a guitar display, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/modular-kitchen-beige-black-refrigerator-villa-narsingi-hyderabad-06.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/modular-kitchen-beige-black-refrigerator-villa-narsingi-hyderabad-06-800.webp",
+     "w": 1447,
+     "h": 1087,
+     "alt": "Beige and black modular kitchen with a refrigerator, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/family-lounge-diamond-pattern-wall-villa-narsingi-hyderabad-07.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/family-lounge-diamond-pattern-wall-villa-narsingi-hyderabad-07-800.webp",
+     "w": 1449,
+     "h": 1085,
+     "alt": "Family lounge with a diamond-pattern timber wall, Jagadeesh Residence villa"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/walk-in-wardrobe-dressing-table-villa-narsingi-hyderabad-08.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/walk-in-wardrobe-dressing-table-villa-narsingi-hyderabad-08-800.webp",
+     "w": 1449,
+     "h": 1085,
+     "alt": "Walk-in wardrobe with a dressing table, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/double-height-living-room-tv-wall-villa-narsingi-hyderabad-09.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/double-height-living-room-tv-wall-villa-narsingi-hyderabad-09-800.webp",
+     "w": 1450,
+     "h": 1085,
+     "alt": "TV wall in the double-height living room, Jagadeesh Residence, Narsingi"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/family-lounge-low-sofa-timber-plinth-villa-narsingi-hyderabad-10.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/family-lounge-low-sofa-timber-plinth-villa-narsingi-hyderabad-10-800.webp",
+     "w": 1447,
+     "h": 1087,
+     "alt": "Family lounge with a low sofa on a timber plinth, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/dressing-unit-oval-mirror-bookshelf-villa-narsingi-hyderabad-11.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/dressing-unit-oval-mirror-bookshelf-villa-narsingi-hyderabad-11-800.webp",
+     "w": 1122,
+     "h": 1402,
+     "alt": "Dressing unit with an oval mirror and bookshelf, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/l-shaped-kitchen-beige-matte-window-villa-narsingi-hyderabad-12.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/l-shaped-kitchen-beige-matte-window-villa-narsingi-hyderabad-12-800.webp",
+     "w": 1448,
+     "h": 1086,
+     "alt": "L-shaped kitchen in beige matte by the window, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/bedroom-upholstered-wall-panels-study-villa-narsingi-hyderabad-13.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/bedroom-upholstered-wall-panels-study-villa-narsingi-hyderabad-13-800.webp",
+     "w": 1449,
+     "h": 1085,
+     "alt": "Bedroom with upholstered wall panels and a study, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/wardrobe-dressing-unit-gold-glass-villa-narsingi-hyderabad-14.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/wardrobe-dressing-unit-gold-glass-villa-narsingi-hyderabad-14-800.webp",
+     "w": 1449,
+     "h": 1086,
+     "alt": "Wardrobe and dressing unit with gold-tinted glass, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/master-bedroom-window-seat-timber-wall-villa-narsingi-hyderabad-15.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/master-bedroom-window-seat-timber-wall-villa-narsingi-hyderabad-15-800.webp",
+     "w": 1448,
+     "h": 1086,
+     "alt": "Master bedroom window seat set into a timber wall, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/bedroom-study-desk-sheer-curtains-villa-narsingi-hyderabad-16.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/bedroom-study-desk-sheer-curtains-villa-narsingi-hyderabad-16-800.webp",
+     "w": 1450,
+     "h": 1085,
+     "alt": "Bedroom study desk with sheer curtains, Jagadeesh Residence villa"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/indoor-courtyard-niche-wall-sunlight-villa-narsingi-hyderabad-17.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/indoor-courtyard-niche-wall-sunlight-villa-narsingi-hyderabad-17-800.webp",
+     "w": 1447,
+     "h": 1087,
+     "alt": "Sunlit niche wall in the indoor courtyard, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/bedroom-geometric-led-headboard-wall-villa-narsingi-hyderabad-18.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/bedroom-geometric-led-headboard-wall-villa-narsingi-hyderabad-18-800.webp",
+     "w": 1447,
+     "h": 1087,
+     "alt": "Bedroom with a geometric LED headboard wall, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/modular-kitchen-side-by-side-fridge-villa-narsingi-hyderabad-19.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/modular-kitchen-side-by-side-fridge-villa-narsingi-hyderabad-19-800.webp",
+     "w": 1448,
+     "h": 1086,
+     "alt": "Modular kitchen with a side-by-side fridge, Jagadeesh Residence"
+    },
+    {
+     "src": "/images/projects/jagadeesh-residence-villa-narsingi/bedroom-platform-bed-sunlight-villa-narsingi-hyderabad-20.webp",
+     "sm": "/images/projects/jagadeesh-residence-villa-narsingi/bedroom-platform-bed-sunlight-villa-narsingi-hyderabad-20-800.webp",
+     "w": 1451,
+     "h": 1084,
+     "alt": "Sunlit bedroom with a platform bed, Jagadeesh Residence, Narsingi"
+    }
+   ]
+  },
+  {
+   "num": "04",
+   "slug": "sathish-residence-modern-villa-hyderabad",
+   "name": "Sathish Residence",
+   "h1": "Sathish Residence",
+   "em": "Residence",
+   "sub": "MODERN VILLA INTERIORS · HYDERABAD",
+   "where": "Hyderabad, Telangana",
+   "loc": "Hyderabad",
+   "cat": "Villa",
+   "space": "Lounge · Marble and chevron timber",
+   "idea": "Choose one geometry and carry it through. Here, it is the angle.",
+   "brief": "Sathish Residence is a villa in Hyderabad where Form X's architects let one geometry run the house: the angle. It starts in the kitchen with a faceted island, oak tall units and an angled chimney, and continues as chevron timber panelling in the foyer lounge and beside the marble TV wall. A home office with a glass bookcase sits on a raised platform, and the study is set a few steps up behind a glass partition. On the first floor, a lounge opens to floor-to-ceiling windows.",
+   "title": "Modern Villa Interior Design, Hyderabad | Sathish · Form X",
+   "meta": "A faceted kitchen island, chevron timber and a marble TV wall. See how Form X's architects designed Sathish Residence, a modern villa in Hyderabad.",
+   "keywords": [
+    "modern villa interior design Hyderabad",
+    "kitchen island design",
+    "chevron wall panelling",
+    "home office interior"
+   ],
+   "lead": 6,
+   "og": 6,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Lounge · Marble and chevron timber",
+     "img": 6
+    },
+    {
+     "label": "KITCHEN",
+     "line": "A faceted island under an angled chimney.",
+     "img": 2
+    },
+    {
+     "label": "FOYER",
+     "line": "Chevron timber slats on the lounge wall.",
+     "img": 9
+    },
+    {
+     "label": "STUDY",
+     "line": "Up a few steps, behind glass.",
+     "img": 8
+    },
+    {
+     "label": "LOUNGE",
+     "line": "Floor-to-ceiling glass on the first floor.",
+     "img": 4
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/kitchen-faceted-island-oak-tall-units-villa-hyderabad-01.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/kitchen-faceted-island-oak-tall-units-villa-hyderabad-01-800.webp",
+     "w": 1000,
+     "h": 563,
+     "alt": "Kitchen with a faceted island and oak tall units, Sathish Residence villa, Hyderabad"
+    },
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/kitchen-island-hob-glossy-grey-cabinets-villa-hyderabad-02.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/kitchen-island-hob-glossy-grey-cabinets-villa-hyderabad-02-800.webp",
+     "w": 1000,
+     "h": 563,
+     "alt": "Kitchen island with a hob and glossy grey cabinets, Sathish Residence"
+    },
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/geometric-kitchen-island-angled-chimney-villa-hyderabad-03.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/geometric-kitchen-island-angled-chimney-villa-hyderabad-03-800.webp",
+     "w": 1000,
+     "h": 563,
+     "alt": "Geometric kitchen island under an angled chimney, Sathish Residence"
+    },
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/living-room-open-bookshelf-tufted-sofa-villa-hyderabad-04.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/living-room-open-bookshelf-tufted-sofa-villa-hyderabad-04-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Living room with an open bookshelf and tufted sofa, Sathish Residence"
+    },
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/first-floor-lounge-floor-to-ceiling-windows-villa-hyderabad-05.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/first-floor-lounge-floor-to-ceiling-windows-villa-hyderabad-05-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "First-floor lounge with floor-to-ceiling windows, Sathish Residence villa"
+    },
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/family-lounge-marble-tv-wall-fluted-panel-villa-hyderabad-06.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/family-lounge-marble-tv-wall-fluted-panel-villa-hyderabad-06-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Family lounge with a marble TV wall and fluted panel, Sathish Residence"
+    },
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/marble-tv-wall-chevron-timber-panel-villa-hyderabad-07.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/marble-tv-wall-chevron-timber-panel-villa-hyderabad-07-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Marble TV wall beside chevron timber panelling, Sathish Residence"
+    },
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/home-office-glass-bookcase-platform-villa-hyderabad-08.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/home-office-glass-bookcase-platform-villa-hyderabad-08-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Home office with a glass bookcase on a raised platform, Sathish Residence"
+    },
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/study-room-steps-glass-partition-villa-hyderabad-09.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/study-room-steps-glass-partition-villa-hyderabad-09-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Study room behind a glass partition, up a few steps, Sathish Residence"
+    },
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/foyer-lounge-chevron-wood-wall-slats-villa-hyderabad-10.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/foyer-lounge-chevron-wood-wall-slats-villa-hyderabad-10-800.webp",
+     "w": 1600,
+     "h": 1143,
+     "alt": "Foyer lounge with chevron wood wall slats, Sathish Residence villa"
+    },
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/foyer-lounge-chevron-panels-grey-sofa-villa-hyderabad-11.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/foyer-lounge-chevron-panels-grey-sofa-villa-hyderabad-11-800.webp",
+     "w": 1600,
+     "h": 1143,
+     "alt": "Foyer lounge with chevron panels and a grey sofa, Sathish Residence"
+    },
+    {
+     "src": "/images/projects/sathish-residence-modern-villa-hyderabad/foyer-lounge-fluted-slats-sheer-curtains-villa-hyderabad-12.webp",
+     "sm": "/images/projects/sathish-residence-modern-villa-hyderabad/foyer-lounge-fluted-slats-sheer-curtains-villa-hyderabad-12-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Foyer lounge with fluted slats and sheer curtains, Sathish Residence"
+    }
+   ]
+  },
+  {
+   "num": "05",
+   "slug": "rajan-residence-villa-financial-district",
+   "name": "Rajan Residence",
+   "h1": "Rajan Residence",
+   "em": "Residence",
+   "sub": "VILLA INTERIORS · FINANCIAL DISTRICT, HYDERABAD",
+   "where": "Financial District, Hyderabad",
+   "loc": "Financial District",
+   "cat": "Villa",
+   "space": "Kitchen · Grey marble island",
+   "idea": "Every room gets designed, or it is not a home project. Nothing is left to be figured out on site.",
+   "brief": "Rajan Residence is a villa in Financial District, Hyderabad, and proof of a Form X rule: every room gets designed, including the small ones. The kitchen centres on a grey marble island, with a breakfast counter and bar stools for quick meals. The powder room gets the same attention as the living spaces, finished in black marble with a wall-hung WC that keeps the floor clear and easy to clean.",
+   "title": "Villa Interior Design, Financial District | Rajan · Form X",
+   "meta": "A grey marble kitchen island, a breakfast counter and a black marble powder room. See Rajan Residence, a villa in Financial District, Hyderabad, by Form X.",
+   "keywords": [
+    "villa interior design Financial District Hyderabad",
+    "grey marble kitchen island",
+    "powder room design",
+    "breakfast counter"
+   ],
+   "lead": 0,
+   "og": 0,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Kitchen · Grey marble island",
+     "img": 0
+    },
+    {
+     "label": "COUNTER",
+     "line": "A breakfast counter off the kitchen.",
+     "img": 1
+    },
+    {
+     "label": "SEATING",
+     "line": "Bar stools tucked under the counter.",
+     "img": 2
+    },
+    {
+     "label": "POWDER ROOM",
+     "line": "Black marble, even in the powder room.",
+     "img": 3
+    },
+    {
+     "label": "FIXTURES",
+     "line": "A wall-hung WC keeps the floor clear.",
+     "img": 4
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/rajan-residence-villa-financial-district/grey-marble-kitchen-island-villa-financial-district-hyderabad-01.webp",
+     "sm": "/images/projects/rajan-residence-villa-financial-district/grey-marble-kitchen-island-villa-financial-district-hyderabad-01-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Kitchen with a grey marble island, Rajan Residence villa in Financial District, Hyderabad"
+    },
+    {
+     "src": "/images/projects/rajan-residence-villa-financial-district/kitchen-breakfast-counter-villa-financial-district-hyderabad-02.webp",
+     "sm": "/images/projects/rajan-residence-villa-financial-district/kitchen-breakfast-counter-villa-financial-district-hyderabad-02-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Kitchen with a breakfast counter, Rajan Residence"
+    },
+    {
+     "src": "/images/projects/rajan-residence-villa-financial-district/breakfast-counter-bar-stools-villa-financial-district-hyderabad-03.webp",
+     "sm": "/images/projects/rajan-residence-villa-financial-district/breakfast-counter-bar-stools-villa-financial-district-hyderabad-03-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Breakfast counter with bar stools, Rajan Residence villa"
+    },
+    {
+     "src": "/images/projects/rajan-residence-villa-financial-district/powder-room-black-marble-villa-financial-district-hyderabad-04.webp",
+     "sm": "/images/projects/rajan-residence-villa-financial-district/powder-room-black-marble-villa-financial-district-hyderabad-04-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Powder room in black marble, Rajan Residence"
+    },
+    {
+     "src": "/images/projects/rajan-residence-villa-financial-district/powder-room-wall-hung-wc-villa-financial-district-hyderabad-05.webp",
+     "sm": "/images/projects/rajan-residence-villa-financial-district/powder-room-wall-hung-wc-villa-financial-district-hyderabad-05-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Powder room with a wall-hung WC, Rajan Residence, Financial District"
+    }
+   ]
+  },
+  {
+   "num": "06",
+   "slug": "pranithi-residence-apartment-narsingi",
+   "name": "Pranithi Residence",
+   "h1": "Pranithi Residence",
+   "em": "Residence",
+   "sub": "APARTMENT INTERIORS · NARSINGI, HYDERABAD",
+   "where": "Narsingi, Hyderabad",
+   "loc": "Narsingi",
+   "cat": "Apartment",
+   "space": "Living room · Media wall",
+   "idea": "The joinery is the architecture. Shape the room with built-ins, not with furniture.",
+   "brief": "Pranithi Residence is an apartment in Narsingi, Hyderabad, where Form X's architects let the built-ins shape every room. The living room is organised by a media wall with a lit glass display tower and vertical slats, a fluted-glass partition shelf separates the dining area, and a teak-and-glass pooja room sits beside the TV wall. In the bedrooms, sliding wardrobes, lofts, study desks and a window seat are planned into the walls, so the floor stays free. The taupe L-shaped kitchen adds tall pantry units around the fridge.",
+   "title": "Apartment Interior Design, Narsingi | Pranithi · Form X",
+   "meta": "A media wall with a lit display tower, a teak pooja room and built-ins in every bedroom. See Pranithi Residence, an apartment in Narsingi, Hyderabad.",
+   "keywords": [
+    "apartment interior design Narsingi",
+    "TV unit with display",
+    "pooja room design",
+    "sliding wardrobe with study"
+   ],
+   "lead": 0,
+   "og": 0,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Living room · Media wall",
+     "img": 0
+    },
+    {
+     "label": "PARTITION",
+     "line": "A fluted-glass shelf divides living and dining.",
+     "img": 5
+    },
+    {
+     "label": "POOJA",
+     "line": "A mandir in teak and glass.",
+     "img": 17
+    },
+    {
+     "label": "BEDROOM",
+     "line": "Wardrobe, loft and study desk in one wall.",
+     "img": 9
+    },
+    {
+     "label": "KITCHEN",
+     "line": "A taupe L-shape with tall pantry units.",
+     "img": 14
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/tv-unit-glass-display-tower-slats-apartment-narsingi-hyderabad-01.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/tv-unit-glass-display-tower-slats-apartment-narsingi-hyderabad-01-800.webp",
+     "w": 1120,
+     "h": 840,
+     "alt": "TV unit with a lit glass display tower and vertical slats, Pranithi Residence apartment in Narsingi, Hyderabad"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/media-wall-cove-false-ceiling-apartment-narsingi-hyderabad-02.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/media-wall-cove-false-ceiling-apartment-narsingi-hyderabad-02-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Media wall under a cove-lit false ceiling, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/living-room-tv-wall-pooja-room-apartment-narsingi-hyderabad-03.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/living-room-tv-wall-pooja-room-apartment-narsingi-hyderabad-03-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Living room TV wall beside the pooja room, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/four-seater-dining-crockery-unit-apartment-narsingi-hyderabad-04.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/four-seater-dining-crockery-unit-apartment-narsingi-hyderabad-04-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Four-seater dining table with a crockery unit, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/living-room-sofa-wall-moulding-apartment-narsingi-hyderabad-05.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/living-room-sofa-wall-moulding-apartment-narsingi-hyderabad-05-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Living room sofa wall with mouldings, Pranithi Residence apartment"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/partition-shelf-fluted-glass-apartment-narsingi-hyderabad-06.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/partition-shelf-fluted-glass-apartment-narsingi-hyderabad-06-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Partition shelf with fluted glass between living and dining, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/dining-area-partition-shelf-apartment-narsingi-hyderabad-07.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/dining-area-partition-shelf-apartment-narsingi-hyderabad-07-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Dining area beside the partition shelf, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/master-bedroom-sliding-wardrobe-apartment-narsingi-hyderabad-08.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/master-bedroom-sliding-wardrobe-apartment-narsingi-hyderabad-08-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Master bedroom with a sliding wardrobe, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/bedroom-slat-panels-textured-wall-apartment-narsingi-hyderabad-09.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/bedroom-slat-panels-textured-wall-apartment-narsingi-hyderabad-09-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Bedroom with slat panels and a textured wall, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/sliding-wardrobe-loft-study-desk-apartment-narsingi-hyderabad-10.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/sliding-wardrobe-loft-study-desk-apartment-narsingi-hyderabad-10-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Sliding wardrobe with loft and study desk, Pranithi Residence apartment"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/guest-bedroom-study-desk-apartment-narsingi-hyderabad-11.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/guest-bedroom-study-desk-apartment-narsingi-hyderabad-11-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Guest bedroom with a study desk, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/bedroom-tv-wall-fluted-panels-apartment-narsingi-hyderabad-12.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/bedroom-tv-wall-fluted-panels-apartment-narsingi-hyderabad-12-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Bedroom TV wall with fluted panels, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/bedroom-wardrobe-window-seat-apartment-narsingi-hyderabad-13.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/bedroom-wardrobe-window-seat-apartment-narsingi-hyderabad-13-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Bedroom wardrobe with a window seat, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/bedroom-tropical-wallpaper-headboard-apartment-narsingi-hyderabad-14.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/bedroom-tropical-wallpaper-headboard-apartment-narsingi-hyderabad-14-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Bedroom headboard wall in tropical wallpaper, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/l-shaped-modular-kitchen-taupe-apartment-narsingi-hyderabad-15.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/l-shaped-modular-kitchen-taupe-apartment-narsingi-hyderabad-15-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "L-shaped modular kitchen in taupe, Pranithi Residence, Narsingi"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/modular-kitchen-hob-tall-pantry-apartment-narsingi-hyderabad-16.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/modular-kitchen-hob-tall-pantry-apartment-narsingi-hyderabad-16-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Modular kitchen hob and tall pantry units, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/kitchen-tall-units-fridge-apartment-narsingi-hyderabad-17.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/kitchen-tall-units-fridge-apartment-narsingi-hyderabad-17-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Kitchen tall units around the fridge, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/pooja-room-teak-glass-mandir-apartment-narsingi-hyderabad-18.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/pooja-room-teak-glass-mandir-apartment-narsingi-hyderabad-18-800.webp",
+     "w": 1120,
+     "h": 1120,
+     "alt": "Pooja room with a teak and glass mandir, Pranithi Residence"
+    },
+    {
+     "src": "/images/projects/pranithi-residence-apartment-narsingi/crockery-unit-fluted-glass-apartment-narsingi-hyderabad-19.webp",
+     "sm": "/images/projects/pranithi-residence-apartment-narsingi/crockery-unit-fluted-glass-apartment-narsingi-hyderabad-19-800.webp",
+     "w": 1320,
+     "h": 989,
+     "alt": "Crockery unit with fluted glass shutters, Pranithi Residence apartment"
+    }
+   ]
+  },
+  {
+   "num": "07",
+   "slug": "dheena-residence-apartment-kokapet",
+   "name": "Dheena Residence",
+   "h1": "Dheena Residence",
+   "em": "Residence",
+   "sub": "APARTMENT INTERIORS · KOKAPET, HYDERABAD",
+   "where": "Kokapet, Hyderabad",
+   "loc": "Kokapet",
+   "cat": "Apartment",
+   "space": "Dining · Pooja unit and crockery wall",
+   "idea": "Plan the pooja unit first. The dining, the light and the storage take their cue from it.",
+   "brief": "Dheena Residence is an apartment in Kokapet, Hyderabad, planned by Form X's architects around its pooja unit. Set into the dining room under a cove ceiling, the unit's lotus niches sit beside a crockery display with fluted glass, a sideboard and a linear pendant over the table. The living room gets a black marble TV unit. The L-shaped modular kitchen in marble adds a tall oven unit, an appliance wall with utility access and an angled black chimney, and a wash basin counter with a round mirror completes the common areas.",
+   "title": "Apartment Interior Design, Kokapet | Dheena · Form X",
+   "meta": "A pooja unit with lotus niches, a fluted-glass crockery wall and a marble kitchen. See Dheena Residence, an apartment in Kokapet, Hyderabad, by Form X.",
+   "keywords": [
+    "apartment interior design Kokapet",
+    "pooja unit design for dining room",
+    "crockery unit with fluted glass",
+    "L-shaped modular kitchen"
+   ],
+   "lead": 4,
+   "og": 4,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Dining · Pooja unit and crockery wall",
+     "img": 4
+    },
+    {
+     "label": "POOJA",
+     "line": "Lotus niches carved into the pooja unit.",
+     "img": 12
+    },
+    {
+     "label": "CROCKERY",
+     "line": "Fluted glass on the crockery cabinet.",
+     "img": 7
+    },
+    {
+     "label": "LIVING",
+     "line": "A black marble TV unit.",
+     "img": 10
+    },
+    {
+     "label": "KITCHEN",
+     "line": "An L-shaped kitchen in marble.",
+     "img": 0
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/l-shaped-modular-kitchen-marble-apartment-kokapet-hyderabad-01.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/l-shaped-modular-kitchen-marble-apartment-kokapet-hyderabad-01-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "L-shaped modular kitchen in marble, Dheena Residence apartment in Kokapet, Hyderabad"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/modular-kitchen-tall-oven-unit-apartment-kokapet-hyderabad-02.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/modular-kitchen-tall-oven-unit-apartment-kokapet-hyderabad-02-800.webp",
+     "w": 1494,
+     "h": 1052,
+     "alt": "Modular kitchen with a tall oven unit, Dheena Residence"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/kitchen-appliance-wall-utility-apartment-kokapet-hyderabad-03.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/kitchen-appliance-wall-utility-apartment-kokapet-hyderabad-03-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "Kitchen appliance wall with utility access, Dheena Residence"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/modular-kitchen-black-angled-chimney-apartment-kokapet-hyderabad-04.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/modular-kitchen-black-angled-chimney-apartment-kokapet-hyderabad-04-800.webp",
+     "w": 1494,
+     "h": 1053,
+     "alt": "Modular kitchen with a black angled chimney, Dheena Residence"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/dining-pooja-unit-crockery-display-apartment-kokapet-hyderabad-05.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/dining-pooja-unit-crockery-display-apartment-kokapet-hyderabad-05-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Dining room with a pooja unit and crockery display, Dheena Residence"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/dining-room-cove-ceiling-pooja-unit-apartment-kokapet-hyderabad-06.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/dining-room-cove-ceiling-pooja-unit-apartment-kokapet-hyderabad-06-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Cove ceiling over the dining room pooja unit, Dheena Residence, Kokapet"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/dining-area-from-living-room-apartment-kokapet-hyderabad-07.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/dining-area-from-living-room-apartment-kokapet-hyderabad-07-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Dining area seen from the living room, Dheena Residence apartment"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/dining-crockery-cabinet-fluted-glass-apartment-kokapet-hyderabad-08.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/dining-crockery-cabinet-fluted-glass-apartment-kokapet-hyderabad-08-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Crockery cabinet with fluted glass in the dining room, Dheena Residence"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/dining-room-linear-pendant-apartment-kokapet-hyderabad-09.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/dining-room-linear-pendant-apartment-kokapet-hyderabad-09-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Dining room under a linear pendant light, Dheena Residence"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/dining-table-pooja-unit-sideboard-apartment-kokapet-hyderabad-10.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/dining-table-pooja-unit-sideboard-apartment-kokapet-hyderabad-10-800.webp",
+     "w": 1600,
+     "h": 1128,
+     "alt": "Dining table with the pooja unit and sideboard, Dheena Residence"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/living-room-black-marble-tv-unit-apartment-kokapet-hyderabad-11.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/living-room-black-marble-tv-unit-apartment-kokapet-hyderabad-11-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Living room with a black marble TV unit, Dheena Residence"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/living-room-foyer-tv-wall-apartment-kokapet-hyderabad-12.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/living-room-foyer-tv-wall-apartment-kokapet-hyderabad-12-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Living room and foyer TV wall, Dheena Residence apartment"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/pooja-unit-design-lotus-niches-apartment-kokapet-hyderabad-13.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/pooja-unit-design-lotus-niches-apartment-kokapet-hyderabad-13-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Pooja unit design with lotus niches, Dheena Residence, Kokapet"
+    },
+    {
+     "src": "/images/projects/dheena-residence-apartment-kokapet/wash-basin-counter-round-mirror-apartment-kokapet-hyderabad-14.webp",
+     "sm": "/images/projects/dheena-residence-apartment-kokapet/wash-basin-counter-round-mirror-apartment-kokapet-hyderabad-14-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Wash basin counter with a round mirror, Dheena Residence"
+    }
+   ]
+  },
+  {
+   "num": "08",
+   "slug": "sai-residence-bedrooms-kokapet",
+   "name": "Sai Residence",
+   "h1": "Sai Residence",
+   "em": "Residence",
+   "sub": "BEDROOM INTERIORS · KOKAPET, HYDERABAD",
+   "where": "Kokapet, Hyderabad",
+   "loc": "Kokapet",
+   "cat": "Apartment",
+   "space": "Master bedroom · Monstera wall",
+   "idea": "One joinery system, three personalities. The colour changes; the language does not.",
+   "brief": "Sai Residence is an apartment in Kokapet, Hyderabad, where Form X's architects designed every bedroom with one joinery system and gave each its own colour. The master bedroom pairs a monstera wallpaper wall with a dresser and window seat, another bedroom takes a navy blue study unit, and the guest room and a study nook use charcoal wardrobes built around the window. A study desk beside a fluted-glass display and a grey textured wall finish the set. Same details, three moods.",
+   "title": "Bedroom Interior Design, Kokapet | Sai Residence · Form X",
+   "meta": "A monstera wall, a navy study unit and charcoal wardrobes: one joinery system, three moods. See the bedrooms of Sai Residence, Kokapet, Hyderabad.",
+   "keywords": [
+    "bedroom interior design Kokapet",
+    "master bedroom wallpaper",
+    "wardrobe with study table",
+    "window seat design"
+   ],
+   "lead": 0,
+   "og": 0,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Master bedroom · Monstera wall",
+     "img": 0
+    },
+    {
+     "label": "WINDOW SEAT",
+     "line": "A dresser and window seat in one run.",
+     "img": 1
+    },
+    {
+     "label": "STUDY",
+     "line": "A navy blue study unit.",
+     "img": 2
+    },
+    {
+     "label": "CHARCOAL",
+     "line": "Charcoal wardrobes wrap the study nook.",
+     "img": 5
+    },
+    {
+     "label": "DISPLAY",
+     "line": "A study desk beside fluted glass.",
+     "img": 4
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/sai-residence-bedrooms-kokapet/master-bedroom-monstera-wallpaper-apartment-kokapet-hyderabad-01.webp",
+     "sm": "/images/projects/sai-residence-bedrooms-kokapet/master-bedroom-monstera-wallpaper-apartment-kokapet-hyderabad-01-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Master bedroom with a monstera wallpaper wall, Sai Residence apartment in Kokapet, Hyderabad"
+    },
+    {
+     "src": "/images/projects/sai-residence-bedrooms-kokapet/master-bedroom-window-seat-dresser-apartment-kokapet-hyderabad-02.webp",
+     "sm": "/images/projects/sai-residence-bedrooms-kokapet/master-bedroom-window-seat-dresser-apartment-kokapet-hyderabad-02-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Master bedroom window seat and dresser, Sai Residence"
+    },
+    {
+     "src": "/images/projects/sai-residence-bedrooms-kokapet/bedroom-navy-blue-study-unit-apartment-kokapet-hyderabad-03.webp",
+     "sm": "/images/projects/sai-residence-bedrooms-kokapet/bedroom-navy-blue-study-unit-apartment-kokapet-hyderabad-03-800.webp",
+     "w": 1600,
+     "h": 1128,
+     "alt": "Bedroom with a navy blue study unit, Sai Residence"
+    },
+    {
+     "src": "/images/projects/sai-residence-bedrooms-kokapet/guest-bedroom-charcoal-wardrobe-study-apartment-kokapet-hyderabad-04.webp",
+     "sm": "/images/projects/sai-residence-bedrooms-kokapet/guest-bedroom-charcoal-wardrobe-study-apartment-kokapet-hyderabad-04-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Guest bedroom with a charcoal wardrobe and study, Sai Residence"
+    },
+    {
+     "src": "/images/projects/sai-residence-bedrooms-kokapet/study-desk-fluted-glass-display-apartment-kokapet-hyderabad-05.webp",
+     "sm": "/images/projects/sai-residence-bedrooms-kokapet/study-desk-fluted-glass-display-apartment-kokapet-hyderabad-05-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Study desk beside a fluted-glass display, Sai Residence"
+    },
+    {
+     "src": "/images/projects/sai-residence-bedrooms-kokapet/study-nook-charcoal-wardrobe-window-apartment-kokapet-hyderabad-06.webp",
+     "sm": "/images/projects/sai-residence-bedrooms-kokapet/study-nook-charcoal-wardrobe-window-apartment-kokapet-hyderabad-06-800.webp",
+     "w": 1600,
+     "h": 1128,
+     "alt": "Study nook between charcoal wardrobes at the window, Sai Residence"
+    },
+    {
+     "src": "/images/projects/sai-residence-bedrooms-kokapet/bedroom-charcoal-wardrobe-apartment-kokapet-hyderabad-07.webp",
+     "sm": "/images/projects/sai-residence-bedrooms-kokapet/bedroom-charcoal-wardrobe-apartment-kokapet-hyderabad-07-800.webp",
+     "w": 1600,
+     "h": 1128,
+     "alt": "Bedroom with charcoal wardrobes, Sai Residence, Kokapet"
+    },
+    {
+     "src": "/images/projects/sai-residence-bedrooms-kokapet/monstera-wall-master-bedroom-apartment-kokapet-hyderabad-08.webp",
+     "sm": "/images/projects/sai-residence-bedrooms-kokapet/monstera-wall-master-bedroom-apartment-kokapet-hyderabad-08-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Monstera wall behind the master bed, Sai Residence"
+    },
+    {
+     "src": "/images/projects/sai-residence-bedrooms-kokapet/bedroom-grey-textured-wall-apartment-kokapet-hyderabad-09.webp",
+     "sm": "/images/projects/sai-residence-bedrooms-kokapet/bedroom-grey-textured-wall-apartment-kokapet-hyderabad-09-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Bedroom with a grey textured wall, Sai Residence apartment"
+    }
+   ]
+  },
+  {
+   "num": "09",
+   "slug": "saranya-residence-3bhk-apartment-hyderabad",
+   "name": "Saranya Residence",
+   "h1": "Saranya Residence",
+   "em": "Residence",
+   "sub": "3BHK APARTMENT INTERIORS · HYDERABAD",
+   "where": "Hyderabad, Telangana",
+   "loc": "Hyderabad",
+   "cat": "Apartment",
+   "space": "Living room · Grey sectional",
+   "idea": "Repeat one shape and the whole home holds together. Here, it is the arch.",
+   "brief": "Saranya Residence is a 3BHK apartment in Hyderabad, designed by Form X's architects with one shape and one palette. Arched mirrors appear twice, over the living room console and at the dining wash basin, and a dome pendant hangs above the marble dining table. The living room pairs a grey sectional with blue art and a TV unit on a floating console. The bedrooms work in greys and charcoal, with a fluted headboard wall and a wardrobe-and-study unit in the master. The kitchen has fluted-glass cabinets, a sink at the window, built-in ovens and a utility door.",
+   "title": "3BHK Apartment Interior Design, Hyderabad | Saranya · Form X",
+   "meta": "Arched mirrors, a dome pendant and a calm grey palette across a full 3BHK. See how Form X's architects designed Saranya Residence in Hyderabad.",
+   "keywords": [
+    "3BHK interior design Hyderabad",
+    "arched mirror console",
+    "grey sectional living room",
+    "modular kitchen with fluted glass"
+   ],
+   "lead": 1,
+   "og": 1,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Living room · Grey sectional",
+     "img": 1
+    },
+    {
+     "label": "CONSOLE",
+     "line": "An arched mirror over the console.",
+     "img": 3
+    },
+    {
+     "label": "DINING",
+     "line": "A dome pendant over a marble table.",
+     "img": 0
+    },
+    {
+     "label": "WASH",
+     "line": "The arch returns at the dining wash basin.",
+     "img": 4
+    },
+    {
+     "label": "KITCHEN",
+     "line": "Fluted-glass cabinets, the sink at the window.",
+     "img": 7
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/dining-room-dome-pendant-marble-table-3bhk-apartment-hyderabad-01.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/dining-room-dome-pendant-marble-table-3bhk-apartment-hyderabad-01-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Dining room with a dome pendant over a marble table, Saranya Residence 3BHK apartment, Hyderabad"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/living-room-grey-sectional-blue-art-3bhk-apartment-hyderabad-02.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/living-room-grey-sectional-blue-art-3bhk-apartment-hyderabad-02-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Living room with a grey sectional sofa and blue art, Saranya Residence"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/living-room-tv-unit-floating-console-3bhk-apartment-hyderabad-03.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/living-room-tv-unit-floating-console-3bhk-apartment-hyderabad-03-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "TV unit with a floating console, Saranya Residence living room"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/living-room-arched-mirror-console-3bhk-apartment-hyderabad-04.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/living-room-arched-mirror-console-3bhk-apartment-hyderabad-04-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Arched mirror above the living room console, Saranya Residence"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/dining-area-arched-mirror-wash-basin-3bhk-apartment-hyderabad-05.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/dining-area-arched-mirror-wash-basin-3bhk-apartment-hyderabad-05-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Dining area wash basin with an arched mirror, Saranya Residence"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/master-bedroom-charcoal-wardrobe-study-3bhk-apartment-hyderabad-06.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/master-bedroom-charcoal-wardrobe-study-3bhk-apartment-hyderabad-06-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Master bedroom with a charcoal wardrobe and study, Saranya Residence"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/master-bedroom-fluted-headboard-wall-3bhk-apartment-hyderabad-07.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/master-bedroom-fluted-headboard-wall-3bhk-apartment-hyderabad-07-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Master bedroom fluted headboard wall, Saranya Residence"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/modular-kitchen-fluted-glass-cabinets-3bhk-apartment-hyderabad-08.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/modular-kitchen-fluted-glass-cabinets-3bhk-apartment-hyderabad-08-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Modular kitchen with fluted-glass cabinets, Saranya Residence"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/modular-kitchen-sink-window-3bhk-apartment-hyderabad-09.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/modular-kitchen-sink-window-3bhk-apartment-hyderabad-09-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Modular kitchen sink under the window, Saranya Residence 3BHK"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/guest-bedroom-grey-panel-wall-3bhk-apartment-hyderabad-10.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/guest-bedroom-grey-panel-wall-3bhk-apartment-hyderabad-10-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Guest bedroom with a grey panelled wall, Saranya Residence"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/bedroom-pendant-lamp-dark-wardrobe-3bhk-apartment-hyderabad-11.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/bedroom-pendant-lamp-dark-wardrobe-3bhk-apartment-hyderabad-11-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Bedroom with a pendant lamp and dark wardrobe, Saranya Residence"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/master-bedroom-grey-palette-wardrobe-3bhk-apartment-hyderabad-12.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/master-bedroom-grey-palette-wardrobe-3bhk-apartment-hyderabad-12-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Master bedroom wardrobe in a grey palette, Saranya Residence"
+    },
+    {
+     "src": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/kitchen-built-in-ovens-utility-door-3bhk-apartment-hyderabad-13.webp",
+     "sm": "/images/projects/saranya-residence-3bhk-apartment-hyderabad/kitchen-built-in-ovens-utility-door-3bhk-apartment-hyderabad-13-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Kitchen with built-in ovens and a utility door, Saranya Residence"
+    }
+   ]
+  },
+  {
+   "num": "10",
+   "slug": "keerthi-residence-luxury-home-hyderabad",
+   "name": "Keerthi Residence",
+   "h1": "Keerthi Residence",
+   "em": "Residence",
+   "sub": "LUXURY HOME INTERIORS · HYDERABAD",
+   "where": "Hyderabad, Telangana",
+   "loc": "Hyderabad",
+   "cat": "Villa",
+   "space": "Master bedroom · Marble wall",
+   "idea": "Luxury is what you leave out. One stone, one light, one long sofa.",
+   "brief": "Keerthi Residence is a home in Hyderabad where Form X's architects kept the palette to one warm neutral and let texture carry the luxury. In the master bedroom, a marble slab and upholstered panels frame the bed, and a looped LED pendant drops in place of bedside lamps. The living room runs a deep sectional sofa under curtains that rise from floor to ceiling, with a curved coffee table and a fluted media console facing a wall-mounted screen.",
+   "title": "Luxury Home Interior Design, Hyderabad | Keerthi · Form X",
+   "meta": "A marble-backed master bedroom, a looped LED pendant and full-height curtains. See how Form X's architects designed Keerthi Residence in Hyderabad.",
+   "keywords": [
+    "luxury home interior design Hyderabad",
+    "luxury master bedroom design",
+    "marble wall behind bed",
+    "sectional sofa living room"
+   ],
+   "lead": 0,
+   "og": 0,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Master bedroom · Marble wall",
+     "img": 0
+    },
+    {
+     "label": "LIGHT",
+     "line": "A looped LED pendant drops by the marble.",
+     "img": 0
+    },
+    {
+     "label": "LIVING",
+     "line": "A deep sectional under full-height curtains.",
+     "img": 1
+    },
+    {
+     "label": "WINDOWS",
+     "line": "Floor-to-ceiling glass onto the greenery.",
+     "img": 2
+    },
+    {
+     "label": "CONSOLE",
+     "line": "A fluted console under the screen.",
+     "img": 2
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/keerthi-residence-luxury-home-hyderabad/luxury-master-bedroom-marble-led-pendant-home-hyderabad-01.webp",
+     "sm": "/images/projects/keerthi-residence-luxury-home-hyderabad/luxury-master-bedroom-marble-led-pendant-home-hyderabad-01-800.webp",
+     "w": 1600,
+     "h": 1087,
+     "alt": "Master bedroom with a marble feature wall and a looped LED pendant, Keerthi Residence, Hyderabad"
+    },
+    {
+     "src": "/images/projects/keerthi-residence-luxury-home-hyderabad/luxury-living-room-sectional-sofa-home-hyderabad-02.webp",
+     "sm": "/images/projects/keerthi-residence-luxury-home-hyderabad/luxury-living-room-sectional-sofa-home-hyderabad-02-800.webp",
+     "w": 1600,
+     "h": 1087,
+     "alt": "Living room with a deep sectional sofa under full-height curtains, Keerthi Residence"
+    },
+    {
+     "src": "/images/projects/keerthi-residence-luxury-home-hyderabad/living-room-floor-to-ceiling-windows-luxury-home-hyderabad-03.webp",
+     "sm": "/images/projects/keerthi-residence-luxury-home-hyderabad/living-room-floor-to-ceiling-windows-luxury-home-hyderabad-03-800.webp",
+     "w": 1600,
+     "h": 1087,
+     "alt": "Living room with floor-to-ceiling windows, a curved coffee table and a fluted console, Keerthi Residence"
+    }
+   ]
+  },
+  {
+   "num": "11",
+   "slug": "ahamed-house-full-home-interiors-hyderabad",
+   "name": "Ahamed House",
+   "h1": "Ahamed House",
+   "em": "House",
+   "sub": "FULL HOME INTERIORS · HYDERABAD",
+   "where": "Hyderabad, Telangana",
+   "loc": "Hyderabad",
+   "cat": "Apartment",
+   "space": "Living room · Floating TV unit",
+   "idea": "One matte taupe, kitchen shutters to wardrobes. That is what keeps a full home calm.",
+   "brief": "Ahamed House is a full home interior in Hyderabad, designed by Form X's architects in one matte taupe that runs from the kitchen shutters to the bedroom wardrobes. The living room keeps a floating TV unit and lounge chairs; the dining room sets a marble table under a track pendant, with a wash basin and backlit round mirror beside it. The L-shaped modular kitchen pairs the taupe with a dark countertop and open shelves, and every bedroom gets a panelled headboard wall, a study desk and full-height wardrobes.",
+   "title": "Full Home Interior Design, Hyderabad | Ahamed House · Form X",
+   "meta": "Taupe matte from kitchen to wardrobes, a marble dining table and panelled bedrooms. See how Form X's architects designed Ahamed House, a full home in Hyderabad.",
+   "keywords": [
+    "full home interior design Hyderabad",
+    "taupe modular kitchen",
+    "floating TV unit design",
+    "bedroom wardrobe with study desk"
+   ],
+   "lead": 2,
+   "og": 2,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Living room · Floating TV unit",
+     "img": 2
+    },
+    {
+     "label": "DINING",
+     "line": "A marble table under a track pendant.",
+     "img": 1
+    },
+    {
+     "label": "KITCHEN",
+     "line": "Taupe matte shutters, a dark countertop.",
+     "img": 7
+    },
+    {
+     "label": "VANITY",
+     "line": "A backlit round mirror at the wash basin.",
+     "img": 4
+    },
+    {
+     "label": "BEDROOM",
+     "line": "A fluted headboard panel with an LED line.",
+     "img": 6
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/ahamed-house-full-home-interiors-hyderabad/bedroom-wardrobe-and-study-desk-home-hyderabad-01.webp",
+     "sm": "/images/projects/ahamed-house-full-home-interiors-hyderabad/bedroom-wardrobe-and-study-desk-home-hyderabad-01-800.webp",
+     "w": 1600,
+     "h": 1015,
+     "alt": "Bedroom with a full-height wardrobe and a study desk by the window, Ahamed House, Hyderabad"
+    },
+    {
+     "src": "/images/projects/ahamed-house-full-home-interiors-hyderabad/dining-room-marble-table-track-pendant-home-hyderabad-02.webp",
+     "sm": "/images/projects/ahamed-house-full-home-interiors-hyderabad/dining-room-marble-table-track-pendant-home-hyderabad-02-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Dining room with a marble table under a track pendant and blue abstract art, Ahamed House"
+    },
+    {
+     "src": "/images/projects/ahamed-house-full-home-interiors-hyderabad/living-room-floating-tv-unit-home-hyderabad-03.webp",
+     "sm": "/images/projects/ahamed-house-full-home-interiors-hyderabad/living-room-floating-tv-unit-home-hyderabad-03-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Living room with a floating TV unit and two lounge chairs, Ahamed House, Hyderabad"
+    },
+    {
+     "src": "/images/projects/ahamed-house-full-home-interiors-hyderabad/living-room-beige-sofa-lounge-chairs-home-hyderabad-04.webp",
+     "sm": "/images/projects/ahamed-house-full-home-interiors-hyderabad/living-room-beige-sofa-lounge-chairs-home-hyderabad-04-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Living room with a beige sofa and a pair of lounge chairs, Ahamed House"
+    },
+    {
+     "src": "/images/projects/ahamed-house-full-home-interiors-hyderabad/wash-basin-vanity-backlit-mirror-home-hyderabad-05.webp",
+     "sm": "/images/projects/ahamed-house-full-home-interiors-hyderabad/wash-basin-vanity-backlit-mirror-home-hyderabad-05-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Wash basin vanity with a backlit round mirror beside the dining area, Ahamed House"
+    },
+    {
+     "src": "/images/projects/ahamed-house-full-home-interiors-hyderabad/guest-bedroom-textured-wall-art-home-hyderabad-06.webp",
+     "sm": "/images/projects/ahamed-house-full-home-interiors-hyderabad/guest-bedroom-textured-wall-art-home-hyderabad-06-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Guest bedroom with textured wall art and a taupe wardrobe, Ahamed House"
+    },
+    {
+     "src": "/images/projects/ahamed-house-full-home-interiors-hyderabad/bedroom-fluted-headboard-panel-home-hyderabad-07.webp",
+     "sm": "/images/projects/ahamed-house-full-home-interiors-hyderabad/bedroom-fluted-headboard-panel-home-hyderabad-07-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Bedroom with a fluted headboard panel and an LED line, Ahamed House"
+    },
+    {
+     "src": "/images/projects/ahamed-house-full-home-interiors-hyderabad/modular-kitchen-taupe-matte-dark-countertop-home-hyderabad-08.webp",
+     "sm": "/images/projects/ahamed-house-full-home-interiors-hyderabad/modular-kitchen-taupe-matte-dark-countertop-home-hyderabad-08-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "L-shaped modular kitchen in taupe matte with a dark countertop, Ahamed House"
+    },
+    {
+     "src": "/images/projects/ahamed-house-full-home-interiors-hyderabad/l-shaped-kitchen-open-shelves-home-hyderabad-09.webp",
+     "sm": "/images/projects/ahamed-house-full-home-interiors-hyderabad/l-shaped-kitchen-open-shelves-home-hyderabad-09-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "L-shaped kitchen with open shelves and a chimney, Ahamed House"
+    },
+    {
+     "src": "/images/projects/ahamed-house-full-home-interiors-hyderabad/bedroom-headboard-wall-led-cove-home-hyderabad-10.webp",
+     "sm": "/images/projects/ahamed-house-full-home-interiors-hyderabad/bedroom-headboard-wall-led-cove-home-hyderabad-10-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Bedroom with a panelled headboard wall and an LED cove, Ahamed House"
+    },
+    {
+     "src": "/images/projects/ahamed-house-full-home-interiors-hyderabad/bedroom-pendant-light-bean-bag-home-hyderabad-11.webp",
+     "sm": "/images/projects/ahamed-house-full-home-interiors-hyderabad/bedroom-pendant-light-bean-bag-home-hyderabad-11-800.webp",
+     "w": 1440,
+     "h": 913,
+     "alt": "Bedroom with a pendant light, a bean bag and a textured wall, Ahamed House"
+    }
+   ]
+  },
+  {
+   "num": "12",
+   "slug": "kanesh-residence-kids-room-hyderabad",
+   "name": "Kanesh Residence",
+   "h1": "Kanesh Residence",
+   "em": "Residence",
+   "sub": "KIDS' ROOM & HOME INTERIORS · HYDERABAD",
+   "where": "Hyderabad, Telangana",
+   "loc": "Hyderabad",
+   "cat": "Apartment",
+   "space": "Kids' room · Loft bed",
+   "idea": "Give a child a room to climb, not just a bed to sleep in.",
+   "brief": "Kanesh Residence is a family home in Hyderabad where Form X's architects designed the kids' room as a place to play. A loft bed sits on storage stairs, with a climbing wall and overhead bars along the ceiling and a study desk at the window. The living room pairs a sectional sofa and curved lounge chairs with a sculptural ring chandelier and a slatted TV wall. In the master bedroom, botanical wallpaper wraps the headboard wall and returns behind a dressing table with a backlit round mirror.",
+   "title": "Kids Bedroom Interior Design, Hyderabad | Kanesh · Form X",
+   "meta": "A loft bed on storage stairs, a climbing wall and a study desk, plus a ring chandelier living room. See Kanesh Residence, Hyderabad, by Form X.",
+   "keywords": [
+    "kids bedroom interior design Hyderabad",
+    "loft bed with study table",
+    "kids room climbing wall",
+    "botanical wallpaper bedroom"
+   ],
+   "lead": 0,
+   "og": 0,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Kids' room · Loft bed",
+     "img": 0
+    },
+    {
+     "label": "STUDY",
+     "line": "A study desk at the window, bars overhead.",
+     "img": 1
+    },
+    {
+     "label": "LIVING",
+     "line": "A ring chandelier over the sectional.",
+     "img": 2
+    },
+    {
+     "label": "TV WALL",
+     "line": "Vertical slats frame the TV.",
+     "img": 3
+    },
+    {
+     "label": "BEDROOM",
+     "line": "Botanical wallpaper behind the bed.",
+     "img": 4
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/kanesh-residence-kids-room-hyderabad/kids-bedroom-loft-bed-climbing-wall-home-hyderabad-01.webp",
+     "sm": "/images/projects/kanesh-residence-kids-room-hyderabad/kids-bedroom-loft-bed-climbing-wall-home-hyderabad-01-800.webp",
+     "w": 1600,
+     "h": 1069,
+     "alt": "Kids' bedroom with a loft bed, storage stairs and a climbing wall, Kanesh Residence, Hyderabad"
+    },
+    {
+     "src": "/images/projects/kanesh-residence-kids-room-hyderabad/kids-room-loft-bed-study-desk-home-hyderabad-02.webp",
+     "sm": "/images/projects/kanesh-residence-kids-room-hyderabad/kids-room-loft-bed-study-desk-home-hyderabad-02-800.webp",
+     "w": 1600,
+     "h": 1015,
+     "alt": "Kids' room with a loft bed, overhead bars and a study desk, Kanesh Residence"
+    },
+    {
+     "src": "/images/projects/kanesh-residence-kids-room-hyderabad/living-room-ring-chandelier-fluted-panels-home-hyderabad-03.webp",
+     "sm": "/images/projects/kanesh-residence-kids-room-hyderabad/living-room-ring-chandelier-fluted-panels-home-hyderabad-03-800.webp",
+     "w": 1600,
+     "h": 1015,
+     "alt": "Living room with a ring chandelier, fluted panels and curved lounge chairs, Kanesh Residence"
+    },
+    {
+     "src": "/images/projects/kanesh-residence-kids-room-hyderabad/tv-wall-vertical-slats-living-room-home-hyderabad-04.webp",
+     "sm": "/images/projects/kanesh-residence-kids-room-hyderabad/tv-wall-vertical-slats-living-room-home-hyderabad-04-800.webp",
+     "w": 1600,
+     "h": 1015,
+     "alt": "Living room TV wall with vertical slats and a sectional sofa, Kanesh Residence"
+    },
+    {
+     "src": "/images/projects/kanesh-residence-kids-room-hyderabad/master-bedroom-botanical-wallpaper-home-hyderabad-05.webp",
+     "sm": "/images/projects/kanesh-residence-kids-room-hyderabad/master-bedroom-botanical-wallpaper-home-hyderabad-05-800.webp",
+     "w": 1600,
+     "h": 1015,
+     "alt": "Master bedroom with botanical wallpaper behind the bed, Kanesh Residence"
+    },
+    {
+     "src": "/images/projects/kanesh-residence-kids-room-hyderabad/dressing-table-backlit-mirror-bedroom-home-hyderabad-06.webp",
+     "sm": "/images/projects/kanesh-residence-kids-room-hyderabad/dressing-table-backlit-mirror-bedroom-home-hyderabad-06-800.webp",
+     "w": 1600,
+     "h": 1015,
+     "alt": "Dressing table with a backlit round mirror and botanical wallpaper, Kanesh Residence"
+    }
+   ]
+  },
+  {
+   "num": "13",
+   "slug": "shaeed-residence-open-kitchen-apartment-hyderabad",
+   "name": "Shaeed Residence",
+   "h1": "Shaeed Residence",
+   "em": "Residence",
+   "sub": "OPEN-PLAN APARTMENT INTERIORS · HYDERABAD",
+   "where": "Hyderabad, Telangana",
+   "loc": "Hyderabad",
+   "cat": "Apartment",
+   "space": "Open kitchen · Island and oak",
+   "idea": "Open the kitchen and the home doubles. The island is where everyone ends up.",
+   "brief": "Shaeed Residence is an apartment in Hyderabad that Form X's architects planned around an open kitchen. The island, oak cabinets and built-in oven face the living room instead of hiding behind a wall, and a breakfast counter with bar stools links the kitchen to the dining table. Fluted timber panels run behind the sofa, a stone-clad TV wall anchors the living room, and a marble dining table sits under a monochrome lion portrait.",
+   "title": "Open Kitchen Apartment Design, Hyderabad | Shaeed · Form X",
+   "meta": "An open kitchen with an oak island, fluted timber panels and a stone TV wall. See how Form X's architects designed Shaeed Residence, an apartment in Hyderabad.",
+   "keywords": [
+    "open kitchen design Hyderabad",
+    "kitchen island with breakfast counter",
+    "fluted wall panels living room",
+    "stone TV wall design"
+   ],
+   "lead": 0,
+   "og": 0,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Open kitchen · Island and oak",
+     "img": 0
+    },
+    {
+     "label": "LIVING",
+     "line": "Fluted timber panels behind the sofa.",
+     "img": 1
+    },
+    {
+     "label": "TV WALL",
+     "line": "A stone TV wall faces the kitchen.",
+     "img": 2
+    },
+    {
+     "label": "COUNTER",
+     "line": "A breakfast counter joins kitchen and dining.",
+     "img": 3
+    },
+    {
+     "label": "DINING",
+     "line": "A marble table under the lion portrait.",
+     "img": 4
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/shaeed-residence-open-kitchen-apartment-hyderabad/open-kitchen-island-oak-cabinets-apartment-hyderabad-01.webp",
+     "sm": "/images/projects/shaeed-residence-open-kitchen-apartment-hyderabad/open-kitchen-island-oak-cabinets-apartment-hyderabad-01-800.webp",
+     "w": 1600,
+     "h": 1028,
+     "alt": "Open kitchen with an island, oak cabinets and a built-in oven, Shaeed Residence apartment, Hyderabad"
+    },
+    {
+     "src": "/images/projects/shaeed-residence-open-kitchen-apartment-hyderabad/living-dining-fluted-timber-panels-apartment-hyderabad-02.webp",
+     "sm": "/images/projects/shaeed-residence-open-kitchen-apartment-hyderabad/living-dining-fluted-timber-panels-apartment-hyderabad-02-800.webp",
+     "w": 1600,
+     "h": 1028,
+     "alt": "Living and dining area with fluted timber panels and a grey sofa, Shaeed Residence"
+    },
+    {
+     "src": "/images/projects/shaeed-residence-open-kitchen-apartment-hyderabad/living-room-stone-tv-wall-open-kitchen-apartment-hyderabad-03.webp",
+     "sm": "/images/projects/shaeed-residence-open-kitchen-apartment-hyderabad/living-room-stone-tv-wall-open-kitchen-apartment-hyderabad-03-800.webp",
+     "w": 1600,
+     "h": 1028,
+     "alt": "Living room with a stone TV wall facing the open kitchen, Shaeed Residence"
+    },
+    {
+     "src": "/images/projects/shaeed-residence-open-kitchen-apartment-hyderabad/open-kitchen-breakfast-counter-dining-apartment-hyderabad-04.webp",
+     "sm": "/images/projects/shaeed-residence-open-kitchen-apartment-hyderabad/open-kitchen-breakfast-counter-dining-apartment-hyderabad-04-800.webp",
+     "w": 1600,
+     "h": 1028,
+     "alt": "Open kitchen breakfast counter beside the dining table, Shaeed Residence"
+    },
+    {
+     "src": "/images/projects/shaeed-residence-open-kitchen-apartment-hyderabad/dining-room-marble-table-lion-art-apartment-hyderabad-05.webp",
+     "sm": "/images/projects/shaeed-residence-open-kitchen-apartment-hyderabad/dining-room-marble-table-lion-art-apartment-hyderabad-05-800.webp",
+     "w": 1600,
+     "h": 1028,
+     "alt": "Dining room with a marble table and a lion portrait, Shaeed Residence"
+    }
+   ]
+  },
+  {
+   "num": "14",
+   "slug": "tenzi-co-works-office-financial-district",
+   "name": "Tenzi Co-Works",
+   "h1": "Tenzi Co-Works",
+   "em": "Co-Works",
+   "sub": "OFFICE INTERIORS · FINANCIAL DISTRICT, HYDERABAD",
+   "where": "Financial District, Hyderabad",
+   "loc": "Financial District",
+   "cat": "Commercial",
+   "space": "MD cabin · Fluted timber wall",
+   "idea": "An office gets specified the way a home does. Same drawings, same care, same hardware.",
+   "brief": "Tenzi Co-Works is an office in Financial District, Hyderabad, specified by Form X's architects with the same drawings and care as a home. The MD cabin sets an executive desk against a fluted timber wall with lit shelves and hidden storage, and the director's cabin adds a curved sofa beside a skyline window. A glass-walled boardroom seats the team around an oval timber table with the city behind it, linear LED lines cut across the ceiling over the open-plan workstations, and a pantry counter completes the floor.",
+   "title": "Office Interior Design, Financial District | Tenzi · Form X",
+   "meta": "An MD cabin with a fluted timber wall, a glass boardroom with city views and LED light lines overhead. See Tenzi Co-Works in Financial District, by Form X.",
+   "keywords": [
+    "office interior design Financial District Hyderabad",
+    "MD cabin interior design",
+    "boardroom design with city view",
+    "corporate office interiors Hyderabad"
+   ],
+   "lead": 0,
+   "og": 0,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "MD cabin · Fluted timber wall",
+     "img": 0
+    },
+    {
+     "label": "BOARDROOM",
+     "line": "An oval timber table against the city.",
+     "img": 1
+    },
+    {
+     "label": "DIRECTOR",
+     "line": "A curved sofa by the skyline window.",
+     "img": 3
+    },
+    {
+     "label": "WORKSTATIONS",
+     "line": "Light lines cut across the ceiling.",
+     "img": 6
+    },
+    {
+     "label": "PANTRY",
+     "line": "A breakfast counter for quick breaks.",
+     "img": 7
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/tenzi-co-works-office-financial-district/md-cabin-fluted-timber-wall-office-financial-district-hyderabad-01.webp",
+     "sm": "/images/projects/tenzi-co-works-office-financial-district/md-cabin-fluted-timber-wall-office-financial-district-hyderabad-01-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "MD cabin with a fluted timber wall and lit shelves, Tenzi Co-Works office in Financial District, Hyderabad"
+    },
+    {
+     "src": "/images/projects/tenzi-co-works-office-financial-district/boardroom-city-view-office-financial-district-hyderabad-02.webp",
+     "sm": "/images/projects/tenzi-co-works-office-financial-district/boardroom-city-view-office-financial-district-hyderabad-02-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Glass-walled boardroom with an oval timber table and a city view, Tenzi Co-Works"
+    },
+    {
+     "src": "/images/projects/tenzi-co-works-office-financial-district/conference-room-city-view-office-financial-district-hyderabad-03.webp",
+     "sm": "/images/projects/tenzi-co-works-office-financial-district/conference-room-city-view-office-financial-district-hyderabad-03-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Conference room with a city view and a wall-mounted screen, Tenzi Co-Works"
+    },
+    {
+     "src": "/images/projects/tenzi-co-works-office-financial-district/director-cabin-skyline-view-office-financial-district-hyderabad-04.webp",
+     "sm": "/images/projects/tenzi-co-works-office-financial-district/director-cabin-skyline-view-office-financial-district-hyderabad-04-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Director's cabin with a skyline view and a curved sofa, Tenzi Co-Works, Financial District"
+    },
+    {
+     "src": "/images/projects/tenzi-co-works-office-financial-district/md-cabin-executive-desk-office-financial-district-hyderabad-05.webp",
+     "sm": "/images/projects/tenzi-co-works-office-financial-district/md-cabin-executive-desk-office-financial-district-hyderabad-05-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "MD cabin executive desk under ceiling light lines, Tenzi Co-Works"
+    },
+    {
+     "src": "/images/projects/tenzi-co-works-office-financial-district/boardroom-linear-led-ceiling-office-financial-district-hyderabad-06.webp",
+     "sm": "/images/projects/tenzi-co-works-office-financial-district/boardroom-linear-led-ceiling-office-financial-district-hyderabad-06-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Boardroom under linear LED ceiling lines, Tenzi Co-Works office"
+    },
+    {
+     "src": "/images/projects/tenzi-co-works-office-financial-district/open-plan-workstations-office-financial-district-hyderabad-07.webp",
+     "sm": "/images/projects/tenzi-co-works-office-financial-district/open-plan-workstations-office-financial-district-hyderabad-07-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Open-plan workstations under linear LED light lines, Tenzi Co-Works"
+    },
+    {
+     "src": "/images/projects/tenzi-co-works-office-financial-district/office-pantry-breakfast-counter-financial-district-hyderabad-08.webp",
+     "sm": "/images/projects/tenzi-co-works-office-financial-district/office-pantry-breakfast-counter-financial-district-hyderabad-08-800.webp",
+     "w": 1600,
+     "h": 2133,
+     "alt": "Office pantry with a breakfast counter and bar stools, Tenzi Co-Works"
+    },
+    {
+     "src": "/images/projects/tenzi-co-works-office-financial-district/director-cabin-curved-sofa-office-financial-district-hyderabad-09.webp",
+     "sm": "/images/projects/tenzi-co-works-office-financial-district/director-cabin-curved-sofa-office-financial-district-hyderabad-09-800.webp",
+     "w": 1600,
+     "h": 900,
+     "alt": "Director's cabin with a curved sofa and planters, Tenzi Co-Works"
+    }
+   ]
+  },
+  {
+   "num": "15",
+   "slug": "k-works-coworking-space-hyderabad",
+   "name": "K-Works",
+   "h1": "K-Works",
+   "em": "Works",
+   "sub": "COWORKING SPACE INTERIORS · HYDERABAD",
+   "where": "Hyderabad, Telangana",
+   "loc": "Hyderabad",
+   "cat": "Commercial",
+   "space": "Reception · Cane desk",
+   "idea": "A coworking space should feel like a well-kept home, not a call centre.",
+   "brief": "K-Works is a coworking space in Hyderabad that Form X's architects designed to feel like a well-kept home. Visitors arrive at a cane-fronted reception desk and a lounge of armchairs on a jute rug, with an arched opening to the waiting area. Meeting and conference rooms sit under pendant lights and large artworks, the MD's cabin pairs an L-shaped desk with backlit shelves, and the open workstations use sage-green chairs under linear lights. Sand-toned walls and planting tie every zone together.",
+   "title": "Coworking Space Interiors, Hyderabad | K-Works · Form X",
+   "meta": "A cane reception desk, sage-green workstations and meeting rooms under pendants. See how Form X's architects designed K-Works, a coworking space in Hyderabad.",
+   "keywords": [
+    "coworking space interior design Hyderabad",
+    "office reception design",
+    "conference room interior",
+    "MD cabin design"
+   ],
+   "lead": 2,
+   "og": 2,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Reception · Cane desk",
+     "img": 2
+    },
+    {
+     "label": "LOUNGE",
+     "line": "Armchairs on a jute rug by the window.",
+     "img": 6
+    },
+    {
+     "label": "MEETING",
+     "line": "Eight seats under a row of pendants.",
+     "img": 3
+    },
+    {
+     "label": "CABIN",
+     "line": "Backlit shelves behind the MD's L-desk.",
+     "img": 1
+    },
+    {
+     "label": "DESKS",
+     "line": "Sage chairs under linear lights.",
+     "img": 9
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/k-works-coworking-space-hyderabad/md-cabin-executive-desk-cane-legs-coworking-office-hyderabad-01.webp",
+     "sm": "/images/projects/k-works-coworking-space-hyderabad/md-cabin-executive-desk-cane-legs-coworking-office-hyderabad-01-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "MD cabin with an executive desk on cane legs and lounge chairs, K-Works coworking space, Hyderabad"
+    },
+    {
+     "src": "/images/projects/k-works-coworking-space-hyderabad/md-cabin-backlit-shelves-l-desk-coworking-office-hyderabad-02.webp",
+     "sm": "/images/projects/k-works-coworking-space-hyderabad/md-cabin-backlit-shelves-l-desk-coworking-office-hyderabad-02-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "MD cabin with backlit shelves and an L-shaped desk, K-Works"
+    },
+    {
+     "src": "/images/projects/k-works-coworking-space-hyderabad/coworking-reception-cane-desk-office-hyderabad-03.webp",
+     "sm": "/images/projects/k-works-coworking-space-hyderabad/coworking-reception-cane-desk-office-hyderabad-03-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "Coworking reception with a cane-fronted desk and K-Works signage, Hyderabad"
+    },
+    {
+     "src": "/images/projects/k-works-coworking-space-hyderabad/conference-room-eight-seater-pendants-coworking-office-hyderabad-04.webp",
+     "sm": "/images/projects/k-works-coworking-space-hyderabad/conference-room-eight-seater-pendants-coworking-office-hyderabad-04-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "Eight-seater conference room under pendant lights, K-Works coworking space"
+    },
+    {
+     "src": "/images/projects/k-works-coworking-space-hyderabad/meeting-room-dome-pendants-artwork-coworking-office-hyderabad-05.webp",
+     "sm": "/images/projects/k-works-coworking-space-hyderabad/meeting-room-dome-pendants-artwork-coworking-office-hyderabad-05-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "Meeting room with dome pendants and large artworks, K-Works"
+    },
+    {
+     "src": "/images/projects/k-works-coworking-space-hyderabad/office-waiting-lounge-arch-opening-coworking-hyderabad-06.webp",
+     "sm": "/images/projects/k-works-coworking-space-hyderabad/office-waiting-lounge-arch-opening-coworking-hyderabad-06-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "Waiting lounge with an arched opening and sage chairs, K-Works"
+    },
+    {
+     "src": "/images/projects/k-works-coworking-space-hyderabad/reception-lounge-armchairs-jute-rug-coworking-office-hyderabad-07.webp",
+     "sm": "/images/projects/k-works-coworking-space-hyderabad/reception-lounge-armchairs-jute-rug-coworking-office-hyderabad-07-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "Reception lounge with armchairs on a jute rug, K-Works coworking space"
+    },
+    {
+     "src": "/images/projects/k-works-coworking-space-hyderabad/collaboration-table-hanging-planter-coworking-office-hyderabad-08.webp",
+     "sm": "/images/projects/k-works-coworking-space-hyderabad/collaboration-table-hanging-planter-coworking-office-hyderabad-08-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "Collaboration table with a hanging planter, K-Works"
+    },
+    {
+     "src": "/images/projects/k-works-coworking-space-hyderabad/open-workstations-sage-chairs-coworking-office-hyderabad-09.webp",
+     "sm": "/images/projects/k-works-coworking-space-hyderabad/open-workstations-sage-chairs-coworking-office-hyderabad-09-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "Open workstations with sage-green chairs, K-Works coworking space"
+    },
+    {
+     "src": "/images/projects/k-works-coworking-space-hyderabad/workstation-area-linear-lights-coworking-office-hyderabad-10.webp",
+     "sm": "/images/projects/k-works-coworking-space-hyderabad/workstation-area-linear-lights-coworking-office-hyderabad-10-800.webp",
+     "w": 1495,
+     "h": 1052,
+     "alt": "Workstation area under linear lights, K-Works, Hyderabad"
+    }
+   ]
+  },
+  {
+   "num": "16",
+   "slug": "zen-co-work-startup-office-hyderabad",
+   "name": "Zen Co-Work",
+   "h1": "Zen Co-Work",
+   "em": "Co-Work",
+   "sub": "STARTUP OFFICE INTERIORS · HYDERABAD",
+   "where": "Hyderabad, Telangana",
+   "loc": "Hyderabad",
+   "cat": "Commercial",
+   "space": "Lounge · Geometric mural",
+   "idea": "Let colour do the zoning. Terracotta to work, blush to meet, the mural to switch off.",
+   "brief": "Zen Co-Work is a coworking office in Hyderabad where Form X's architects used colour to zone the floor. A terracotta sofa and a hot-desk counter sit beside a geometric mural in the lounge, and black-framed glass cabins line the open workstations. Desks in the workstation bays pick up the terracotta, panelled walls carry the storage, and the meeting room turns blush pink, so every zone reads at a glance.",
+   "title": "Startup Office Interior Design, Hyderabad | Zen · Form X",
+   "meta": "A geometric mural, terracotta desks and glass cabins: see how Form X's architects zoned Zen Co-Work, a startup office in Hyderabad, with colour.",
+   "keywords": [
+    "startup office interior design Hyderabad",
+    "office wall mural design",
+    "glass cabin partitions",
+    "hot desk area design"
+   ],
+   "lead": 1,
+   "og": 1,
+   "tour": [
+    {
+     "label": "OVERVIEW",
+     "line": "Lounge · Geometric mural",
+     "img": 1
+    },
+    {
+     "label": "HOT DESK",
+     "line": "Bar stools at a counter by the window.",
+     "img": 0
+    },
+    {
+     "label": "CABINS",
+     "line": "Black-framed glass cabins line the floor.",
+     "img": 2
+    },
+    {
+     "label": "DESKS",
+     "line": "Terracotta desks in a workstation bay.",
+     "img": 4
+    },
+    {
+     "label": "MEETING",
+     "line": "A blush-pink table for meetings.",
+     "img": 5
+    }
+   ],
+   "images": [
+    {
+     "src": "/images/projects/zen-co-work-startup-office-hyderabad/coworking-lounge-terracotta-sofa-hot-desk-office-hyderabad-01.webp",
+     "sm": "/images/projects/zen-co-work-startup-office-hyderabad/coworking-lounge-terracotta-sofa-hot-desk-office-hyderabad-01-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Coworking lounge with a terracotta sofa and a hot-desk counter, Zen Co-Work, Hyderabad"
+    },
+    {
+     "src": "/images/projects/zen-co-work-startup-office-hyderabad/coworking-lounge-geometric-mural-office-hyderabad-02.webp",
+     "sm": "/images/projects/zen-co-work-startup-office-hyderabad/coworking-lounge-geometric-mural-office-hyderabad-02-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Coworking lounge beside a geometric wall mural, Zen Co-Work office in Hyderabad"
+    },
+    {
+     "src": "/images/projects/zen-co-work-startup-office-hyderabad/coworking-workstations-glass-cabins-office-hyderabad-03.webp",
+     "sm": "/images/projects/zen-co-work-startup-office-hyderabad/coworking-workstations-glass-cabins-office-hyderabad-03-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Workstations beside black-framed glass cabins, Zen Co-Work"
+    },
+    {
+     "src": "/images/projects/zen-co-work-startup-office-hyderabad/open-workstations-panelled-wall-coworking-office-hyderabad-04.webp",
+     "sm": "/images/projects/zen-co-work-startup-office-hyderabad/open-workstations-panelled-wall-coworking-office-hyderabad-04-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Open workstations along a panelled wall, Zen Co-Work"
+    },
+    {
+     "src": "/images/projects/zen-co-work-startup-office-hyderabad/workstation-bay-terracotta-desks-coworking-office-hyderabad-05.webp",
+     "sm": "/images/projects/zen-co-work-startup-office-hyderabad/workstation-bay-terracotta-desks-coworking-office-hyderabad-05-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Workstation bay with terracotta desks, Zen Co-Work, Hyderabad"
+    },
+    {
+     "src": "/images/projects/zen-co-work-startup-office-hyderabad/meeting-room-pink-table-coworking-office-hyderabad-06.webp",
+     "sm": "/images/projects/zen-co-work-startup-office-hyderabad/meeting-room-pink-table-coworking-office-hyderabad-06-800.webp",
+     "w": 1600,
+     "h": 1126,
+     "alt": "Meeting room with a blush-pink table, Zen Co-Work"
+    }
+   ]
+  }
+ ]
+}

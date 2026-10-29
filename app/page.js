@@ -1,0 +1,219 @@
+"use client";
+
+import { useEffect } from "react";
+import initFormX from "@/lib/formx";
+import Logo from "@/components/Logo";
+import HowWeWork from "@/components/HowWeWork";
+import Estimator from "@/components/Estimator";
+import Testimonials from "@/components/Testimonials";
+import MoneyBreakdown from "@/components/MoneyBreakdown";
+import Advantage from "@/components/Advantage";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Instagram from "@/components/Instagram";
+import JournalHome from "@/components/JournalHome";
+import FAQ from "@/components/FAQ";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
+import CTAModal from "@/components/CTAModal";
+
+export default function Page() {
+  useEffect(() => {
+    const cleanup = initFormX();
+    return cleanup;
+  }, []);
+
+  return (
+    <>
+      <div id="cur">
+        <b></b>
+      </div>
+
+      {/* ---- intro logo animation ---- */}
+      <div id="intro">
+        <img src="/logo.png" alt="form X Interiors" className="intro-logo" />
+      </div>
+
+      {/* ---- menu ---- */}
+      <button suppressHydrationWarning
+        id="xbtn"
+        aria-label="Open sidebar"
+        aria-expanded="false"
+      >
+        <img src="/close-icon.png" alt="" className="custom-x" />
+      </button>
+      <nav id="menu" aria-hidden="true">
+        <a href="#work">
+          <span className="sw">
+            <i>Projects</i>
+            <i>Projects</i>
+          </span>
+        </a>
+        <a href="#offers">
+          <span className="sw">
+            <i>Services</i>
+            <i>Services</i>
+          </span>
+        </a>
+        <a href="#cost-calculator">
+          <span className="sw">
+            <i>Estimate</i>
+            <i>Estimate</i>
+          </span>
+        </a>
+        <a href="#offers-cards">
+          <span className="sw">
+            <i>Process</i>
+            <i>Process</i>
+          </span>
+        </a>
+        <a href="#book-visit">
+          <span className="sw">
+            <i>Site visit</i>
+            <i>Site visit</i>
+          </span>
+        </a>
+        <a href="#faq">
+          <span className="sw">
+            <i>FAQ</i>
+            <i>FAQ</i>
+          </span>
+        </a>
+        <a href="#contact">
+          <span className="sw">
+            <i>Contact</i>
+            <i>Contact</i>
+          </span>
+        </a>
+        <a href="#blog">
+          <span className="sw">
+            <i>Blog</i>
+            <i>Blog</i>
+          </span>
+        </a>
+        <div className="mono foot">Hyderabad · <a href="tel:+919951733955">+91 99517 33955</a></div>
+      </nav>
+
+      {/* ---- scroll-scrubbed film hero ---- */}
+      <div className="page-scroll">
+        <header className="vhero" id="vhero">
+          <div className="vstick">
+            <canvas id="sim" aria-hidden="true"></canvas>
+            <video
+              id="film"
+              muted
+              playsInline
+              preload="auto"
+              aria-hidden="true"
+              style={{ display: "none" }}
+            ></video>
+            <canvas id="slats" aria-hidden="true" data-cursor="move it"></canvas>
+            <div className="vgrad"></div>
+            <div className="brandbar">
+              <Logo />
+            </div>
+            <div className="hero-in">
+              <div className="caps">
+                <h1 className="cap on">
+                  Interiors priced
+                  <br />
+                  in the <em>open</em>.
+                </h1>
+                <h1 className="cap">
+                  Drawings, materials,
+                  <br />
+                  carpentry, <em>site</em>.
+                </h1>
+                <h1 className="cap">
+                  One team.
+                  <br />
+                  <em>One bill</em>.
+                </h1>
+              </div>
+              <h2 className="hero-sub">Turnkey interior company in Hyderabad</h2>
+              <div className="hero-row">
+                <p>
+                  Getting keys in Kokapet or Tellapur? One company takes your home from
+                  empty to move-in ready — civil, electrical, modular, painting, décor.
+                  Design is free when we build. Every cut, software-checked.
+                </p>
+                <div className="hero-cta">
+                  <div className="hero-cta-row">
+                    <a className="btn mag" href="#cost-calculator" data-cursor="price">
+                      Get my interior cost →
+                    </a>
+                    <a className="hero-link" href="#book-visit">Book a free site visit</a>
+                  </div>
+                  <div className="hero-note">
+                    Free design when we build · No sales team · Keys 48 days after sign-off
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="sind">
+              <i id="sfill"></i>
+            </div>
+
+            {/* ---- marquee ---- */}
+            <div className="mq">
+              <div id="mqi">
+                {Array.from({ length: 60 }).map((_, idx) => (
+                  <span key={idx}>
+                    {[
+                      "A–Z turnkey interiors",
+                      "Civil & false ceiling",
+                      "Electrical & plumbing",
+                      "Modular kitchens & wardrobes",
+                      "Painting & décor",
+                      "Hyderabad",
+                    ][idx % 6]}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <HowWeWork />
+
+          {/* ---- estimator ---- */}
+          <Estimator />
+
+          {/* ---- three promises ---- */}
+          <Advantage />
+
+          {/* ---- projects wall ---- */}
+          <Projects />
+
+          {/* ---- cost anatomy ---- */}
+          <MoneyBreakdown />
+
+          {/* ---- testimonials ---- */}
+          <Testimonials />
+
+          {/* ---- book a consultation ---- */}
+          <Contact />
+
+          {/* ---- instagram ---- */}
+          <Instagram />
+
+          {/* ---- journal ---- */}
+          <JournalHome />
+
+          {/* ---- faq ---- */}
+          <FAQ />
+
+          {/* ---- final CTA ---- */}
+          <CTA />
+
+          {/* ---- footer ---- */}
+          <Footer />
+        </main>
+      </div>
+
+      <CTAModal />
+    </>
+  );
+}
+

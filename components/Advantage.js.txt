@@ -1,0 +1,185 @@
+
+/* ---- keep three squares and the CTA inside one screen ---- */
+(function () {
+  var cards = document.querySelector('.fx-cards'), GAP = 12;
+  function fit() {
+    if (window.innerWidth <= 900) { cards.style.removeProperty('--card'); return; }
+    cards.style.removeProperty('--card');
+    var h = cards.clientHeight, w = cards.clientWidth;
+    var size = Math.floor(Math.min(h, (w - GAP * 2) / 3));
+    cards.style.setProperty('--card', size + 'px');
+  }
+  addEventListener('resize', fit);
+  addEventListener('orientationchange', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+  requestAnimationFrame(fit);
+})();
+
+/* ---------- build the 3D plan ---------- */
+(function () {
+  var WALL_H = 30;
+  /* walls: [x, y, length, 'x'|'y'] — gaps left where the doors are */
+  var WALLS = [
+    [12,12,296,'x'], [12,208,296,'x'], [12,12,196,'y'], [308,12,196,'y'],
+    [188,12,56,'y'], [188,92,36,'y'],            /* partition, door gap between */
+    [188,128,24,'x'], [252,128,56,'x']           /* kitchen wall, opening between */
+  ];
+  /* boxes: [x, y, w, d, h, round?] */
+  var BOXES = [
+    [28,44,18,72,14],  [66,66,34,26,7],   [172,52,10,58,13],
+    [72,140,48,48,13,1],
+    [90,120,11,11,9], [90,192,11,11,9], [52,158,11,11,9], [128,158,11,11,9],
+    [210,26,66,78,11], [288,26,14,78,32],
+    [196,140,106,12,17], [196,152,12,46,17]
+  ];
+
+  var model = document.getElementById('model');
+  if (!model) return;
+  var html = '', d = 0;
+
+  WALLS.forEach(function (w, i) {
+    var t = w[3] === 'x'
+      ? 'rotateX(-90deg) scaleY(var(--g,0))'
+      : 'rotateZ(90deg) rotateX(-90deg) scaleY(var(--g,0))';
+    html += '<i class="wall" style="left:' + w[0] + 'px;top:' + w[1] + 'px;width:' + w[2] +
+            'px;height:' + WALL_H + 'px;transform:' + t +
+            ';transition-delay:' + (1.45 + i * .07).toFixed(2) + 's"></i>';
+  });
+
+  BOXES.forEach(function (b, i) {
+    var x = b[0], y = b[1], w = b[2], dp = b[3], h = b[4], r = b[5] ? ' round' : '';
+    var del = (2.1 + i * .08).toFixed(2) + 's';
+    /* top */
+    html += '<i class="face top' + r + '" style="left:' + x + 'px;top:' + y + 'px;width:' + w +
+            'px;height:' + dp + 'px;transform:translateZ(var(--z' + i + ',0px));transition-delay:' + del + '"></i>';
+    if (!b[5]) {
+      /* right side */
+      html += '<i class="face side" style="left:' + (x + w) + 'px;top:' + y + 'px;width:' + dp +
+              'px;height:' + h + 'px;transform:rotateZ(90deg) rotateX(-90deg) scaleY(var(--g,0));transition-delay:' + del + '"></i>';
+      /* front side */
+      html += '<i class="face side" style="left:' + x + 'px;top:' + (y + dp) + 'px;width:' + w +
+              'px;height:' + h + 'px;transform:rotateX(-90deg) scaleY(var(--g,0));transition-delay:' + del + '"></i>';
+    }
+  });
+  model.innerHTML = html;
+
+  /* raise the tops to their height once the card is live */
+  var card = model.closest('.fx-card');
+  var tops = [].slice.call(model.querySelectorAll('.face.top'));
+  function raise(on) {
+    tops.forEach(function (el, i) {
+      el.style.transform = 'translateZ(' + (on ? BOXES[i][4] : 0) + 'px)';
+    });
+    model.style.setProperty('--g', on ? 1 : 0);
+    [].slice.call(model.querySelectorAll('.wall')).forEach(function (el) {
+      el.style.setProperty('--g', on ? 1 : 0);
+    });
+    model.querySelectorAll('.face.side').forEach(function (el) {
+      el.style.setProperty('--g', on ? 1 : 0);
+    });
+  }
+  raise(false);
+
+  /* fit the model to the card, and let the cursor tilt it */
+  var iso = document.getElementById('iso'), world = document.getElementById('world');
+  function fitIso() {
+    var r = iso.getBoundingClientRect();
+    if (!r.width) return;
+    world.style.setProperty('--s', Math.min(r.width / 344, r.height / 300).toFixed(3));
+  }
+  addEventListener('resize', fitIso);
+  requestAnimationFrame(fitIso);
+
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    card.addEventListener('pointermove', function (e) {
+      var r = card.getBoundingClientRect();
+      world.style.setProperty('--dz', (((e.clientX - r.left) / r.width - .5) * 14).toFixed(1) + 'deg');
+      world.style.setProperty('--dx', (((e.clientY - r.top) / r.height - .5) * -9).toFixed(1) + 'deg');
+    });
+    card.addEventListener('pointerleave', function () {
+      world.style.setProperty('--dz', '0deg'); world.style.setProperty('--dx', '0deg');
+    });
+  }
+
+  new IntersectionObserver(function (es, o) {
+    es.forEach(function (e) { if (e.isIntersecting) { fitIso(); raise(true); o.disconnect(); } });
+  }, { threshold: .3 }).observe(card);
+
+  card.addEventListener('mouseenter', function () { raise(true); });
+})();
+
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cards  = [].slice.call(document.querySelectorAll('[data-anim]'));
+  var track  = document.getElementById('fx-track');
+  var flash  = document.getElementById('fx-flash');
+  var count  = document.getElementById('fx-count');
+  var days   = [].slice.call(document.querySelectorAll('.fx-day'));
+  var timer  = null;
+
+  function frame(i) {
+    track.style.setProperty('--i', i);
+    days.forEach(function (b) { b.setAttribute('aria-current', +b.dataset.s === i ? 'true' : 'false'); });
+    count.textContent = days[i].dataset.d + ' / 48';
+    flash.classList.remove('go');
+    void flash.offsetWidth;                       // restart the shutter flash
+    flash.classList.add('go');
+  }
+
+  function runReel() {
+    clearInterval(timer);
+    var i = 0; frame(0);
+    timer = setInterval(function () {
+      i++; frame(i);
+      if (i >= 3) clearInterval(timer);           // rests on day 48, never loops
+    }, 1000);
+  }
+
+  days.forEach(function (b) {
+    b.addEventListener('click', function () { clearInterval(timer); frame(+b.dataset.s); });
+  });
+
+  function countUp(el) {
+    var target = +el.dataset.count, start = null, dur = 1200;
+    (function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(step);
+    })(performance.now());
+  }
+
+  function play(card) {
+    card.classList.remove('is-on');
+    void card.offsetWidth;                        // replay the drafting sequence
+    card.classList.add('is-on');
+    [].slice.call(card.querySelectorAll('[data-count]')).forEach(function (n, i) {
+      n.textContent = '0';
+      setTimeout(function () { countUp(n); }, i * 180);
+    });
+    if (card.contains(track)) runReel();
+  }
+
+  if (reduce) {
+    cards.forEach(function (c) {
+      c.classList.add('is-on');
+      [].slice.call(c.querySelectorAll('[data-count]')).forEach(function (n) { n.textContent = n.dataset.count; });
+    });
+    frame(3);
+    return;
+  }
+
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { play(e.target); io.unobserve(e.target); } });
+  }, { threshold: .3 });
+
+  cards.forEach(function (c) {
+    io.observe(c);
+    var t = null;
+    c.addEventListener('mouseenter', function () {
+      clearTimeout(t); t = setTimeout(function () { play(c); }, 80);
+    });
+    c.addEventListener('focus', function () { play(c); });
+  });
+})();

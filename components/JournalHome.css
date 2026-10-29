@@ -1,0 +1,18 @@
+/* The journal wall on the home page. It reuses the wall's tokens, tiles and faces (Journal.css, .jr) and swaps the
+   fixed full-screen page for a section that pins while the page scrolls, like the project wall (.pg-stage / .pg-stick). */
+.jr.jr-home {
+  position: relative;
+  inset: auto;
+  display: block;
+  /* no overflow clipping here: it would stop the pinned part from sticking */
+  overflow: visible;
+  scroll-snap-align: start;
+}
+.jr-stage { position: relative; }
+.jr-stick { position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column; overflow: hidden; }
+.jr-home .jr-top { padding-top: clamp(14px, 2.6vh, 28px); }
+/* room for the site's fixed menu button in the top right */
+.jr-home .jr-eye { padding-right: 64px; }
+.jr-home .jr-h { max-width: none; }
+/* the rows follow the page scroll; let vertical swipes through to the page */
+.jr-home .jr-rail { touch-action: pan-y; }
